@@ -11,6 +11,12 @@ export default defineConfig({
       logo: {
         src: "/src/assets/flomaster.png",
       },
+      locales: {
+        root: {
+          label: "Русский",
+          lang: "ru",
+        },
+      },
       customCss: ["/src/styles/custom.css"],
       social: {
         github: "https://github.com/AuthFailed/flomaster/",
@@ -21,7 +27,7 @@ export default defineConfig({
           label: "🏠 Главная",
           link: "/",
         },
-        { label: "👋 База", link: "/chat-phrases" },
+        { label: "Что это такое?", link: "/chat-phrases" },
         {
           label: "Технические вопросы",
           autogenerate: { directory: "chat-phrases/tech" },
