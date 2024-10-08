@@ -37,6 +37,10 @@ export default defineConfig({
           label: "Абонентские вопросы",
           autogenerate: { directory: "chat-phrases/abon" },
         },
+        {
+          label: "Продажи",
+          autogenerate: { directory: "chat-phrases/sales" },
+        },
       ],
       editLink: {
         baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
