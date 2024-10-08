@@ -38,6 +38,10 @@ export default defineConfig({
           autogenerate: { directory: "chat-phrases/abon" },
         },
         {
+          label: "Отработка диалога",
+          autogenerate: { directory: "chat-phrases/dialog" },
+        },
+        {
           label: "Продажи",
           autogenerate: { directory: "chat-phrases/sales" },
         },
