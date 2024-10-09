@@ -1,5 +1,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import copyCodePlugin from "/src/plugins/code-copy-plugin.js";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -49,12 +51,7 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
       },
-      locales: {
-        root: {
-          label: "Russian",
-          lang: "ru",
-        },
-      },
     }),
   ],
+
 });
