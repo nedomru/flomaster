@@ -1,6 +1,5 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
-import copyCodePlugin from "/src/plugins/code-copy-plugin.js";
 
 
 // https://astro.build/config
@@ -30,21 +29,21 @@ export default defineConfig({
           label: "🏠 Главная",
           link: "/",
         },
-        { label: "Что это такое?", link: "/chat-phrases" },
+        { label: "🤔Что это такое?", link: "/chat-phrases" },
         {
-          label: "Технические вопросы",
+          label: "🛠️Технические вопросы",
           autogenerate: { directory: "chat-phrases/tech" },
         },
         {
-          label: "Абонентские вопросы",
+          label: "💸 Абонентские вопросы",
           autogenerate: { directory: "chat-phrases/abon" },
         },
         {
-          label: "Отработка диалога",
+          label: "💭 Отработка диалога",
           autogenerate: { directory: "chat-phrases/dialog" },
         },
         {
-          label: "Продажи",
+          label: "🛒 Продажи",
           autogenerate: { directory: "chat-phrases/sales" },
         },
       ],
@@ -53,5 +52,4 @@ export default defineConfig({
       },
     }),
   ],
-
 });
