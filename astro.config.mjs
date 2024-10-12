@@ -38,19 +38,37 @@ export default defineConfig({
         { label: "🤔Что это такое?", link: "/chat-phrases" },
         {
           label: "🛠️Технические вопросы",
-          autogenerate: { directory: "chat-phrases/tech" },
+          items: [
+            { slug: "chat-phrases/tech/internet" },
+            { slug: "chat-phrases/tech/television" },
+            { slug: "chat-phrases/tech/intercom" },
+            { slug: "chat-phrases/tech/applications" },
+          ],
         },
         {
           label: "💸 Абонентские вопросы",
-          autogenerate: { directory: "chat-phrases/abon" },
+          items: [
+            { slug: "chat-phrases/abon/money" },
+            { slug: "chat-phrases/abon/promotions" },
+            { slug: "chat-phrases/abon/tariffs" },
+          ],
         },
         {
           label: "💭 Диалог",
-          autogenerate: { directory: "chat-phrases/dialog" },
+          items: [
+            { slug: "chat-phrases/dialog/greetings" },
+            { slug: "chat-phrases/dialog/parting" },
+            { slug: "chat-phrases/dialog/selfservice" },
+            { slug: "chat-phrases/dialog/legal" },
+            { slug: "chat-phrases/dialog/negative" },
+          ],
         },
         {
           label: "🛒 Продажи",
-          autogenerate: { directory: "chat-phrases/sales" },
+          items: [
+            { slug: "chat-phrases/sales/routers" },
+            { slug: "chat-phrases/sales/decoders" },
+          ],
         },
       ],
       editLink: {
