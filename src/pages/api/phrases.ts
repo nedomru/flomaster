@@ -14,6 +14,7 @@ interface PhraseVariant {
 interface PhraseData {
     android?: PhraseVariant;
     ios?: PhraseVariant;
+    smartdom?: PhraseVariant;
     lk?: PhraseVariant;
     web?: PhraseVariant;
     android_web?: PhraseVariant;
@@ -411,7 +412,7 @@ const phrases: StructuredData = {
                         }
                     },
                     "Активация ключа в МП": {
-                        default: {
+                        smartdom: {
                             value: `Активировать новый ключ легко!
 В приложении Умный Дом.ру ••• раздел Кабинет - Мои ключи 🔑 - Регистрация нового ключа.
 Познакомьтесь с нашим Мобильным приложением поближе 😊`
