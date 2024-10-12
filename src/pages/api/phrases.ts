@@ -43,6 +43,49 @@ interface StructuredData {
 }
 
 const phrases: StructuredData = {
+    "Технические вопросы": {
+        subcategories: {
+            "Интернет": {
+                phrases: {
+
+                }
+            },
+            "Телевидение": {
+                phrases: {
+
+                }
+            },
+            "Домофония": {
+                phrases: {
+
+                }
+            },
+            "Заявки и аварии": {
+                phrases: {
+
+                }
+            }
+        }
+    },
+    "Абонентские вопросы": {
+        subcategories: {
+            "Начисления": {
+                phrases: {
+
+                }
+            },
+            "Акции": {
+                phrases: {
+
+                }
+            },
+            "Тарифы": {
+                phrases: {
+
+                }
+            }
+        }
+    },
     "Диалог": {
         subcategories: {
             "Приветствия": {
@@ -92,6 +135,16 @@ const phrases: StructuredData = {
                         }
                     },
                 },
+            },
+            "Правовая часть": {
+                phrases: {
+
+                }
+            },
+            "Отработка негатива": {
+                phrases: {
+
+                }
             },
             "Оценка чата": {
                 phrases: {
@@ -388,8 +441,7 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
     },
     "Продажи": {
         subcategories: {
-            "Декодеры":
-                {
+            "Декодеры": {
                     phrases: {
                         "Movix Model 2023": {
                             default: {
@@ -456,8 +508,7 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
                         }
                     },
                 },
-            "Роутеры":
-                {
+            "Роутеры": {
                     phrases: {
                         "TP-Link Archer EC220": {
                             default: {
