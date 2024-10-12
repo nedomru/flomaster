@@ -45,7 +45,7 @@ export default defineConfig({
           autogenerate: { directory: "chat-phrases/abon" },
         },
         {
-          label: "💭 Отработка диалога",
+          label: "💭 Диалог",
           autogenerate: { directory: "chat-phrases/dialog" },
         },
         {
