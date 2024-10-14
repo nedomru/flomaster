@@ -1,6 +1,7 @@
-import { defineConfig } from "astro/config";
+import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
+import {reportErrorPlugin} from './src/plugins/copyCodeBlock.ts';
 
 // https://astro.build/config
 export default defineConfig({
@@ -74,6 +75,17 @@ export default defineConfig({
       editLink: {
         baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
       },
+      expressiveCode: {
+        plugins: [
+          reportErrorPlugin()
+        ],
+        styleOverrides: {
+          borderRadius: '0.5rem',
+          frames: {
+            shadowColor: '#124',
+          },
+        },
+      }
     }),
   ],
 });
