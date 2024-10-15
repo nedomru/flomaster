@@ -4,7 +4,6 @@ import vercel from '@astrojs/vercel/serverless';
 
 import {reportErrorPlugin} from './src/plugins/reportError.ts';
 import {clickToCopyPlugin} from './src/plugins/copyCodeBlock.ts';
-import inoxToolsStarWarp from "@inox-tools/star-warp";
 
 // https://astro.build/config
 export default defineConfig({
@@ -79,7 +78,7 @@ export default defineConfig({
                 editLink: {
                     baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
                 },
-                plugins: [inoxToolsStarWarp()],
+                plugins: [],
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),
