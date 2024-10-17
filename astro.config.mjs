@@ -82,7 +82,16 @@ export default defineConfig({
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),
-                        clickToCopyPlugin()
+                        clickToCopyPlugin(),
+                        {
+                            name: 'Hide copy button',
+                            baseStyles: `
+                          .expressive-code .copy button {
+                            display: none;
+                          }
+                        `,
+                        },
+
                     ],
                     styleOverrides: {
                         borderRadius: '0.5rem',

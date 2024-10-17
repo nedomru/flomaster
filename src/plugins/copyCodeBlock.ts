@@ -5,75 +5,75 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
     return {
         name: 'Click to Copy',
         baseStyles: `
-      .ec-code-block {
-        cursor: pointer;
-        transition: border-color 0.3s ease, background-color 0.3s ease;
-        position: relative;
-      }
-      .ec-code-block:hover {
-        background-color: var(--sl-color-gray-7);
-      }
-      .ec-copy-message {
-        position: absolute;
-        top: 0.5em;
-        right: 0.5em;
-        background-color: var(--sl-color-accent);
-        color: var(--sl-color-white);
-        padding: 0.25em 0.5em;
-        border-radius: 0.25em;
-        font-size: var(--sl-text-sm);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-    `,
+            .ec-code-block {
+                position: relative;
+                font-size: small;
+            }
+            .ec-copy-button {
+                position: absolute;
+                top: 0.5em;
+                right: 0.5em;
+                background-color: rgba(0, 0, 0, 0.7);
+                color: white;
+                border: none;
+                border-radius: 0.25em;
+                padding: 0.25em 0.5em;
+                font-size: 0.8em;
+                cursor: pointer;
+                opacity: 0;
+                transition: opacity 0.3s;
+                font-size: small;
+            }
+            .ec-code-block:hover .ec-copy-button {
+                opacity: 1;
+            }
+            .ec-copy-button:hover {
+                background-color: rgba(0, 0, 0, 0.9);
+            }
+        `,
         hooks: {
             postprocessRenderedBlock: ({codeBlock, renderData}) => {
                 const copyScript = `
                     (function() {
                         const container = document.currentScript.parentElement;
-                        const copyMessage = container.querySelector('.ec-copy-message');
-                        const originalBorderColor = getComputedStyle(container).borderColor;
-                        const originalBackgroundColor = getComputedStyle(container).backgroundColor;
+                        const copyButton = container.querySelector('.ec-copy-button');
                         
-                        function copyToClipboard(text) {
+                        function copyToClipboard(text, isFullBlock) {
                             navigator.clipboard.writeText(text).then(() => {
-                                container.style.borderColor = '#4CAF50'; // Green color
-                                copyMessage.style.opacity = '1';
-                                
+                                const originalText = copyButton.textContent;
+                                copyButton.textContent = isFullBlock ? 'Скопировал полностью' : 'Скопировал часть';
                                 setTimeout(() => {
-                                    container.style.borderColor = originalBorderColor;
-                                    copyMessage.style.opacity = '0';
-                                }, 1500);
+                                    copyButton.textContent = originalText;
+                                }, 2000);
                             }).catch(err => {
                                 console.error('Failed to copy: ', err);
                             });
                         }
                         
                         container.addEventListener('click', (event) => {
-                            // Prevent copying when clicking on the report error button
-                            if (event.target.closest('.actions')) {
+                            if (event.target === copyButton || event.target.closest('.actions')) {
                                 return;
                             }
                             
                             event.preventDefault();
                             const selectedText = window.getSelection().toString();
-                            const textToCopy = selectedText || ${JSON.stringify(codeBlock.code)};
-                            copyToClipboard(textToCopy);
+                            if (selectedText) {
+                                copyToClipboard(selectedText, false);
+                            } else {
+                                copyToClipboard(${JSON.stringify(codeBlock.code)}, true);
+                            }
                         });
-                        
-                        // Hover effect
-                        container.addEventListener('mouseover', () => {
-                            container.style.backgroundColor = 'var(--sl-color-gray-7)';
-                        });
-                        container.addEventListener('mouseout', () => {
-                            container.style.backgroundColor = originalBackgroundColor;
+
+                        copyButton.addEventListener('click', (event) => {
+                            event.preventDefault();
+                            copyToClipboard(${JSON.stringify(codeBlock.code)}, true);
                         });
                     })();
                 `;
 
                 renderData.blockAst = h('div', {class: 'ec-code-block'}, [
                     renderData.blockAst,
-                    h('div', {class: 'ec-copy-message'}, 'Copied!'),
+                    h('button', {class: 'ec-copy-button'}, 'Нажми чтобы скопировать'),
                     h('script', copyScript)
                 ]);
             },
