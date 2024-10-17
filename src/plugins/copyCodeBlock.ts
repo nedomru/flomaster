@@ -8,6 +8,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
             .ec-code-block {
                 position: relative;
                 font-size: 110%;
+                cursor: pointer;
             }
             .ec-copy-button {
                 position: absolute;
