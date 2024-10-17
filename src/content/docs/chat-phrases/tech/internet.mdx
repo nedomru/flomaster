@@ -3,6 +3,13 @@ title: Интернет
 ---
 
 
+
+
+
+
+
+
+
 import {Aside, TabItem, Tabs} from "@astrojs/starlight/components";
 
 <Aside type="caution">Раздел в разработке</Aside>
@@ -106,6 +113,34 @@ import {Aside, TabItem, Tabs} from "@astrojs/starlight/components";
         локальной сети (если такого нет, подключение может называться Ethernet);
         5. Далее откройте Состояние.
         Что указано в Состояние среды? Отправьте, пожалуйста, фото
+        ```
+    </TabItem>
+</Tabs>
+
+### Заблокированные порты
+<Tabs>
+    <TabItem label="Наша сеть">
+        ```txt
+        На данный момент закрыты следующие порты:
+        TCP/445; UDP/1434; TCP+UDP/135-139
+        Данные порты ограничены не оборудованием, а на уровне ядра сети.
+        ```
+    </TabItem>
+    <TabItem label="Interzet">
+        ```txt
+        На данный момент закрыты следующие порты:
+        135/TCP,UDP MSRPC (Microsoft RPC[6]) — используется в приложениях «клиент—сервер» Microsoft (например, Exchange)
+        135/TCP,UDP LOC-SRV (Locator service) — используется службами удалённого обслуживания (DHCP, DNS, WINS и т.д.)
+        137/TCP,UDP NETBIOS-NS (NetBIOS Name Service)
+        138/TCP,UDP NETBIOS-DGM (NetBIOS Datagram Service)
+        139/TCP,UDP NETBIOS-SSN (NetBIOS Session Service)
+        445/TCP,UDP MICROSOFT-DS — используется в Microsoft Windows 2000 и поздних версий для прямого TCP/IP-доступа без
+        использования NetBIOS (например, в Active Directory)
+        67/TCP,UDP BOOTPS (Bootstrap Protocol Server) — для сервера, с которого выполняется загрузка бездисковых рабочих
+        станций; также используется DHCP (Dynamic Host Configuration Protocol)
+        68/TCP,UDP BOOTPC (Bootstrap Protocol Client) — для клиентов бездисковых рабочих станций, загружающихся с
+        сервера BOOTP; также используется DHCP (Dynamic Host Configuration Protocol)
+        1900/UDP Microsoft SSDP Enables discovery of UPnP devices
         ```
     </TabItem>
 </Tabs>

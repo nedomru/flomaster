@@ -50,13 +50,33 @@ const phrases: StructuredData = {
         subcategories: {
             "Интернет": {
                 phrases: {
-
+                    "Заблокированные порты - Наша сеть": {
+                        default: {
+                            value: `На данный момент закрыты следующие порты:
+TCP/445; UDP/1434; TCP+UDP/135-139
+Данные порты ограничены не оборудованием, а на уровне ядра сети.
+`
+                        },
+                    },
+                    "Заблокированные порты - Interzet": {
+                        default: {
+                            value: `На данный момент закрыты следующие порты:
+135/TCP,UDP\tMSRPC (Microsoft RPC[6]) — используется в приложениях «клиент—сервер» Microsoft (например, Exchange)
+135/TCP,UDP\tLOC-SRV (Locator service) — используется службами удалённого обслуживания (DHCP, DNS, WINS и т.д.)\t 
+137/TCP,UDP\tNETBIOS-NS (NetBIOS Name Service)  
+138/TCP,UDP\tNETBIOS-DGM (NetBIOS Datagram Service)
+139/TCP,UDP\tNETBIOS-SSN (NetBIOS Session Service)
+445/TCP,UDP\tMICROSOFT-DS — используется в Microsoft Windows 2000 и поздних версий для прямого TCP/IP-доступа без использования NetBIOS (например, в Active Directory)
+67/TCP,UDP   \tBOOTPS (Bootstrap Protocol Server) — для сервера, с которого выполняется загрузка бездисковых рабочих станций; также используется DHCP (Dynamic Host Configuration Protocol)
+68/TCP,UDP   \tBOOTPC (Bootstrap Protocol Client) — для клиентов бездисковых рабочих станций, загружающихся с сервера BOOTP; также используется DHCP (Dynamic Host Configuration Protocol)
+1900/UDP       \tMicrosoft SSDP Enables discovery of UPnP devices
+`
+                        },
+                    }
                 }
             },
             "Телевидение": {
-                phrases: {
-
-                }
+                phrases: {}
             },
             "Домофония": {
                 phrases: {
@@ -196,19 +216,13 @@ const phrases: StructuredData = {
     "Абонентские вопросы": {
         subcategories: {
             "Начисления": {
-                phrases: {
-
-                }
+                phrases: {}
             },
             "Акции": {
-                phrases: {
-
-                }
+                phrases: {}
             },
             "Тарифы": {
-                phrases: {
-
-                }
+                phrases: {}
             }
         }
     },
@@ -602,10 +616,10 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
     "Продажи": {
         subcategories: {
             "Декодеры": {
-                    phrases: {
-                        "Movix Model 2023": {
-                            default: {
-                                value: `Модель: Movix Model 2023
+                phrases: {
+                    "Movix Model 2023": {
+                        default: {
+                            value: `Модель: Movix Model 2023
 - Официальный Android TV 11
 - Голосовой поиск (Google Assistant)
 - Подключение устройств по Bluetooth
@@ -623,11 +637,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 6 200 ₽
 - В рассрочку:
 - 1 400 ₽/мес. на 6 месяцев (общая стоимость - 8 400 ₽)`
-                            }
-                        },
-                        "Movix Model 2021": {
-                            default: {
-                                value: `Модель: Movix Model 2021
+                        }
+                    },
+                    "Movix Model 2021": {
+                        default: {
+                            value: `Модель: Movix Model 2021
 - Официальный Android TV 11
 - Голосовой поиск (Google Assistant)
 - Подключение устройств по Bluetooth
@@ -644,11 +658,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 5 100 ₽
 - В рассрочку:
 - 980 ₽/мес. на 6 месяцев (общая стоимость - 5 880 ₽)`
-                            }
-                        },
-                        "Movix Go": {
-                            default: {
-                                value: `Модель: Movix Go
+                        }
+                    },
+                    "Movix Go": {
+                        default: {
+                            value: `Модель: Movix Go
 - Официальный Android TV 11
 - Голосовой поиск (Google Assistant)
 - Подключение устройств по Bluetooth
@@ -664,15 +678,15 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 5 590 ₽
 - В рассрочку:
 - 1080 ₽/мес. на 6 месяцев (общая стоимость - 6 480 ₽)`
-                            }
                         }
-                    },
+                    }
                 },
+            },
             "Роутеры": {
-                    phrases: {
-                        "TP-Link Archer EC220": {
-                            default: {
-                                value: `Модель: TP-Link Archer EC220
+                phrases: {
+                    "TP-Link Archer EC220": {
+                        default: {
+                            value: `Модель: TP-Link Archer EC220
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 300 Мбит/с на 2,4 ГГц, до 867 Мбит/с на 5 ГГц
 - Площадь покрытия: до 70 м2
@@ -686,11 +700,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 4 490 ₽
 - В рассрочку:
 - 825 ₽/мес. на 6 месяцев (общая стоимость - 4 950 ₽)`
-                            }
-                        },
-                        "TP-Link Archer EX220": {
-                            default: {
-                                value: `Модель: TP-Link Archer EX220
+                        }
+                    },
+                    "TP-Link Archer EX220": {
+                        default: {
+                            value: `Модель: TP-Link Archer EX220
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 574 Мбит/с на 2,4 ГГц, до 1201 Мбит/с на 5 ГГц
 - Площадь покрытия: до 80 м2
@@ -704,11 +718,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 6 800 ₽
 - В рассрочку:
 - 1 270 ₽/мес. на 6 месяцев (общая стоимость - 7 620 ₽)`
-                            }
-                        },
-                        "TP-Link Archer EX511": {
-                            default: {
-                                value: `Модель: TP-Link Archer EX511
+                        }
+                    },
+                    "TP-Link Archer EX511": {
+                        default: {
+                            value: `Модель: TP-Link Archer EX511
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 574 Мбит/с на 2,4 ГГц, до 1201 Мбит/с на 5 ГГц
 - Площадь покрытия: до 80 м2
@@ -722,11 +736,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 8 900 ₽
 - В рассрочку:
 - 1 650 ₽/мес. на 6 месяцев (общая стоимость - 9 900 ₽)`
-                            }
-                        },
-                        "TP-Link Archer AX55": {
-                            default: {
-                                value: `Модель: TP-Link Archer AX55
+                        }
+                    },
+                    "TP-Link Archer AX55": {
+                        default: {
+                            value: `Модель: TP-Link Archer AX55
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 574 Мбит/с на 2,4 ГГц, до 2402 Мбит/с на 5 ГГц
 - Площадь покрытия: до 80 м2
@@ -740,11 +754,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 8 900 ₽
 - В рассрочку:
 - 1 650 ₽/мес. на 6 месяцев (общая стоимость - 9 900 ₽)`
-                            }
-                        },
-                        "TP-Link Archer AX73": {
-                            default: {
-                                value: `Модель: TP-Link Archer AX73
+                        }
+                    },
+                    "TP-Link Archer AX73": {
+                        default: {
+                            value: `Модель: TP-Link Archer AX73
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 574 Мбит/с на 2,4 ГГц, до 4804 Мбит/с на 5 ГГц
 - Площадь покрытия: до 120 м2
@@ -759,11 +773,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В рассрочку:
 - 1 210 ₽/мес. на 12 месяцев (общая стоимость - 14 520 ₽)
 - 680 ₽/мес. на 24 месяца (общая стоимость - 16 320 ₽)`
-                            }
-                        },
-                        "D-Link DIR842/R7": {
-                            default: {
-                                value: `Модель: D-Link DIR-842/R7
+                        }
+                    },
+                    "D-Link DIR842/R7": {
+                        default: {
+                            value: `Модель: D-Link DIR-842/R7
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 300 Мбит/с на 2,4 ГГц, до 867 Мбит/с на 5 ГГц
 - Площадь покрытия: до 70 м2
@@ -777,11 +791,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 4 490 ₽
 - В рассрочку:
 - 825 ₽/мес. на 6 месяцев (общая стоимость - 4 950 ₽)`
-                            }
-                        },
-                        "D-Link DIR-X1530": {
-                            default: {
-                                value: `Модель: D-Link DIR-X1530
+                        }
+                    },
+                    "D-Link DIR-X1530": {
+                        default: {
+                            value: `Модель: D-Link DIR-X1530
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 300 Мбит/с на 2,4 ГГц, до 1201 Мбит/с на 5 ГГц
 - Площадь покрытия: до 80 м2
@@ -795,11 +809,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 5 990 ₽
 - В рассрочку:
 - 1 115 ₽/мес. на 6 месяцев (общая стоимость - 6 690 ₽)`
-                            }
-                        },
-                        "ASUS ROG Rapture GT-AX6000": {
-                            default: {
-                                value: `Модель: ROG Rapture GT-AX6000
+                        }
+                    },
+                    "ASUS ROG Rapture GT-AX6000": {
+                        default: {
+                            value: `Модель: ROG Rapture GT-AX6000
 - Скорость по кабелю: до 2500 Мбит/с
 - Скорость по Wi-Fi: до 1148 Мбит/с на 2,4 ГГц, до 4804 Мбит/с на 5 ГГц
 - Площадь покрытия: до 100 м2
@@ -809,11 +823,11 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 
 Стоимость:
 - В собственность - 28000 ₽`
-                            }
-                        },
-                        "Dom.ru Wave": {
-                            default: {
-                                value: `Модель: Wave
+                        }
+                    },
+                    "Dom.ru Wave": {
+                        default: {
+                            value: `Модель: Wave
 - Скорость по кабелю: до 1000 Мбит/с
 - Скорость по Wi-Fi: до 500 Мбит/с
 - Площадь покрытия: до 80 м2
@@ -826,15 +840,15 @@ https://dom.ru/faq/instruktsii-po-oborudovaniyu/pult-movix-pro-model-2021-go-202
 - В собственность - 4 990 ₽
 - В рассрочку:
 - 930 ₽/мес. на 6 месяцев (общая стоимость - 5 580 ₽)`
-                            }
                         }
                     }
                 }
+            }
         }
     }
 }
 
-export const GET: APIRoute = ({ request }) => {
+export const GET: APIRoute = ({request}) => {
     const url = new URL(request.url);
     const categoryName = url.searchParams.get("category");
     const subCategoryName = url.searchParams.get("subcategory");
@@ -844,7 +858,7 @@ export const GET: APIRoute = ({ request }) => {
 
     const filterAndAddToResult = (data: StructuredData, category: string, subcategory: string, phrase: string) => {
         if (!result[category]) {
-            result[category] = { badge: data[category].badge, subcategories: {} };
+            result[category] = {badge: data[category].badge, subcategories: {}};
         }
         if (!result[category].subcategories[subcategory]) {
             result[category].subcategories[subcategory] = {
@@ -887,6 +901,6 @@ export const GET: APIRoute = ({ request }) => {
     }
 
     return new Response(JSON.stringify(result), {
-        headers: { 'Content-Type': 'application/json' }
+        headers: {'Content-Type': 'application/json'}
     });
 };
