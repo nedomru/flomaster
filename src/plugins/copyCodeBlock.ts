@@ -21,7 +21,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 cursor: pointer;
                 opacity: 0;
                 transition: opacity 0.3s;
-                font-size: 110%;
+                font-size: 90%;
             }
             .ec-code-block:hover .ec-copy-button {
                 opacity: 1;
