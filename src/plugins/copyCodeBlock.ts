@@ -7,13 +7,13 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
         baseStyles: `
             .ec-code-block {
                 position: relative;
-                font-size: small;
+                font-size: 110%;
             }
             .ec-copy-button {
                 position: absolute;
                 top: 0.5em;
                 right: 0.5em;
-                background-color: rgba(0, 0, 0, 0.7);
+                background-color: #0073aa;
                 color: white;
                 border: none;
                 border-radius: 0.25em;
@@ -22,7 +22,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 cursor: pointer;
                 opacity: 0;
                 transition: opacity 0.3s;
-                font-size: small;
+                font-size: 110%;
             }
             .ec-code-block:hover .ec-copy-button {
                 opacity: 1;
