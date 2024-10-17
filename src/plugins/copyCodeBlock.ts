@@ -30,6 +30,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 background-color: rgba(0, 0, 0, 0.9);
             }
         `,
+        
         hooks: {
             postprocessRenderedBlock: ({codeBlock, renderData}) => {
                 const copyScript = `
