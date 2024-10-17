@@ -7,7 +7,6 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
         baseStyles: `
             .ec-code-block {
                 position: relative;
-                font-size: 110%;
                 cursor: pointer;
             }
             .ec-copy-button {
@@ -19,7 +18,6 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 border: none;
                 border-radius: 0.25em;
                 padding: 0.25em 0.5em;
-                font-size: 0.8em;
                 cursor: pointer;
                 opacity: 0;
                 transition: opacity 0.3s;
