@@ -42,6 +42,9 @@ export default defineConfig({
                     },
                 },
                 customCss: ["/src/styles/custom.css", "/src/styles/headings.css",],
+                tableOfContents: {
+                    maxHeadingLevel: 4
+                },
                 components: {
                     Header: '/src/overrides/CustomHeader.astro',
                     SocialIcons: './src/overrides/SocialIcons.astro',
