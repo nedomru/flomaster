@@ -1,0 +1,108 @@
+---
+import {z} from 'astro/zod';
+import {HYPERPING_STATUS_PAGE_URL} from 'astro:env/server';
+import {Icon} from '@astrojs/starlight/components';
+
+const Badge = z.object({
+    text: z.string(),
+    backgroundColor: z.string(),
+    textColor: z.string(),
+});
+
+const PhraseVariant = z.object({
+    value: z.string(),
+    badge: Badge.optional(),
+});
+
+const PhraseData = z.record(PhraseVariant.optional());
+
+const SubcategoryData = z.object({
+    badge: Badge.optional(),
+    phrases: z.record(PhraseData),
+});
+
+const CategoryData = z.object({
+    badge: Badge.optional(),
+    subcategories: z.record(SubcategoryData),
+});
+
+const StructuredData = z.record(CategoryData);
+
+type APIStatus = 'up' | 'неизвестно';
+
+let status: APIStatus = 'неизвестно';
+let categoryCount = 0;
+let subcategoryCount = 0;
+let phraseCount = 0;
+
+try {
+    const response = await fetch(new URL('/api/phrases', HYPERPING_STATUS_PAGE_URL));
+    if (!response.ok) throw new Error('Invalid response');
+    const data = StructuredData.parse(await response.json());
+
+    // Count categories, subcategories, and phrases
+    categoryCount = Object.keys(data).length;
+    Object.values(data).forEach(category => {
+        const subcategories = Object.values(category.subcategories);
+        subcategoryCount += subcategories.length;
+        subcategories.forEach(subcategory => {
+            phraseCount += Object.keys(subcategory.phrases).length;
+        });
+    });
+
+    status = phraseCount > 0 ? 'up' : 'неизвестно';
+} catch (error) {
+    console.error('Error fetching API status:', error);
+    // Keep the unknown status if the status cannot be retrieved.
+}
+
+const statusText = status === 'up'
+    ? `API работает. ${categoryCount} категории, ${subcategoryCount} подкатегорий, ${phraseCount} РМа`
+    : 'Неизвестно';
+---
+
+<span class:list={['api-status', status]} title={statusText}>
+    {status === 'up' ? (
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <circle r="5" cx="12" cy="12" fill="currentColor"/>
+            </svg>
+    ) : (
+            <Icon name="warning" size="0.75rem"/>
+    )}
+    <span class="sr-only">API status:</span>
+    {statusText}
+</span>
+
+<style>
+    .api-status {
+        align-items: center;
+        background-color: var(--sl-color-black);
+        border: 1px solid var(--sl-color-gray-5);
+        border-radius: 0.5rem;
+        color: var(--sl-color-gray-2);
+        display: flex;
+        font-size: var(--sl-text-sm);
+        gap: 0.3125rem;
+        padding: 0.125rem 0.625rem 0.125rem 0.375rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+    }
+
+    .up svg {
+        color: var(--sl-color-green);
+    }
+
+    :global([data-theme='light']) .up svg {
+        color: var(--sl-color-green-high);
+    }
+
+    .неизвестно svg {
+        color: var(--sl-color-orange);
+    }
+
+    :global([data-theme='light']) .неизвестно svg {
+        color: var(--sl-color-orange-high);
+    }
+</style>

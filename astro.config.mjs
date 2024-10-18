@@ -1,4 +1,4 @@
-import {defineConfig} from "astro/config";
+import {defineConfig, envField} from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
 import react from "@astrojs/react";
@@ -16,6 +16,14 @@ export default defineConfig({
     adapter: vercel({
         webAnalytics: {enabled: true}
     }),
+    experimental: {
+        serverIslands: true,
+        env: {
+            schema: {
+                HYPERPING_STATUS_PAGE_URL: envField.string({context: 'server', access: 'secret'}),
+            },
+        },
+    },
 
     site: "https://flomaster.chrsnv.ru",
     base: "/",
@@ -35,7 +43,8 @@ export default defineConfig({
                 },
                 customCss: ["/src/styles/custom.css", "/src/styles/headings.css",],
                 components: {
-                    Header: '/src/components/CustomHeader.astro',
+                    Header: '/src/overrides/CustomHeader.astro',
+                    SocialIcons: './src/overrides/SocialIcons.astro',
                 },
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
