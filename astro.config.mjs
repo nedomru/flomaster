@@ -2,8 +2,11 @@ import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
 
-import {reportErrorPlugin} from './src/plugins/reportError.ts';
-import {clickToCopyPlugin} from './src/plugins/copyCodeBlock.ts';
+import {reportErrorPlugin} from './src/plugins/reportError';
+import {clickToCopyPlugin} from './src/plugins/copyCodeBlock';
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import {rehypeHeadingIds} from "@astrojs/markdown-remark";
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -28,7 +31,7 @@ export default defineConfig({
                         lang: "ru",
                     },
                 },
-                customCss: ["/src/styles/custom.css"],
+                customCss: ["/src/styles/custom.css", "/src/styles/headings.css",],
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
                     telegram: "https://t.me/+jH1mblw0ytcwOWUy",
@@ -79,6 +82,7 @@ export default defineConfig({
                     baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
                 },
                 plugins: [],
+
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),
@@ -100,5 +104,11 @@ export default defineConfig({
                         },
                     },
                 }
-            })]
+            })],
+    markdown: {
+        rehypePlugins: [rehypeHeadingIds, [rehypeAutolinkHeadings,
+            {
+                behavior: 'wrap',
+            }]],
+    },
 });
