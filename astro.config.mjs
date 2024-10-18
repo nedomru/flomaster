@@ -83,6 +83,7 @@ export default defineConfig({
                             {slug: "chat-phrases/dialog/greetings"},
                             {slug: "chat-phrases/dialog/parting"},
                             {slug: "chat-phrases/dialog/selfservice"},
+                            {slug: "chat-phrases/dialog/fastchat"},
                             {slug: "chat-phrases/dialog/legal"},
                             {slug: "chat-phrases/dialog/negative"},
                         ],
