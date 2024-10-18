@@ -1,10 +1,12 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
+import react from "@astrojs/react";
+import tailwind from "@astrojs/tailwind";
+
 
 import {reportErrorPlugin} from './src/plugins/reportError';
 import {clickToCopyPlugin} from './src/plugins/copyCodeBlock';
-import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 
 
@@ -32,6 +34,9 @@ export default defineConfig({
                     },
                 },
                 customCss: ["/src/styles/custom.css", "/src/styles/headings.css",],
+                components: {
+                    Header: '/src/components/CustomHeader.astro',
+                },
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
                     telegram: "https://t.me/+jH1mblw0ytcwOWUy",
@@ -82,7 +87,6 @@ export default defineConfig({
                     baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
                 },
                 plugins: [],
-
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),
@@ -104,11 +108,15 @@ export default defineConfig({
                         },
                     },
                 }
-            })],
+            }),
+        react(),
+        tailwind(),
+    ],
+
     markdown: {
-        rehypePlugins: [rehypeHeadingIds, [rehypeAutolinkHeadings,
-            {
-                behavior: 'wrap',
-            }]],
+        rehypePlugins: [
+            rehypeHeadingIds,
+        ],
     },
+
 });

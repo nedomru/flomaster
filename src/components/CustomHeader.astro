@@ -1,0 +1,78 @@
+---
+import Header from '@astrojs/starlight/components/Header.astro';
+---
+
+<Header/>
+
+<script>
+    function copyLinkToClipboard(id, button) {
+        const url = new URL(window.location);
+        const decodedHeaderID = decodeURIComponent(id)
+        const decoded_url = decodeURIComponent(url)
+
+        navigator.clipboard.writeText(`${decoded_url}#${decodedHeaderID}`).then(() => {
+            button.textContent = '✓';
+            button.classList.add('text-green-500');
+            setTimeout(() => {
+                button.textContent = '🔗';
+                button.classList.remove('text-green-500');
+            }, 1000);
+        }).catch(err => {
+            console.error('Failed to copy: ', err);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('h1[id], h2[id], h3[id], h4[id], h5[id], h6[id]').forEach((heading) => {
+            if (heading.id === '_top') return; // Skip headers with id "_top"
+
+            const button = document.createElement('button');
+            button.textContent = '🔗';
+            button.className = 'header-link-button text-xs focus:outline-none transition-all duration-300 ease-in-out ml-2';
+            button.style.opacity = '0';
+            button.style.transform = 'translateX(5px)';
+            button.setAttribute('aria-label', 'Copy link to section');
+            button.onclick = (e) => {
+                e.preventDefault();
+                copyLinkToClipboard(heading.id, button);
+            };
+
+            // Create a wrapper span for the header content
+            const wrapper = document.createElement('span');
+            wrapper.className = 'header-content-wrapper flex items-center';
+
+            // Move the header's content into the wrapper
+            while (heading.firstChild) {
+                wrapper.appendChild(heading.firstChild);
+            }
+
+            // Append the button to the wrapper
+            wrapper.appendChild(button);
+
+            // Add the wrapper back to the heading
+            heading.appendChild(wrapper);
+
+            heading.addEventListener('mouseenter', () => {
+                button.style.opacity = '1';
+                button.style.transition = 'opacity 0.3s ease';
+            });
+
+            heading.addEventListener('mouseleave', () => {
+                button.style.opacity = '0';
+                button.style.transition = 'opacity 0.3s ease';
+            });
+        });
+    });
+</script>
+
+<style>
+    .header-link-button {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .header-content-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+</style>
