@@ -58,7 +58,7 @@ try {
 
 const statusText = status === 'up'
     ? `API работает. ${categoryCount} категории, ${subcategoryCount} подкатегорий, ${phraseCount} РМа`
-    : 'Неизвестно';
+    : 'Статус API неизвестен';
 ---
 
 <span class:list={['api-status', status]} title={statusText}>
