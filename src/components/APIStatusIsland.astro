@@ -1,6 +1,5 @@
 ---
 import {z} from 'astro/zod';
-import {HYPERPING_STATUS_PAGE_URL} from 'astro:env/server';
 import {Icon} from '@astrojs/starlight/components';
 
 const Badge = z.object({
@@ -36,7 +35,7 @@ let subcategoryCount = 0;
 let phraseCount = 0;
 
 try {
-    const response = await fetch(new URL('/api/phrases', HYPERPING_STATUS_PAGE_URL));
+    const response = await fetch(new URL('/api/phrases', import.meta.env.HYPERPING_STATUS_PAGE_URL));
     if (!response.ok) throw new Error('Invalid response');
     const data = StructuredData.parse(await response.json());
 
