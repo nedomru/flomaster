@@ -16,17 +16,16 @@ export default defineConfig({
     adapter: vercel({
         webAnalytics: {enabled: true}
     }),
-    experimental: {
-        serverIslands: true,
-        env: {
-            schema: {
-                HYPERPING_STATUS_PAGE_URL: envField.string({context: 'server', access: 'secret'}),
-            },
-        },
-    },
 
     site: "https://flomaster.chrsnv.ru",
     base: "/",
+
+    vite: {
+        define: {
+            'import.meta.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
+            'import.meta.env.SUPABASE_SERVICE_ROLE_KEY': JSON.stringify(process.env.SUPABASE_SERVICE_ROLE_KEY),
+        },
+    },
 
     integrations: [
         starlight(
@@ -47,7 +46,6 @@ export default defineConfig({
                 },
                 components: {
                     Header: '/src/overrides/CustomHeader.astro',
-                    SocialIcons: './src/overrides/SocialIcons.astro',
                 },
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",

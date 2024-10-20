@@ -1,0 +1,47 @@
+---
+import {supabase} from '../../lib/supabase';
+import APIManager from '../../components/APIManager';
+
+const {data: {session}} = await supabase.auth.getSession();
+
+console.log('Server-side session check:', session);
+---
+
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Менеджер API</title>
+</head>
+<body class="bg-gray-900 text-white">
+<div id="content" style="display: none;">
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold mb-4 text-center">Менеджер API</h1>
+        <APIManager client:only="react"/>
+        <div class="text-center mt-8">
+            <a href="/admin" class="text-blue-400 hover:underline">Вернуться в Админ-панель</a>
+        </div>
+    </div>
+</div>
+<div id="loading" class="flex justify-center items-center h-screen">
+    <p>Загрузка...</p>
+</div>
+<script>
+    import {supabase} from '../../lib/supabase';
+
+    async function checkAuth() {
+        const {data: {session}} = await supabase.auth.getSession();
+        console.log('Client-side session check:', session);
+
+        if (session) {
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        } else {
+            window.location.href = '/admin';
+        }
+    }
+
+    checkAuth();
+</script>
+</body>
+</html>
