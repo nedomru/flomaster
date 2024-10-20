@@ -1,4 +1,3 @@
-import React, {useState, useEffect} from 'react';
 import {Disclosure} from '@headlessui/react';
 import {ChevronUpIcon} from '@heroicons/react/24/solid';
 import {supabase} from "@/lib/supabase";
@@ -66,7 +65,6 @@ const APIManager = () => {
       const response = await fetch('/api/phrases', {
         method: 'PUT',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({id, phrase_value: editedPhraseValue, edited_by: userEmail, last_edit_time: currentTime}),
       });
       await response.json();
       setEditingPhraseId(null);
@@ -190,7 +188,6 @@ const APIManager = () => {
                                     </Disclosure.Button>
                                     <Disclosure.Panel className="px-4 pt-4 pb-2 text-gray-300">
                                       {phrases.map((phrase) => (
-                                          <div key={phrase.id} className="bg-gray-800 p-4 rounded mb-2">
                                             <p className="text-gray-300 mb-2">{phrase.phrase_key}</p>
                                             {editingPhraseId === phrase.id ? (
                                                 <div>
