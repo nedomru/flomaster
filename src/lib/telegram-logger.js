@@ -3,14 +3,6 @@ import {createHash} from 'crypto';
 const TELEGRAM_BOT_TOKEN = import.meta.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.TELEGRAM_CHAT_ID;
 
-const TOPICS = {
-    GET: 3,
-    POST: 3,
-    PUT: 3,
-    DELETE: 3,
-    ERROR: 3
-};
-
 async function sendToTelegram(message, topicId) {
     const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
     const body = JSON.stringify({
@@ -34,22 +26,29 @@ async function sendToTelegram(message, topicId) {
     }
 }
 
-export function logToTelegram(action, data, error = null) {
-    const topic = TOPICS[action] || TOPICS.ERROR;
-    const timestamp = new Date().toISOString();
-    let message = `<b>[${action}]</b> ${timestamp}\n\n`;
+export function logToTelegram(options) {
+    const {
+        notificationName,
+        type,
+        message,
+        data,
+        topicId,
+        successStatus,
+        sensitiveKeys = ['phrase_value', 'password', 'token']
+    } = options;
 
-    if (error) {
-        message += `<b>Error:</b> ${error.message}\n\n`;
-    }
+    const timestamp = new Date().toISOString();
+    let fullMessage = `<b>[${notificationName}]</b>
+<b>Тип запроса</b>: ${type}
+<b>Статус</b>: ${successStatus === true ? "✅️ ОК" : "❌ Ошибка"}
+<b>Сообщение</b>: ${message}
+
+<i>Время события: ${timestamp}\n</i>`;
 
     if (data) {
-        const safeData = JSON.parse(JSON.stringify(data));
-        if (safeData.phrase_value) {
-            safeData.phrase_value = createHash('sha256').update(safeData.phrase_value).digest('hex');
-        }
-        message += `<pre>${JSON.stringify(safeData, null, 2)}</pre>`;
+        const jsonData = JSON.parse(JSON.stringify(data));
+        fullMessage += `<pre>${JSON.stringify(jsonData, null, 2)}</pre>`;
     }
 
-    sendToTelegram(message, topic);
+    sendToTelegram(fullMessage, topicId);
 }

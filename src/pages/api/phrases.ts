@@ -2,6 +2,12 @@ import type {APIRoute} from 'astro';
 import {supabase} from '../../lib/supabase';
 import {logToTelegram} from '../../lib/telegram-logger';
 
+// Define your custom topic IDs
+const TOPIC_IDS = {
+    PHRASES_OPS: 3,  // For general phrase operations
+    ERRORS: 89,       // For all errors
+};
+
 export const GET: APIRoute = async ({request}) => {
   const {data: phrases, error} = await supabase
       .from('phrases')
@@ -9,14 +15,27 @@ export const GET: APIRoute = async ({request}) => {
       .order('id', {ascending: true});
 
   if (error) {
-    logToTelegram('GET', null, error);
+      logToTelegram({
+          notificationName: 'Получить список РМов',
+          message: 'Ошибка получения РМов',
+          successStatus: false,
+          type: "🙋🏻‍♂️ GET",
+          data: {error: error.message},
+          topicId: TOPIC_IDS.ERRORS
+      });
     return new Response(JSON.stringify({error: error.message}), {
       status: 500,
       headers: {'Content-Type': 'application/json'},
     });
   }
 
-  logToTelegram('GET', {count: phrases.length});
+    logToTelegram({
+        notificationName: 'Получить список РМов',
+        message: 'Список РМов успешно выгружен из Supabase',
+        successStatus: true,
+        type: "🙋🏻‍♂️ GET",
+        topicId: TOPIC_IDS.PHRASES_OPS
+    });
   return new Response(JSON.stringify(phrases), {
     status: 200,
     headers: {'Content-Type': 'application/json'},
@@ -38,14 +57,28 @@ export const POST: APIRoute = async ({request}) => {
   ]);
 
   if (error) {
-    logToTelegram('POST', {category, subcategory, phrase_key}, error);
+      logToTelegram({
+          notificationName: 'Создание РМа',
+          message: 'Ошибка при создании РМа',
+          successStatus: false,
+          type: "📝 POST",
+          data: {category, subcategory, phrase_key, phrase_value, created_by, error: error.message},
+          topicId: TOPIC_IDS.ERRORS
+      });
     return new Response(JSON.stringify({error: error.message}), {
       status: 500,
       headers: {'Content-Type': 'application/json'},
     });
   }
 
-  logToTelegram('POST', {category, subcategory, phrase_key});
+    logToTelegram({
+        notificationName: 'Создание РМа',
+        message: 'Новый РМ успешно создан',
+        successStatus: true,
+        type: "📝 POST",
+        data: {category, subcategory, phrase_key, phrase_value, created_by},
+        topicId: TOPIC_IDS.PHRASES_OPS
+    });
   return new Response(JSON.stringify(data), {
     status: 201,
     headers: {'Content-Type': 'application/json'},
@@ -61,14 +94,28 @@ export const PUT: APIRoute = async ({request}) => {
       .eq('id', id);
 
   if (error) {
-    logToTelegram('PUT', {id, category, subcategory, phrase_key}, error);
+      logToTelegram({
+          notificationName: 'Обновление РМа',
+          message: 'Ошибка обновления РМа',
+          successStatus: false,
+          type: "✏️ PUT",
+          data: {id, category, subcategory, phrase_key, phrase_value, edited_by, error: error.message},
+          topicId: TOPIC_IDS.ERRORS
+      });
     return new Response(JSON.stringify({error: error.message}), {
       status: 500,
       headers: {'Content-Type': 'application/json'},
     });
   }
 
-  logToTelegram('PUT', {id, category, subcategory, phrase_key});
+    logToTelegram({
+        notificationName: 'Обновление РМа',
+        message: 'РМ успешно обновлен',
+        successStatus: true,
+        type: "✏️ PUT",
+        data: {id, category, subcategory, phrase_key, phrase_value, edited_by, last_edit_time},
+        topicId: TOPIC_IDS.PHRASES_OPS
+    });
   return new Response(JSON.stringify(data), {
     status: 200,
     headers: {'Content-Type': 'application/json'},
@@ -81,14 +128,28 @@ export const DELETE: APIRoute = async ({request}) => {
   const {data, error} = await supabase.from('phrases').delete().eq('id', id);
 
   if (error) {
-    logToTelegram('DELETE', {id}, error);
+      logToTelegram({
+          notificationName: 'Удаление РМа',
+          message: 'Ошибка удаления РМа',
+          successStatus: false,
+          type: "🗑️ DELETE",
+          data: {id, error: error.message},
+          topicId: TOPIC_IDS.ERRORS
+      });
     return new Response(JSON.stringify({error: error.message}), {
       status: 500,
       headers: {'Content-Type': 'application/json'},
     });
   }
 
-  logToTelegram('DELETE', {id});
+    logToTelegram({
+        notificationName: 'Удаление РМа',
+        message: 'РМ успешно удален',
+        successStatus: true,
+        type: "🗑️ DELETE",
+        data: {id,},
+        topicId: TOPIC_IDS.PHRASES_OPS
+    });
   return new Response(JSON.stringify(data), {
     status: 200,
     headers: {'Content-Type': 'application/json'},
