@@ -1,5 +1,6 @@
 ---
 import {supabase} from '../../lib/supabase';
+import APIManager from '../../components/APIManager';
 
 const {data: {session}} = await supabase.auth.getSession();
 
@@ -15,9 +16,11 @@ console.log('Server-side session check:', session);
 <body class="bg-gray-900 text-white">
 <div id="content" style="display: none;">
     <div class="container mx-auto p-8">
-        <h1 class="text-3xl font-bold mb-4">Менеджер API</h1>
-        <p>Это панель управления API. Здесь будет функционал для управления API (Supabase related).</p>
-        <a href="/admin" class="text-blue-400 hover:underline">Вернуться в Админ-панель</a>
+        <h1 class="text-3xl font-bold mb-4 text-center">Менеджер API</h1>
+        <APIManager client:only="react"/>
+        <div class="text-center mt-8">
+            <a href="/admin" class="text-blue-400 hover:underline">Вернуться в Админ-панель</a>
+        </div>
     </div>
 </div>
 <div id="loading" class="flex justify-center items-center h-screen">
