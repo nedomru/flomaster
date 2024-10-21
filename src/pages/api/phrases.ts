@@ -51,19 +51,26 @@ export const POST: APIRoute = async ({request}) => {
             subcategory,
             phrase_key,
             phrase_value,
-            tag,
+            tag: tag === "" ? "default" : tag,
             created_by,
             last_edit_time
         },
     ]);
-
     if (error) {
         logToTelegram({
             notificationName: 'Создание РМа',
             message: 'Ошибка при создании РМа',
             successStatus: false,
             type: "📝 POST",
-            data: {category, subcategory, phrase_key, phrase_value, tag, created_by, error: error.message},
+            data: {
+                category,
+                subcategory,
+                phrase_key,
+                phrase_value,
+                tag: tag === "" ? "default" : tag,
+                created_by,
+                error: error.message
+            },
             topicId: TOPIC_IDS.ERRORS
         });
         return new Response(JSON.stringify({error: error.message}), {
