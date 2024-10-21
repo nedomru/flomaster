@@ -9,6 +9,7 @@ const APIManager = () => {
   const [newSubcategory, setNewSubcategory] = useState('');
   const [newPhraseKey, setNewPhraseKey] = useState('');
   const [newPhraseValue, setNewPhraseValue] = useState('');
+  const [newPhraseTag, setNewPhraseTag] = useState(''); // New state for tag
   const [editingPhraseId, setEditingPhraseId] = useState(null);
   const [editedPhraseValue, setEditedPhraseValue] = useState('');
 
@@ -41,6 +42,7 @@ const APIManager = () => {
           subcategory: newSubcategory,
           phrase_key: newPhraseKey,
           phrase_value: newPhraseValue,
+          tag: newPhraseTag, // Add tag to the request
           created_by: userEmail,
           last_edit_time: currentTime,
         }),
@@ -50,6 +52,7 @@ const APIManager = () => {
       setNewSubcategory('');
       setNewPhraseKey('');
       setNewPhraseValue('');
+      setNewPhraseTag('');
       await fetchPhrases();
     } catch (error) {
       console.error('Ошибка добавления РМа:', error);
@@ -110,58 +113,75 @@ const APIManager = () => {
   }, {});
 
   return (
-      <div className="max-w-4xl mx-auto">
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-4">Добавить новый РМ</h2>
-          <div className="mb-4">
-            <label htmlFor="category" className="block mb-2">
-              Категория:
-            </label>
-            <input
-                type="text"
-                id="category"
-                className="w-full p-2 bg-gray-800 text-white rounded"
-                value={newCategory}
-                onChange={(e) => setNewCategory(e.target.value)}
-            />
+      <div className="max-w-4xl mx-auto p-6">
+        <div className="mb-8 bg-gray-800 p-6 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-4 text-white">Добавить новый РМ</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label htmlFor="category" className="block mb-2 text-sm font-medium text-gray-300">
+                Категория:
+              </label>
+              <input
+                  type="text"
+                  id="category"
+                  className="w-full p-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                  value={newCategory}
+                  onChange={(e) => setNewCategory(e.target.value)}
+              />
+            </div>
+            <div>
+              <label htmlFor="subcategory" className="block mb-2 text-sm font-medium text-gray-300">
+                Подкатегория:
+              </label>
+              <input
+                  type="text"
+                  id="subcategory"
+                  className="w-full p-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                  value={newSubcategory}
+                  onChange={(e) => setNewSubcategory(e.target.value)}
+              />
+            </div>
           </div>
-          <div className="mb-4">
-            <label htmlFor="subcategory" className="block mb-2">
-              Подкатегория:
-            </label>
-            <input
-                type="text"
-                id="subcategory"
-                className="w-full p-2 bg-gray-800 text-white rounded"
-                value={newSubcategory}
-                onChange={(e) => setNewSubcategory(e.target.value)}
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="phraseKey" className="block mb-2">
+          <div className="mt-4">
+            <label htmlFor="phraseKey" className="block mb-2 text-sm font-medium text-gray-300">
               Ключ:
             </label>
             <input
                 type="text"
                 id="phraseKey"
-                className="w-full p-2 bg-gray-800 text-white rounded"
+                className="w-full p-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
                 value={newPhraseKey}
                 onChange={(e) => setNewPhraseKey(e.target.value)}
             />
           </div>
-          <div className="mb-4">
-            <label htmlFor="phraseValue" className="block mb-2">
+          <div className="mt-4">
+            <label htmlFor="phraseValue" className="block mb-2 text-sm font-medium text-gray-300">
               Текст РМа:
             </label>
             <textarea
                 id="phraseValue"
-                className="w-full p-2 bg-gray-800 text-white rounded"
+                className="w-full p-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
                 rows={4}
                 value={newPhraseValue}
                 onChange={(e) => setNewPhraseValue(e.target.value)}
             ></textarea>
           </div>
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded" onClick={addPhrase}>
+          <div className="mt-4">
+            <label htmlFor="phraseTag" className="block mb-2 text-sm font-medium text-gray-300">
+              Тег (необязательно):
+            </label>
+            <input
+                type="text"
+                id="phraseTag"
+                className="w-full p-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-blue-500"
+                value={newPhraseTag}
+                onChange={(e) => setNewPhraseTag(e.target.value)}
+            />
+          </div>
+          <button
+              className="mt-6 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md transition duration-300 ease-in-out"
+              onClick={addPhrase}
+          >
             Добавить РМ
           </button>
         </div>
