@@ -153,15 +153,22 @@ const APIManager = () => {
     }
   };
 
-  const deletePhrase = async (id) => {
+  const deletePhrase = async (id, category, subcategory, phrase_key, phrase_value, tag) => {
     if (window.confirm('Ты уверен, что хочешь удалить РМ?')) {
       try {
         await fetch('/api/phrases', {
           method: 'DELETE',
           headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({id}),
-        });
-        fetchPhrases();
+          body: JSON.stringify({
+            id: id,
+            category: category,
+            subcategory: subcategory,
+            phrase_key: phrase_key,
+            phrase_value: phrase_value,
+            tag: tag
+          })
+        })
+        await fetchPhrases();
       } catch (error) {
         console.error('Ошибка удаления РМа:', error);
       }
@@ -410,7 +417,7 @@ const APIManager = () => {
                                                           </button>
                                                           <button
                                                               className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded transition-colors duration-300"
-                                                              onClick={() => deletePhrase(phrase.id)}
+                                                              onClick={() => deletePhrase(phrase.id, phrase.phrase_category, phrase.phrase_subcategory, phrase.phrase_key, phrase.phrase_value, phrase.tag)}
                                                           >
                                                             Удалить
                                                           </button>

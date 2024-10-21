@@ -131,7 +131,7 @@ export const PUT: APIRoute = async ({request}) => {
 };
 
 export const DELETE: APIRoute = async ({request}) => {
-    const {id} = await request.json();
+    const {id, category, subcategory, phrase_key, phrase_value, tag} = await request.json();
 
     const {data, error} = await supabase.from('phrases').delete().eq('id', id);
 
@@ -141,7 +141,7 @@ export const DELETE: APIRoute = async ({request}) => {
             message: 'Ошибка удаления РМа',
             successStatus: false,
             type: "🗑️ DELETE",
-            data: {id, error: error.message},
+            data: {id, category, subcategory, phrase_key, phrase_value, tag, error: error.message},
             topicId: TOPIC_IDS.ERRORS
         });
         return new Response(JSON.stringify({error: error.message}), {
@@ -155,7 +155,7 @@ export const DELETE: APIRoute = async ({request}) => {
         message: 'РМ успешно удален',
         successStatus: true,
         type: "🗑️ DELETE",
-        data: {id,},
+        data: {id, category, subcategory, phrase_key, phrase_value, tag},
         topicId: TOPIC_IDS.PHRASES_OPS
     });
     return new Response(JSON.stringify(data), {
