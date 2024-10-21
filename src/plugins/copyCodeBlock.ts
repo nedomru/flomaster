@@ -7,7 +7,9 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
         baseStyles: `
             .ec-code-block {
                 position: relative;
-                cursor: pointer;
+            }
+            .ec-code-block pre{
+                cursor: crosshair;
             }
             .ec-copy-button {
                 position: absolute;
@@ -18,7 +20,6 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 border: none;
                 border-radius: 0.25em;
                 padding: 0.25em 0.5em;
-                cursor: pointer;
                 opacity: 0;
                 transition: opacity 0.3s;
                 font-size: 90%;
@@ -30,7 +31,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 background-color: rgba(0, 0, 0, 0.9);
             }
         `,
-        
+
         hooks: {
             postprocessRenderedBlock: ({codeBlock, renderData}) => {
                 const copyScript = `
