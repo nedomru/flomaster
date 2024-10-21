@@ -2,9 +2,23 @@
 title: Настройка | Роутеры
 ---
 
-import {Tabs, TabItem} from "@astrojs/starlight/components";
+import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 
 ### Dom.ru Wave
+<CardGrid>
+    <LinkCard
+        title="TP-Link в БЗ"
+        href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2312"
+        target="_blank"
+        description="Открыть инструкции TP-Link в базе знаний"
+    />
+    <LinkCard
+        title="TP-Link на сайте"
+        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__TPLink"
+        target="_blank"
+        description="Открыть инструкции TP-Link на сайте"
+    />
+</CardGrid>
 #### Настройка соединения
 <Tabs>
     <TabItem label="DHCP">
@@ -75,6 +89,21 @@ import {Tabs, TabItem} from "@astrojs/starlight/components";
 ```
 
 ### TP-Link
+<CardGrid>
+    <LinkCard
+        title="TP-Link в БЗ"
+        href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2312"
+        target="_blank"
+        description="Открыть инструкции TP-Link в базе знаний"
+    />
+    <LinkCard
+        title="TP-Link на сайте"
+        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__TPLink"
+        target="_blank"
+        description="Открыть инструкции TP-Link на сайте"
+    />
+</CardGrid>
+
 #### Быстрая настройка
 <Tabs>
     <TabItem label="DHCP">
@@ -117,3 +146,4 @@ import {Tabs, TabItem} from "@astrojs/starlight/components";
 В открывшихся настройках выберите порт LAN для подключения VoIP-шлюза и созданное до этого Bridge-соединение
 Также нужно задать имя для группы портов (например VoIP). Затем сохраните настройки
 ```
+
