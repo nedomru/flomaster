@@ -66,6 +66,7 @@ export default defineConfig({
                             {slug: "chat-phrases/tech/television"},
                             {slug: "chat-phrases/tech/intercom"},
                             {slug: "chat-phrases/tech/applications"},
+                            {slug: "chat-phrases/tech/accidents"},
                         ],
                     },
                     {
