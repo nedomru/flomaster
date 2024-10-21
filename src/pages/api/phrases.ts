@@ -29,13 +29,13 @@ export const GET: APIRoute = async ({request}) => {
         });
     }
 
-    logToTelegram({
-        notificationName: 'Получить список РМов',
-        message: 'Список РМов успешно выгружен из Supabase',
-        successStatus: true,
-        type: "🙋🏻‍♂️ GET",
-        topicId: TOPIC_IDS.PHRASES_OPS
-    });
+    // logToTelegram({
+    //     notificationName: 'Получить список РМов',
+    //     message: 'Список РМов успешно выгружен из Supabase',
+    //     successStatus: true,
+    //     type: "🙋🏻‍♂️ GET",
+    //     topicId: TOPIC_IDS.PHRASES_OPS
+    // });
     return new Response(JSON.stringify(phrases), {
         status: 200,
         headers: {'Content-Type': 'application/json'},
