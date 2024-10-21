@@ -1,4 +1,4 @@
-import {defineConfig, envField} from "astro/config";
+import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
 import react from "@astrojs/react";
@@ -62,7 +62,14 @@ export default defineConfig({
                     {
                         label: "🛠️Технические вопросы",
                         items: [
-                            {slug: "chat-phrases/tech/internet"},
+                            {
+                                label: "Интернет", items:
+                                    [
+                                        {slug: "chat-phrases/tech/internet/internet-base"},
+                                        {slug: "chat-phrases/tech/internet/internet-setup"},
+                                        {slug: "chat-phrases/tech/internet/internet-cmd"}
+                                    ]
+                            },
                             {slug: "chat-phrases/tech/television"},
                             {slug: "chat-phrases/tech/intercom"},
                             {slug: "chat-phrases/tech/applications"},
