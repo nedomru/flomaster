@@ -8,7 +8,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
             .ec-code-block {
                 position: relative;
             }
-            .ec-code-block pre{
+            .ec-code-block pre {
                 cursor: crosshair;
             }
             .ec-copy-button {
@@ -23,12 +23,10 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 opacity: 0;
                 transition: opacity 0.3s;
                 font-size: 90%;
+                pointer-events: none;
             }
             .ec-code-block:hover .ec-copy-button {
                 opacity: 1;
-            }
-            .ec-copy-button:hover {
-                background-color: rgba(0, 0, 0, 0.9);
             }
         `,
 
@@ -37,26 +35,26 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                 const copyScript = `
                     (function() {
                         const container = document.currentScript.parentElement;
+                        const preElement = container.querySelector('pre');
                         const copyButton = container.querySelector('.ec-copy-button');
                         
                         function copyToClipboard(text, isFullBlock) {
                             navigator.clipboard.writeText(text).then(() => {
                                 const originalText = copyButton.textContent;
                                 copyButton.textContent = isFullBlock ? 'Скопировал полностью' : 'Скопировал часть';
+                                copyButton.style.opacity = '1';
                                 setTimeout(() => {
                                     copyButton.textContent = originalText;
+                                    if (!preElement.matches(':hover')) {
+                                        copyButton.style.opacity = '0';
+                                    }
                                 }, 2000);
                             }).catch(err => {
                                 console.error('Failed to copy: ', err);
                             });
                         }
                         
-                        container.addEventListener('click', (event) => {
-                            if (event.target === copyButton || event.target.closest('.actions')) {
-                                return;
-                            }
-                            
-                            event.preventDefault();
+                        preElement.addEventListener('click', (event) => {
                             const selectedText = window.getSelection().toString();
                             if (selectedText) {
                                 copyToClipboard(selectedText, false);
@@ -65,9 +63,21 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                             }
                         });
 
-                        copyButton.addEventListener('click', (event) => {
-                            event.preventDefault();
-                            copyToClipboard(${JSON.stringify(codeBlock.code)}, true);
+                        preElement.addEventListener('mouseover', () => {
+                            copyButton.style.opacity = '1';
+                        });
+
+                        preElement.addEventListener('mouseout', () => {
+                            if (copyButton.textContent === 'Нажми чтобы скопировать') {
+                                copyButton.style.opacity = '0';
+                            }
+                        });
+
+                        // Prevent text selection when double-clicking
+                        preElement.addEventListener('mousedown', (e) => {
+                            if (e.detail > 1) { // Check for double-click
+                                e.preventDefault();
+                            }
                         });
                     })();
                 `;
