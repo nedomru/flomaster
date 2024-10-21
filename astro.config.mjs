@@ -5,8 +5,9 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 
 
-import {reportErrorPlugin} from './src/plugins/reportError';
-import {clickToCopyPlugin} from './src/plugins/copyCodeBlock';
+import {reportErrorPlugin} from '/src/plugins/reportError';
+import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
+import {codePhotoPlugin} from "/src/plugins/codeShowPhoto";
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 
 
@@ -102,6 +103,7 @@ export default defineConfig({
                     plugins: [
                         reportErrorPlugin(),
                         clickToCopyPlugin(),
+                        codePhotoPlugin(),
                         {
                             name: 'Hide copy button',
                             baseStyles: `

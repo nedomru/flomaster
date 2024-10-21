@@ -1,5 +1,5 @@
 import type {ExpressiveCodePlugin} from 'astro-expressive-code';
-import {h} from '@expressive-code/core/hast'
+import {h} from '@expressive-code/core/hast';
 
 export function reportErrorPlugin(): ExpressiveCodePlugin {
     return {
@@ -10,10 +10,14 @@ export function reportErrorPlugin(): ExpressiveCodePlugin {
         font-size: var(--sl-text-xs);
         justify-content: flex-end;
         padding-inline: 0.5em;
-
-        & a {
-          color: var(--sl-color-gray-3);
-        }
+      }
+      .actions a {
+        color: var(--sl-color-gray-3);
+        margin-left: 1em;
+        text-decoration: none;
+      }
+      .actions a:hover {
+        text-decoration: underline;
       }
     `,
         hooks: {
@@ -34,11 +38,13 @@ ${codeBlock.code}
 
                 renderData.blockAst = h('div', [
                     renderData.blockAst,
-                    h(
-                        'div',
-                        {class: 'actions'},
-                        h('a', {href: url.toString()}, 'Сообщить об ошибке')
-                    ),
+                    h('div', {class: 'actions'},
+                        h('a', {
+                            href: url.toString(),
+                            target: '_blank',
+                            rel: 'noopener noreferrer'
+                        }, 'Сообщить об ошибке')
+                    )
                 ]);
             },
         },
