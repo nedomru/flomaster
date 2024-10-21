@@ -5,20 +5,7 @@ title: Настройка | Роутеры
 import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 
 ### Dom.ru Wave
-<CardGrid>
-    <LinkCard
-        title="TP-Link в БЗ"
-        href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2312"
-        target="_blank"
-        description="Открыть инструкции TP-Link в базе знаний"
-    />
-    <LinkCard
-        title="TP-Link на сайте"
-        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__TPLink"
-        target="_blank"
-        description="Открыть инструкции TP-Link на сайте"
-    />
-</CardGrid>
+
 #### Настройка соединения
 <Tabs>
     <TabItem label="DHCP">
@@ -104,7 +91,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     />
 </CardGrid>
 
-#### Быстрая настройка
+#### Настройка соединения
 <Tabs>
     <TabItem label="DHCP">
         ```txt
@@ -163,7 +150,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     />
 </CardGrid>
 
-#### Быстрая настройка
+#### Настройка соединения
 <Tabs>
     <TabItem label="DHCP">
         ```txt
@@ -226,7 +213,6 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 Далее нажмите "Применить"
 ```
 
-
 #### Включение IGMP
 ```txt
 Слева, в разделе "Дополнительные настройки, выберите пункт "Локальная сеть"
@@ -253,4 +239,70 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 - IP-адрес видимой станции - установите в IP конечного устройства.
 
 Далее нажмите "Применить"
+```
+
+### D-Link
+<CardGrid>
+    <LinkCard
+        title="D-Link в БЗ"
+        href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2275"
+        target="_blank"
+        description="Открыть инструкции D-Link в базе знаний"
+    />
+    <LinkCard
+        title="D-Link на сайте"
+        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__DLink"
+        target="_blank"
+        description="Открыть инструкции D-Link на сайте"
+    />
+</CardGrid>
+
+#### Настройка соединения
+<Tabs>
+    <TabItem label="DHCP">
+        ```txt
+        1. Слева выберите раздел "Настройка соединений", в нем откройте подкатегорию "WAN";
+        2. Посередине выберите "Расширенный режим". Откроется список соединений, удалите все подключения и нажмите
+        кнопку "Добавить";
+        3. В разделе Основные настройки смените тип соединения на Динамический IPv4
+
+        Затем нажмите Применить
+        ```
+    </TabItem>
+    <TabItem label="PPPoE">
+        ```txt
+        1. Слева выберите раздел "Настройка соединений", в нем откройте подкатегорию "WAN";
+        2. Посередине выберите "Расширенный режим". Откроется список соединений, удалите все подключения и нажмите
+        кнопку "Добавить";
+        3. Заполните следующие поля:
+        - Тип соединения - PPPoE;
+        - Клонировать MAC-адрес - Выключено;
+        - Без авторизации - Выключено.
+
+        Имя пользователя и пароль введите по договору
+        Затем нажмите Применить
+        ```
+    </TabItem>
+    <TabItem label="Static IP">
+        ```txt
+        1. Слева выберите раздел "Настройка соединений", в нем откройте подкатегорию "WAN";
+        2. Посередине выберите "Расширенный режим". Откроется список соединений, удалите все подключения и нажмите
+        кнопку "Добавить";
+        3. Заполните следующие поля:
+        - Тип соединения - Статический IPv4;
+        - Клонировать MAC-адрес - Выключено;
+        - Без авторизации - Выключено.
+
+        IP-адрес, маску, шлюз и DNS введите по договору
+        Затем нажмите Применить
+        ```
+    </TabItem>
+</Tabs>
+
+#### ALG / VPN pass through
+```txt
+Необходимо перейти в раздел "Дополнительно", затем перейти в раздел "ALG/Passthrough"
+В данном разделе нужно включить протоколы SIP/RTSP и включить функцию проброса PPPoE/IPsec/L2TP/PPTP
+
+Затем нажмите Применить
 ```
