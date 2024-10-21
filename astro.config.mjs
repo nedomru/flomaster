@@ -66,11 +66,19 @@ export default defineConfig({
                                 label: "Интернет", items:
                                     [
                                         {slug: "chat-phrases/tech/internet/internet-base"},
-                                        {slug: "chat-phrases/tech/internet/internet-setup"},
+                                        {slug: "chat-phrases/tech/internet/internet-setup-pc"},
+                                        {slug: "chat-phrases/tech/internet/internet-setup-router"},
                                         {slug: "chat-phrases/tech/internet/internet-cmd"}
                                     ]
                             },
-                            {slug: "chat-phrases/tech/television"},
+                            {
+                                label: "Телевидение", items:
+                                    [
+                                        {slug: "chat-phrases/tech/television/cam"},
+                                        {slug: "chat-phrases/tech/television/smarttv"},
+                                        {slug: "chat-phrases/tech/television/phone"},
+                                    ]
+                            },
                             {slug: "chat-phrases/tech/intercom"},
                             {slug: "chat-phrases/tech/applications"},
                             {slug: "chat-phrases/tech/accidents"},
