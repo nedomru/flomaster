@@ -37,7 +37,7 @@ export function logToTelegram(options) {
         sensitiveKeys = ['phrase_value', 'password', 'token']
     } = options;
 
-    const timestamp = new Date().toISOString();
+    const timestamp = new Date().toLocaleString();
     let fullMessage = `<b>[${notificationName}]</b>
 <b>Тип запроса</b>: ${type}
 <b>Статус</b>: ${successStatus === true ? "✅️ ОК" : "❌ Ошибка"}
