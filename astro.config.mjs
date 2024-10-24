@@ -3,6 +3,7 @@ import starlight from "@astrojs/starlight";
 import vercel from '@astrojs/vercel/serverless';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
+import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 
 import {reportErrorPlugin} from '/src/plugins/reportError';
@@ -55,66 +56,65 @@ export default defineConfig({
                 lastUpdated: true,
                 sidebar: [
                     {
-                        label: "🏠 Главная",
-                        link: "/",
-                    },
-                    {label: "🤔Что это такое?", link: "/chat-phrases"},
-                    {
-                        label: "🛠️Технические вопросы",
+                        label: "🛠️ Технина",
                         items: [
                             {
-                                label: "Интернет", items:
-                                    [
-                                        {slug: "chat-phrases/tech/internet/internet-base"},
-                                        {slug: "chat-phrases/tech/internet/internet-setup-pc"},
-                                        {slug: "chat-phrases/tech/internet/internet-setup-router"},
-                                        {slug: "chat-phrases/tech/internet/internet-cmd"}
-                                    ]
+                                label: "Интернет", autogenerate: {directory: "/chat-phrases/tech/internet"},
                             },
                             {
-                                label: "Телевидение", items:
-                                    [
-                                        {slug: "chat-phrases/tech/television/cam"},
-                                        {slug: "chat-phrases/tech/television/smarttv"},
-                                        {slug: "chat-phrases/tech/television/phone"},
-                                    ]
+                                label: "Телевидение", autogenerate: {directory: "/chat-phrases/tech/television"},
                             },
-                            {slug: "chat-phrases/tech/intercom"},
-                            {slug: "chat-phrases/tech/applications"},
-                            {slug: "chat-phrases/tech/accidents"},
+                            {
+                                label: "Домофония", autogenerate: {directory: "/chat-phrases/tech/intercom"},
+                            },
+                            {
+                                label: "Заявки и аварии", autogenerate: {directory: "/chat-phrases/tech/accidents"},
+                            },
                         ],
                     },
                     {
-                        label: "💸 Абонентские вопросы",
+                        label: "💸 Абон",
                         items: [
-                            {slug: "chat-phrases/abon/money"},
-                            {slug: "chat-phrases/abon/promotions"},
-                            {slug: "chat-phrases/abon/tariffs"},
-                        ],
+                            {
+                                label: "Начисления", autogenerate: {directory: "/chat-phrases/abon"},
+                            },
+                        ]
                     },
                     {
                         label: "💭 Диалог",
                         items: [
-                            {slug: "chat-phrases/dialog/greetings"},
-                            {slug: "chat-phrases/dialog/parting"},
-                            {slug: "chat-phrases/dialog/selfservice"},
-                            {slug: "chat-phrases/dialog/fastchat"},
-                            {slug: "chat-phrases/dialog/legal"},
-                            {slug: "chat-phrases/dialog/negative"},
+                            {
+                                label: "Общение с клиентом",
+                                autogenerate: {directory: "/chat-phrases/dialog/communications"},
+                            },
+                            {
+                                label: "Регламенты", autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
+                            },
+                            {
+                                label: "Правовая часть", autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
+                            },
                         ],
                     },
                     {
                         label: "🛒 Продажи",
                         items: [
-                            {slug: "chat-phrases/sales/routers"},
-                            {slug: "chat-phrases/sales/decoders"},
+                            {
+                                label: "Роутеры", autogenerate: {directory: "/chat-phrases/sales/routers"},
+                            },
+                            {
+                                label: "Приставки", autogenerate: {directory: "/chat-phrases/sales/decoders"},
+                            },
                         ],
                     },
                 ],
                 editLink: {
                     baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
                 },
-                plugins: [],
+                plugins: [starlightUtils({
+                    multiSidebar: {
+                        switcherStyle: "horizontalList",
+                    },
+                }),],
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),
