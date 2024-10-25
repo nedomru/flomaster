@@ -94,7 +94,7 @@ export default defineConfig({
                                 label: "Регламенты", autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
                             },
                             {
-                                label: "Правовая часть", autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
+                                label: "Правовая часть", autogenerate: {directory: "/chat-phrases/dialog/companylaw"},
                             },
                         ],
                     },
