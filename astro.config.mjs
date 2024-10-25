@@ -68,6 +68,9 @@ export default defineConfig({
                                 label: "Домофония", autogenerate: {directory: "/chat-phrases/tech/intercom"},
                             },
                             {
+                                label: "Видеонаблюдение", autogenerate: {directory: "/chat-phrases/tech/cctv"},
+                            },
+                            {
                                 label: "Заявки и аварии", autogenerate: {directory: "/chat-phrases/tech/accidents"},
                             },
                         ],
