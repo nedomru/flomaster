@@ -107,6 +107,9 @@ export default defineConfig({
                             {
                                 label: "Приставки", autogenerate: {directory: "/chat-phrases/sales/decoders"},
                             },
+                            {
+                                label: "Камеры", autogenerate: {directory: "/chat-phrases/sales/camcorders"},
+                            },
                         ],
                     },
                 ],
