@@ -59,19 +59,29 @@ export default defineConfig({
                         label: "🛠️ Технина",
                         items: [
                             {
-                                label: "Интернет", autogenerate: {directory: "/chat-phrases/tech/internet"},
+                                label: "Интернет",
+                                autogenerate: {directory: "/chat-phrases/tech/internet"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                             {
-                                label: "Телевидение", autogenerate: {directory: "/chat-phrases/tech/television"},
+                                label: "Телевидение",
+                                autogenerate: {directory: "/chat-phrases/tech/television"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                             {
-                                label: "Домофония", autogenerate: {directory: "/chat-phrases/tech/intercom"},
+                                label: "Домофония",
+                                autogenerate: {directory: "/chat-phrases/tech/intercom"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                             {
-                                label: "Видеонаблюдение", autogenerate: {directory: "/chat-phrases/tech/cctv"},
+                                label: "Видеонаблюдение",
+                                autogenerate: {directory: "/chat-phrases/tech/cctv"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                             {
-                                label: "Заявки и аварии", autogenerate: {directory: "/chat-phrases/tech/accidents"},
+                                label: "Заявки и аварии",
+                                autogenerate: {directory: "/chat-phrases/tech/accidents"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                         ],
                     },
@@ -79,7 +89,9 @@ export default defineConfig({
                         label: "💸 Абон",
                         items: [
                             {
-                                label: "Начисления", autogenerate: {directory: "/chat-phrases/abon"},
+                                label: "Начисления",
+                                autogenerate: {directory: "/chat-phrases/abon"},
+                                badge: {text: "Не готово", variant: "caution"}
                             },
                         ]
                     },
@@ -89,12 +101,17 @@ export default defineConfig({
                             {
                                 label: "Общение с клиентом",
                                 autogenerate: {directory: "/chat-phrases/dialog/communications"},
+                                badge: {text: "Готово", variant: "success"}
                             },
                             {
-                                label: "Регламенты", autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
+                                label: "Регламенты",
+                                autogenerate: {directory: "/chat-phrases/dialog/reglaments"},
+                                badge: {text: "Готово", variant: "success"}
                             },
                             {
-                                label: "Правовая часть", autogenerate: {directory: "/chat-phrases/dialog/companylaw"},
+                                label: "Правовая часть",
+                                autogenerate: {directory: "/chat-phrases/dialog/companylaw"},
+                                badge: {text: "Готово", variant: "success"}
                             },
                         ],
                     },
@@ -102,13 +119,19 @@ export default defineConfig({
                         label: "🛒 Продажи",
                         items: [
                             {
-                                label: "Роутеры", autogenerate: {directory: "/chat-phrases/sales/routers"},
+                                label: "Роутеры",
+                                autogenerate: {directory: "/chat-phrases/sales/routers"},
+                                badge: {text: "Актуально", variant: "success"}
                             },
                             {
-                                label: "Приставки", autogenerate: {directory: "/chat-phrases/sales/decoders"},
+                                label: "Приставки",
+                                autogenerate: {directory: "/chat-phrases/sales/decoders"},
+                                badge: {text: "Актуально", variant: "success"}
                             },
                             {
-                                label: "Камеры", autogenerate: {directory: "/chat-phrases/sales/camcorders"},
+                                label: "Камеры",
+                                autogenerate: {directory: "/chat-phrases/sales/camcorders"},
+                                badge: {text: "Актуально", variant: "success"}
                             },
                         ],
                     },
