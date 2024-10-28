@@ -480,6 +480,85 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     </TabItem>
 </Tabs>
 
+### SNR
+<CardGrid>
+    <LinkCard
+        title="SNR в БЗ"
+        href="https://clever.ertelecom.ru/content/space/4/article/2515"
+        target="_blank"
+        description="Открыть инструкции SNR в базе знаний"
+    />
+    <LinkCard
+        title="SNR на сайте"
+        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__SNR-CPE-W4N"
+        target="_blank"
+        description="Открыть инструкции SNR на сайте"
+    />
+</CardGrid>
+
+#### Вход в настройки
+```txt
+1. Подключитесь к сети роутера по кабелю или Wi-Fi
+2. Откройте сайт http://192.168.1.1
+3. На странице войдите с данными от роутера (admin / admin1)
+```
+
+#### Настройка соединения
+<Tabs>
+    <TabItem label="PPPoE">
+        ```txt
+        1. Откройте пункт "Сетевые настройки" - "Настройки VPN";
+        2. Установите параметры:
+        - Включить VPN - поставьте галочку;
+        - Клиент - "Клиент PPPoE";
+        - Шлюз по умолчанию - "Включить";
+        - Адаптивный LCP интервал - "Включить";
+        - DNS провайдера - "Включить";
+        - NAT - "Включить";
+        - Чистый PPPoE - "Включить".
+        3. Имя пользователя и пароль - введите данные по договору.
+
+        Нажмите "Применить и подключить"
+        ```
+    </TabItem>
+</Tabs>
+
+#### Настройка Wi-Fi
+<Tabs>
+    <TabItem label="Название сети">
+    ```txt
+        1. Перейдите в раздел "Wireless Settings" - "Basic";
+        2. Установите параметры:
+        - Wireless – "enable";
+        - Network Name - желаемое название Wi-Fi.
+
+        Для сохранения параметров нажмите "Apply"
+    ```
+    </TabItem>
+    <TabItem label="Пароль сети">
+    ```txt
+        1. Перейдите в раздел "Wireless Settings" - "Security";
+        2. Установите параметры:
+        - Security Mode - "WPA 1/2-PSK";
+        - WPA Algorithms - "TKIP/AES";
+        - Pass Phrase - желаемый пароль Wi-Fi.
+
+        Для сохранения параметров нажмите "Apply"
+    ```
+    </TabItem>
+</Tabs>
+
+#### Смена каналов
+```txt
+Перейдите в раздел "Настройки радио" - "Основные";
+В строке "Канал" измените значение на "Channel 2";
+
+Далее перейдите в раздел "Физический режим HT"
+Там будет строка "Ширина канала", измените значение на 20MHz
+
+Для сохранения параметров нажмите "Apply"
+```
+
 ### Терминалы Dasan
 #### Настройка PPPoE
 ```txt
