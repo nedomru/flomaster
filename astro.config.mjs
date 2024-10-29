@@ -86,16 +86,6 @@ export default defineConfig({
                         ],
                     },
                     {
-                        label: "💸 Абон",
-                        items: [
-                            {
-                                label: "Начисления",
-                                autogenerate: {directory: "/chat-phrases/abon"},
-                                badge: {text: "Не готово", variant: "caution"}
-                            },
-                        ]
-                    },
-                    {
                         label: "💭 Диалог",
                         items: [
                             {
