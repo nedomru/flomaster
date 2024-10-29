@@ -136,10 +136,9 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 #### Настройка моста
 Для прошивки EC220
 ```txt
-1. Перейдите в раздел "Дополнительные настройки";
-2. Выберите в списке слева пункт "Сеть" - "Интернет";
-3. Нажмите "Добавить", в появившемся окне настройки типа соединения выберите "Мост" и нажмите "Сохранить";
-4. Далее перейдите в раздел "Группировка интерфейсов" и нажмите "Добавить"
+1. Перейдите в раздел "Дополнительные настройки" - "Сеть" - "Интернет";
+2. Нажмите "Добавить", в появившемся окне настройки типа соединения выберите "Мост" и нажмите "Сохранить";
+3. Далее перейдите в раздел "Группировка интерфейсов" и нажмите "Добавить"
 
 В открывшихся настройках выберите порт LAN для подключения VoIP-шлюза и созданное до этого Bridge-соединение
 Также нужно задать имя для группы портов (например VoIP). Затем сохраните настройки
@@ -442,8 +441,8 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 <Tabs>
     <TabItem label="Старая прошивка">
         ```txt
-        1. Перейдите в раздел "Безопасность" снизу, далее выберите "Трансляция сетевых адресов";
-        2. Нажмите на "Добавить правило" и заполните строки:
+        1. Откройте раздел "Безопасность" - "Трансляция сетевых адресов";
+        2. Нажмите на "Добавить правило", укажите параметры:
         - Интерфейс - выберите "Broadband connection" или "PPPoE";
         - С номером порта назначения - укажите протокол "TCP/UDP" и порт для проброса;
         - Перенаправить на адрес - укажите IP адрес устройства в локальной сети
@@ -469,7 +468,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 3. На странице войдите с данными от роутера (admin / admin1)
 ```
 
-#### Настройка соединения
+#### Настройка соединения (быстрая)
 <Tabs>
     <TabItem label="PPPoE">
         ```txt
@@ -528,8 +527,8 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
         - Адаптивный LCP интервал - "Включить";
         - DNS провайдера - "Включить";
         - NAT - "Включить";
-        - Чистый PPPoE - "Включить".
-        3. Имя пользователя и пароль - введите данные по договору.
+        - Чистый PPPoE - "Включить";
+        - Имя пользователя и Пароль - введите данные по договору.
 
         Нажмите "Применить и подключить"
         ```
@@ -545,7 +544,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
         - Wireless – "enable";
         - Network Name - желаемое название Wi-Fi.
 
-        Для сохранения параметров нажмите "Apply"
+        Нажмите "Apply"
     ```
     </TabItem>
     <TabItem label="Пароль сети">
@@ -556,20 +555,21 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
         - WPA Algorithms - "TKIP/AES";
         - Pass Phrase - желаемый пароль Wi-Fi.
 
-        Для сохранения параметров нажмите "Apply"
+        Нажмите "Apply"
     ```
     </TabItem>
 </Tabs>
 
 #### Смена каналов
 ```txt
-Перейдите в раздел "Настройки радио" - "Основные";
-В строке "Канал" измените значение на "Channel 2";
+1. Откройте раздел "Настройки радио" - "Основные";
+2. Укажите параметры:
+- Канал - установите на "Channel 2".
+3. Откройте раздел "Физический режим HT";
+4. Укажите параметры:
+- Ширина канала - установите на "20MHz";
 
-Далее перейдите в раздел "Физический режим HT"
-Там будет строка "Ширина канала", измените значение на 20MHz
-
-Для сохранения параметров нажмите "Apply"
+Нажмите "Apply"
 ```
 
 ### Mikrotik
@@ -690,7 +690,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 
 #### Настройка PPPoE
 ```txt
-1. Слева перейдите в раздел "Advanced Setup" - "WAN Connections";
+1. Откройте раздел "Advanced Setup" - "WAN Connections";
 2. Если есть созданное соединение в режиме "Bridge Mode" - удалите его через кнопку "Del";
 3. Далее в "WAN Entry" выберите тип подключения "PPPoE" и нажимаем "ADD";
 4. В таблице ниже, на новом созданном подключении, жмем "Edit" и в открывшейся таблице указываем следующие данные:
@@ -709,7 +709,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 <Tabs>
     <TabItem label="H660RW">
         ```txt
-        1. Слева перейдите в раздел "Wi-Fi Setup" - "Wi-Fi Setting";
+        1. Откройте раздел "Wi-Fi Setup" - "Wi-Fi Setting";
         2. В строке "Channel" выбираем все каналы (номера);
         3. В строке "Authentication Type" меняем значение на "WPA(WPA2)PSK" и параметр "Encryption" на "AES".
 
@@ -731,7 +731,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 
 #### Смена каналов
 ```txt
-1. Слева выберите раздел "Wi-Fi Setup" - "Wi-Fi Setting";
+1. Откройте раздел "Wi-Fi Setup" - "Wi-Fi Setting";
 2. В строке "Channel" поменяйте значение на "Manual" и выберите номер канала.
 
 Для сохранения параметров нажмите "Apply"
@@ -741,7 +741,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 <Tabs>
     <TabItem label="H660RW">
         ```txt
-        1. Слева выберите раздел "Firewall Setup" - "NAT" - "Port Forwarding"
+        1. Откройте раздел "Firewall Setup" - "NAT" - "Port Forwarding"
         2. Укажите параметры:
         - "Protocol" - "TCP/UDP";
         - "Start Port Number" - начальный порт;
@@ -753,7 +753,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     </TabItem>
     <TabItem label="H640RW">
         ```txt
-        1. Слева выберите раздел "Advanced Setting" - "Port Forwarding";
+        1. Откройте раздел "Advanced Setting" - "Port Forwarding";
         2. Укажите параметры:
         - "Rule Name" - Желаемое название для проброса;
         - "Target IP" - IP-адрес устройства, для которого открываем порт;
@@ -769,7 +769,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 <Tabs>
     <TabItem label="H660RW">
         ```txt
-        1. Слева выберите раздел "Firewall Setup" - "NAT" - "DMZ";
+        1. Откройте раздел "Firewall Setup" - "NAT" - "DMZ";
         2. Укажите параметры:
         - DMZ - "Enabled";
         - DMZ Host IP address - IP-адрес устройства, для которого открываем DMZ.
@@ -779,7 +779,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     </TabItem>
     <TabItem label="H640RW">
         ```txt
-        1. Слева выберите раздел "Advanced Setting" - "DMZ Settings";
+        1. Откройте раздел "Advanced Setting" - "DMZ Settings";
         2. Выберите "DMZ" и снизу укажите IP устройства, для которого открываете порты;
 
         Для сохранения параметров нажмите "Add", затем вверху кнопку "Apply Config"
