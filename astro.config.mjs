@@ -15,8 +15,8 @@ import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 // https://astro.build/config
 export default defineConfig({
     output: 'server',
-    adapter: vercel({
-        webAnalytics: {enabled: true}
+    adapter: node({
+        mode: "standalone"
     }),
 
     site: "https://flomaster.chrsnv.ru",
