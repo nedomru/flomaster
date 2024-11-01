@@ -1,6 +1,6 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
-import vercel from '@astrojs/vercel/serverless';
+import node from "@astrojs/node";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
