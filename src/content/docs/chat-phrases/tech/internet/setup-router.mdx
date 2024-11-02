@@ -50,7 +50,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     </TabItem>
 </Tabs>
 
-#### Настройки Wi-Fi
+#### Настройка Wi-Fi
 ```txt
 1. Перейдите в раздел "Wi-FI";
 2. Выберите вашу частоту сети (2.4ггц / 5 ггц);
@@ -391,7 +391,7 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
     </TabItem>
 </Tabs>
 
-#### Настройки Wi-Fi
+#### Настройка Wi-Fi
 ```txt
 1. Откройте раздел "Домашняя сеть"
 2. Укажите параметры:
@@ -1379,6 +1379,92 @@ import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 - Режим - "До 300 Мбит/с".
 
 Нажмите "Применить"
+```
+
+### Netis
+<CardGrid>
+    <LinkCard
+        title="Netis в БЗ"
+        href="https://clever.ertelecom.ru/content/space/4/article/2078"
+        target="_blank"
+        description="Открыть инструкции Netis в базе знаний"
+    />
+    <LinkCard
+        title="Netis на сайте"
+        href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Netis"
+        target="_blank"
+        description="Открыть инструкции Netis на сайте"
+    />
+</CardGrid>
+
+#### Вход в настройки
+```txt
+1. Подключитесь к сети роутера по кабелю или Wi-Fi
+2. Откройте сайт http://192.168.1.1 или http://netis.cc
+3. На странице войдите с данными от роутера (admin / admin1)
+```
+
+#### Настройка соединения
+<Tabs>
+    <TabItem label="DHCP">
+        ```txt
+        1. Откройте раздел "Advanced" - "Сеть" - "WAN";
+        2. Установите параметры:
+        - Тип WAN - "Проводной";
+        - Тип подключения WAN - "DHCP".
+
+        Нажмите кнопку "Сохранить" внизу
+        ```
+    </TabItem>
+    <TabItem label="PPPoE">
+        ```txt
+        1. Откройте раздел "Advanced" - "Сеть" - "WAN";
+        2. Установите параметры:
+        - Тип WAN - "Проводной";
+        - Тип подключения WAN - "PPPoE".
+        - Имя пользователя и Пароль - введите данные по договору;
+        - Подключаться автоматически - включите галочку.
+
+        Нажмите кнопку "Сохранить" внизу
+        ```
+    </TabItem>
+    <TabItem label="Static IP">
+        ```txt
+        1. Откройте раздел "Advanced" - "Сеть" - "WAN";
+        2. Установите параметры:
+        - Тип WAN - "Проводной";
+        - Тип подключения WAN - "Static IP";
+        - IP-адрес WAN, Маска подсети, Шлюз по умолчанию, Первичный DNS, Вторичный DNS - введите данные по договору.
+
+        Нажмите кнопку "Сохранить" внизу
+        ```
+    </TabItem>
+</Tabs>
+
+#### Настройка Wi-Fi
+```txt
+1. Откройте раздел "Беспроводной режим" - "Настройки Wi-Fi";
+2. Установите параметры:
+- Состояние Wi-Fi связи — "Вкл"
+- Режим радио — "Точка доступа";
+- SSID – желаемое название Wi-Fi;
+- Вещание SSID – "Вкл";
+- Тип аутентификации — "WPA/WPA2-PSK";
+- Тип шифрования — "TKIP/AES";
+- Вид ключа — "ASCII";
+- Пароль — желаемый пароль Wi-Fi.
+
+Нажмите кнопку "Сохранить"
+```
+
+#### Смена каналов
+```txt
+1. Откройте раздел "Беспроводной режим" - "Настройки Wi-Fi";
+2. Установите параметры:
+- Канал - ...;
+- Ширина канала - "20MHz".
+
+Нажмите кнопку "Сохранить"
 ```
 
 ### Терминалы Dasan
