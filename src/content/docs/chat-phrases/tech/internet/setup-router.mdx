@@ -6,6 +6,71 @@ sidebar:
 
 import {Tabs, TabItem, LinkCard, CardGrid} from "@astrojs/starlight/components";
 
+{/* Acorp */}
+### Acorp
+
+#### Вход в настройки
+```txt
+1. Подключитесь к сети роутера по кабелю или Wi-Fi
+2. Откройте сайт http://192.168.1.1
+3. На странице войдите с данными от роутера (admin / admin1)
+```
+
+#### Настройка соединения
+<Tabs>
+    <TabItem label="DHCP">
+        ```txt
+        1. Откройте раздел Operation Mode
+        2. Напротив значения "AP-Gateway" включите галочку
+        3. Откройте раздел "Internet Settings" - "WAN Setup"
+        3. Укажите параметры:
+        - Wan Connection Type - "DHCP (Auto Config)"
+        - Enable NAT - включите галочку
+        4. Откройте раздел "Internet Settings" - "VPN Setup"
+        5. Укажите параметры:
+        - Enable VPN - включите галочку
+        - VPN Mode - "PPPoE Client"
+        - PPPoE interface - "WAN"
+        - Authentication method - "Auto"
+        - User name и Password - введите данные по договору
+        - Default gateway - "Enabled"
+        - Adaptive LCP, Enable NAT, Peer DNS - включите галочки
+
+        Нажмите снизу кнопку "Apply and connect"
+        ```
+    </TabItem>
+</Tabs>
+
+#### Настройка Wi-Fi
+```txt
+1. Откройте раздел "Wireless Settings" - "Basic"
+2. Укажите параметры:
+- Wireless enable - включите галочку
+- Network Mode - "11b/g/n mixed"
+- Network Name (SSID) - желаемое название Wi-Fi
+- Broadcast Network Name (SSID) - включите галочку
+Сохраните кнопкой "Apply"
+
+3. Откройте раздел "Security"
+4. Установите параметры:
+- SSID choice - выберите точку доступа, для которой устанавливаете пароль (ваша сеть)
+- Security Mode - "WPA2 PSK"
+- WPA Algorithms - "TKIP+AES"
+- Pass Phrase - желаемый пароль Wi-Fi
+- Policy - выключите галочку
+Сохраните кнопкой "Apply"
+```
+
+#### Смена каналов
+```txt
+1. Откройте раздел "Wireless Settings" - "Basic"
+2. Укажите параметры:
+- Frequency - "2417 (Channel 2)"
+- Channel BandWidth - "20/40"
+
+Сохраните кнопкой "Apply"
+```
+
 {/* Apple Airport */}
 ### Apple Airport
 <CardGrid>
