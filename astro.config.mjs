@@ -4,6 +4,7 @@ import node from "@astrojs/node";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
+import starlightDocSearch from '@astrojs/starlight-docsearch';
 
 
 import {reportErrorPlugin} from '/src/plugins/reportError';
@@ -26,6 +27,8 @@ export default defineConfig({
         define: {
             'import.meta.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
             'import.meta.env.SUPABASE_SERVICE_ROLE_KEY': JSON.stringify(process.env.SUPABASE_SERVICE_ROLE_KEY),
+            'import.meta.env.PUBLIC_ALGOLIA_APIKEY': JSON.stringify(process.env.ALGOLIA_APIKEY),
+            'import.meta.env.PUBLIC_ALGOLIA_APPID': JSON.stringify(process.env.ALGOLIA_APPID),
         },
     },
 
@@ -133,7 +136,12 @@ export default defineConfig({
                     multiSidebar: {
                         switcherStyle: "horizontalList",
                     },
-                }),],
+                }),
+                    starlightDocSearch({
+                        appId: import.meta.env.ALGOLIA_APPID,
+                        apiKey: import.meta.env.ALGOLIA_APIKEY,
+                        indexName: 'flomaster-chrsnv',
+                    }),],
                 expressiveCode: {
                     plugins: [
                         reportErrorPlugin(),

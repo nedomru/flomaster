@@ -1,4 +1,33 @@
 {
   "expressiveCode.copyButtonTooltip": " ",
-  "search.label": "Найти РМ"
+  "search.label": "Найти РМ",
+  "docsearch.searchBox.resetButtonTitle": "Очистить поиск",
+  "docsearch.searchBox.resetButtonAriaLabel": "Очистить поиск",
+  "docsearch.searchBox.cancelButtonText": "Отменить",
+  "docsearch.searchBox.cancelButtonAriaLabel": "Отменить",
+  "docsearch.searchBox.searchInputLabel": "Найти РМ",
+
+  "docsearch.startScreen.recentSearchesTitle": "Последние",
+  "docsearch.startScreen.noRecentSearchesText": "Нет последних поисков",
+  "docsearch.startScreen.saveRecentSearchButtonTitle": "Сохранить запрос",
+  "docsearch.startScreen.removeRecentSearchButtonTitle": "Удалить запрос из истории",
+  "docsearch.startScreen.favoriteSearchesTitle": "Любимые",
+  "docsearch.startScreen.removeFavoriteSearchButtonTitle": "Удалить запрос из любимых",
+
+  "docsearch.errorScreen.titleText": "Не удалось получить информацию",
+  "docsearch.errorScreen.helpText": "Возможно тебе стоит проверить наличие интернета.",
+
+  "docsearch.footer.selectText": "выбор",
+  "docsearch.footer.selectKeyAriaLabel": "Введи ключ",
+  "docsearch.footer.navigateText": "навигация",
+  "docsearch.footer.navigateUpKeyAriaLabel": "Стрелка вверх",
+  "docsearch.footer.navigateDownKeyAriaLabel": "Стрелка вниз",
+  "docsearch.footer.closeText": "закрыть",
+  "docsearch.footer.closeKeyAriaLabel": "Кнопка выхода",
+  "docsearch.footer.searchByText": "Поиск по",
+
+  "docsearch.noResultsScreen.noResultsText": "Результаты не найдены для",
+  "docsearch.noResultsScreen.suggestedQueryText": "Попробуй поискать по",
+  "docsearch.noResultsScreen.reportMissingResultsText": "Уверен, что что-то должно находиться?",
+  "docsearch.noResultsScreen.reportMissingResultsLinkText": "Дай нам знать."
 }
