@@ -3,8 +3,6 @@ import {supabase} from '../../lib/supabase';
 import APIManager from '../../components/APIManager';
 
 const {data: {session}} = await supabase.auth.getSession();
-
-console.log('Server-side session check:', session);
 ---
 
 <html lang="ru">
@@ -32,7 +30,6 @@ console.log('Server-side session check:', session);
 
     async function checkAuth() {
         const {data: {session}} = await supabase.auth.getSession();
-        console.log('Client-side session check:', session);
 
         if (session) {
             document.getElementById('loading').style.display = 'none';
