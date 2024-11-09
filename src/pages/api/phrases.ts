@@ -5,7 +5,7 @@ import {logToTelegram} from '../../lib/telegram-logger';
 // Define your custom topic IDs
 const TOPIC_IDS = {
     PHRASES_OPS: 3,  // For general phrase operations
-    ERRORS: 89,       // For all errors
+    ERRORS: 3,       // For all errors
 };
 
 export const GET: APIRoute = async ({request}) => {
