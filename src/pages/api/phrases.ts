@@ -23,9 +23,14 @@ export const GET: APIRoute = async ({request}) => {
             data: {error: error.message},
             topicId: TOPIC_IDS.ERRORS
         });
-        return new Response(JSON.stringify({error: error.message}), {
+        return new Response(JSON.stringify(error.message), {
             status: 500,
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+            }
         });
     }
 
@@ -38,7 +43,12 @@ export const GET: APIRoute = async ({request}) => {
     // });
     return new Response(JSON.stringify(phrases), {
         status: 200,
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
     });
 };
 
@@ -73,9 +83,14 @@ export const POST: APIRoute = async ({request}) => {
             },
             topicId: TOPIC_IDS.ERRORS
         });
-        return new Response(JSON.stringify({error: error.message}), {
+        return new Response(JSON.stringify(error.message), {
             status: 500,
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+            }
         });
     }
 
@@ -88,8 +103,13 @@ export const POST: APIRoute = async ({request}) => {
         topicId: TOPIC_IDS.PHRASES_OPS
     });
     return new Response(JSON.stringify(data), {
-        status: 201,
-        headers: {'Content-Type': 'application/json'},
+        status: 200,
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
     });
 };
 
@@ -110,9 +130,14 @@ export const PUT: APIRoute = async ({request}) => {
             data: {id, phrase_key, phrase_value, tag, edited_by, error: error.message},
             topicId: TOPIC_IDS.ERRORS
         });
-        return new Response(JSON.stringify({error: error.message}), {
+        return new Response(JSON.stringify(error.message), {
             status: 500,
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+            }
         });
     }
 
@@ -126,7 +151,12 @@ export const PUT: APIRoute = async ({request}) => {
     });
     return new Response(JSON.stringify(data), {
         status: 200,
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
     });
 };
 
@@ -144,9 +174,14 @@ export const DELETE: APIRoute = async ({request}) => {
             data: {id, category, subcategory, phrase_key, phrase_value, tag, error: error.message},
             topicId: TOPIC_IDS.ERRORS
         });
-        return new Response(JSON.stringify({error: error.message}), {
+        return new Response(JSON.stringify(error.message), {
             status: 500,
-            headers: {'Content-Type': 'application/json'},
+            headers: {
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Methods": "GET",
+                "Access-Control-Allow-Headers": "Content-Type, Authorization"
+            }
         });
     }
 
@@ -160,6 +195,11 @@ export const DELETE: APIRoute = async ({request}) => {
     });
     return new Response(JSON.stringify(data), {
         status: 200,
-        headers: {'Content-Type': 'application/json'},
+        headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET",
+            "Access-Control-Allow-Headers": "Content-Type, Authorization"
+        }
     });
 };
