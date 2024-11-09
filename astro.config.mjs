@@ -12,7 +12,6 @@ import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {codePhotoPlugin} from "/src/plugins/codeShowPhoto";
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 
-
 // https://astro.build/config
 export default defineConfig({
     output: 'server',
@@ -25,8 +24,8 @@ export default defineConfig({
 
     vite: {
         define: {
-            'import.meta.env.SUPABASE_URL': JSON.stringify(process.env.SUPABASE_URL),
-            'import.meta.env.SUPABASE_SERVICE_ROLE_KEY': JSON.stringify(process.env.SUPABASE_SERVICE_ROLE_KEY),
+            'import.meta.env.SUPABASE_URL': JSON.stringify(process.env.PUBLIC_SUPABASE_URL),
+            'import.meta.env.SUPABASE_SERVICE_ROLE_KEY': JSON.stringify(process.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY),
         },
     },
 

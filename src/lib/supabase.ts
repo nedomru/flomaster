@@ -1,11 +1,13 @@
 import {createClient} from '@supabase/supabase-js';
 
-const supabaseUrl = import.meta.env.SUPABASE_URL || import.meta.env.PUBLIC_SUPABASE_URL
-const supabaseRoleKey = import.meta.env.SUPABASE_SERVICE_ROLE_KEY || import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY
+const supabaseUrl = import.meta.env.PUBLIC_SUPABASE_URL
+const supabaseRoleKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY
 
 if (!supabaseUrl || !supabaseRoleKey) {
     console.error("[Supabase] There are some configuration missing");
     throw new Error(`Supabase configuration is missing, url: ${supabaseUrl}, key: ${supabaseRoleKey}`);
+}else {
+    console.info(`supabaseUrl: ${supabaseUrl}, key: ${supabaseRoleKey}`);
 }
 
 export const supabase = createClient(supabaseUrl, supabaseRoleKey, {
