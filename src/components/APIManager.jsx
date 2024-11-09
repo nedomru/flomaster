@@ -233,8 +233,7 @@ const APIManager = () => {
       await fetchPhrases();
 
       setError('РМ успешно добавлен!');
-      setTimeout(() => setError(''), 3000);
-      resetForm();
+      setTimeout(() => setError(''), 2000);
     } catch (error) {
       console.error('Ошибка добавления РМа:', error);
       setError('Произошла ошибка при добавлении РМа. Пожалуйста, попробуйте еще раз.');
