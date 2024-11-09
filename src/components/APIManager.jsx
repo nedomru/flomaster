@@ -67,11 +67,6 @@ const APIManager = () => {
       const categoryPhrases = phrases.filter(phrase => phrase.category === newCategory);
       const uniqueSubcategories = [...new Set(categoryPhrases.map(phrase => phrase.subcategory))];
       setFilteredSubcategories(uniqueSubcategories);
-
-      // Reset subcategory selection when category changes
-      setNewSubcategory('');
-      setNewPhraseKey('');
-      setNewPhraseTag('');
     } else {
       setFilteredSubcategories([]);
     }
