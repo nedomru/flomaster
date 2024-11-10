@@ -105,15 +105,15 @@ export default defineConfig({
                         label: "🛒 Продажи",
                         items: [
                             {
-                                label: "Роутеры",
+                                label: "Продажа роутеров",
                                 autogenerate: {directory: "/chat-phrases/sales/routers"}
                             },
                             {
-                                label: "Приставки",
+                                label: "Продажа приставок",
                                 autogenerate: {directory: "/chat-phrases/sales/decoders"}
                             },
                             {
-                                label: "Камеры",
+                                label: "Продажа камер",
                                 autogenerate: {directory: "/chat-phrases/sales/camcorders"}
                             },
                         ],
