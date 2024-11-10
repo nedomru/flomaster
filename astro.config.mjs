@@ -119,9 +119,6 @@ export default defineConfig({
                         ],
                     },
                 ],
-                editLink: {
-                    baseUrl: "https://github.com/authfailed/flomaster/edit/main/",
-                },
                 plugins: [starlightUtils({
                     multiSidebar: {
                         switcherStyle: "horizontalList",
