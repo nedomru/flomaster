@@ -63,6 +63,10 @@ export default defineConfig({
                                 autogenerate: {directory: "/chat-phrases/tech/internet"}
                             },
                             {
+                                label: "Настройка оборудования",
+                                autogenerate: {directory: "/chat-phrases/tech/setup"}
+                            },
+                            {
                                 label: "Телевидение",
                                 autogenerate: {directory: "/chat-phrases/tech/television"}
                             },
