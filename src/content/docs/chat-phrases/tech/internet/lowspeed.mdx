@@ -30,25 +30,31 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
 ### Проверка уровня сигнала Wi-Fi
 <Tabs>
-    <TabItem label="Android/iOS">
+    <TabItem label="Android" icon="linux">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi в верхней панели вашего телефона
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
     </TabItem>
-    <TabItem label="Windows">
+    <TabItem label="iOS" icon="apple">
+        ```txt
+        1. Найдите, пожалуйста, значок Wi-Fi в верхней панели вашего телефона
+        2. Сколько заполнено делений на значке - больше или меньше половины?
+        ```
+    </TabItem>
+    <TabItem label="Windows" icon="seti:windows">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на нижней панели компьютера справа
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
     </TabItem>
-    <TabItem label="Linux">
+    <TabItem label="Linux" icon="linux">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на компьютере
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
     </TabItem>
-    <TabItem label="Mac">
+    <TabItem label="Mac" icon="apple">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на верхней панели компьютера справа
         2. Сколько заполнено делений на значке - больше или меньше половины?
@@ -69,14 +75,14 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 ### Скорость согласования
 #### Проверка скорости согласования
 <Tabs>
-    <TabItem label="Android">
+    <TabItem label="Android" icon="linux">
         ```txt
         1. Откройте настройки телефона, беспроводные сети (или Wi-Fi)
         2. Найдите и нажмите на вашу сеть (или значок напротив названия сети)
         3. На момент проверки подойдите к роутеру и напишите значение пункта "Скорость связи"
         ```
     </TabItem>
-    <TabItem label="Windows">
+    <TabItem label="Windows" icon="seti:windows">
         <Tabs>
             <TabItem label="Win7">
                 ```txt
