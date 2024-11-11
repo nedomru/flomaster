@@ -11,6 +11,7 @@ import {reportErrorPlugin} from '/src/plugins/reportError';
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {codePhotoPlugin} from "/src/plugins/codeShowPhoto";
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 // https://astro.build/config
 export default defineConfig({
@@ -45,9 +46,6 @@ export default defineConfig({
                 customCss: ["/src/styles/custom.css", "/src/styles/headings.css",],
                 tableOfContents: {
                     maxHeadingLevel: 4
-                },
-                components: {
-                    Header: '/src/overrides/CustomHeader.astro',
                 },
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
@@ -159,6 +157,13 @@ export default defineConfig({
     markdown: {
         rehypePlugins: [
             rehypeHeadingIds,
+            [
+                rehypeAutolinkHeadings,
+                {
+                    // Wrap the heading text in a link.
+                    behavior: 'wrap',
+                },
+            ],
         ],
     },
 

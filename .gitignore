@@ -22,3 +22,8 @@ pnpm-debug.log*
 settings.json
 .vercel
 .env
+.idea/chat-flomaster.iml
+.idea/modules.xml
+.idea/prettier.xml
+.idea/vcs.xml
+.idea/codeStyles/codeStyleConfig.xml
