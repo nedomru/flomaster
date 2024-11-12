@@ -4,11 +4,11 @@ import { wrapper } from '@keystatic/core/content-components';
 // Define components
 const components = {
     Tabs: wrapper({
-        label: 'Вкладки',
+        label: 'Список таб',
         schema: {}
     }),
     TabItem: wrapper({
-        label: 'Вкладка',
+        label: 'Таба',
         schema: {
             label: fields.text({
                 label: 'Название вкладки',
