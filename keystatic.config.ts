@@ -34,10 +34,6 @@ const components = {
 const commonSchema = {
     title: fields.slug({ name: { label: 'Название' } }),
     sidebar: fields.object({
-        label: fields.text({
-            label: 'Название в меню',
-            description: 'Отображаемое название в боковой панели'
-        }),
         order: fields.integer({
             label: 'Порядок',
             validation: {
