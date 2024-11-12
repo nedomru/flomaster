@@ -42,6 +42,7 @@ const commonSchema = {
         }),
         hidden: fields.checkbox({
             label: 'Скрыть из меню',
+            defaultValue: false
         }),
         badge: fields.object({
             text: fields.text({
@@ -61,7 +62,8 @@ const commonSchema = {
             })
         }, {
             label: 'Значок',
-            layout: [6, 6]
+            description: 'Оставьте пустым, если значок не нужен',
+            optional: true
         }),
         attrs: fields.object({
             target: fields.text({
@@ -75,7 +77,8 @@ const commonSchema = {
             })
         }, {
             label: 'HTML атрибуты',
-            layout: [4, 4, 4]
+            description: 'Дополнительные HTML атрибуты',
+            optional: true
         })
     }, {
         label: 'Настройки боковой панели',
