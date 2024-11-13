@@ -186,7 +186,7 @@ export default config({
     },
 
     storage: {
-        kind: 'local',
+        kind: 'github',
         repo: 'AuthFailed/flomaster'
     },
 
