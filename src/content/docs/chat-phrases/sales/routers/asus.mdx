@@ -4,15 +4,13 @@ sidebar:
     order: 4
 ---
 
-import {Aside, CardGrid, LinkCard, TabItem, Tabs} from "@astrojs/starlight/components";
-
-<Aside type="tip" title="Города с рассрочкой">
+<starlight.Aside type="tip" title="Города с рассрочкой">
     Пермь, Ижевск, Санкт-Петербург, Челябинск, Уфа, Оренбург, Магнитогорск, Иркутск, Красноярск, Омск, Тюмень, Курган, Нижний Новгород, Чебоксары, Киров, Йошкар-Ола, Ярославль, Тверь, Брянск, Липецк, Воронеж, Курск, Тула, Рязань
-</Aside>
+</starlight.Aside>
 
 ### Роутеры ASUS
-<Tabs>
-    <TabItem label="ASUS ROG Rapture GT-AX6000">
+<starlight.Tabs>
+    <starlight.TabItem label="ASUS ROG Rapture GT-AX6000">
         ```txt
         Модель: ROG Rapture GT-AX6000
         - Скорость по кабелю: до 2500 Мбит/с
@@ -35,19 +33,19 @@ import {Aside, CardGrid, LinkCard, TabItem, Tabs} from "@astrojs/starlight/compo
         - 1 142 ₽/мес. на 36 месяцев (общая стоимость - 41 098 ₽)
         ```
 
-        <CardGrid>
-            <LinkCard
+        <starlight.CardGrid>
+            <starlight.LinkCard
                 title="База знаний"
                 href="https://clever.ertelecom.ru/content/space/4/article/9349"
                 target="_blank"
                 description="ASUS ROG Rapture GT-AX6000 в базе знаний"
             />
-            <LinkCard
+            <starlight.LinkCard
                 title="Сайт производителя"
                 href="https://rog.asus.com/ru/networking/rog-rapture-gt-ax6000-model"
                 target="_blank"
                 description="ASUS ROG Rapture GT-AX6000 на сайте производителя"
             />
-        </CardGrid>
-    </TabItem>
-</Tabs>
+        </starlight.CardGrid>
+    </starlight.TabItem>
+</starlight.Tabs>

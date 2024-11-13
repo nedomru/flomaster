@@ -2,15 +2,13 @@
 title: Диагностика
 ---
 
-import {TabItem, Tabs} from "@astrojs/starlight/components";
-
 ### Перезагрузка камеры
 ```txt
 Отключите камеру и роутер от сети питания на 10-15 секунд, затем включите обратно
 ```
 ### Проверка обновлений МП
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         Нужно проверить актуальность версии приложения:
         1. Откройте Play Market, в строке поиска введите "Умный Дом.ру";
@@ -18,8 +16,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         Возле приложения должна отображаться кнопка "Открыть". Если отображается надпись "Обновить" - жмем на нее
         ```
-    </TabItem>
-    <TabItem label="iOS" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="iOS" icon="apple">
         ```txt
         Нужно проверить актуальность версии приложения:
         1. Откройте AppStore, в строке поиска введите "Умный Дом.ру";
@@ -27,8 +25,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         Возле приложения должна отображаться кнопка "Открыть". Если отображается надпись "Обновить" - жмем на нее
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Проверка версии МП
 ```txt
@@ -46,8 +44,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 ```
 
 ### Пинг до vn.domru.ru
-<Tabs>
-    <TabItem label="Windows" icon="seti:windows">
+<starlight.Tabs>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         Нажмите комбинацию клавиш WIN+R, в открывшемся окне напишите "cmd" без кавычек и нажмите Enter
         Откроется черное окно и строка ввода команды
@@ -59,8 +57,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         пакетов
         Пришлите результат текстом или фотографией результатов
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         Откройте терминал, в нем выполните команду без кавычек:
         "ping -c 30 -s 1200 vn.domru.ru"
@@ -69,8 +67,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         пакетов
         Пришлите результат текстом или фотографией результатов
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         На панели значков найдите "Launchpad" (значок серой ракеты)
         В открывшемся меню откройте папку "Другие" и откройте приложение "Терминал".
@@ -81,5 +79,5 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         пакетов
         Пришлите результат текстом или фотографией результатов
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>

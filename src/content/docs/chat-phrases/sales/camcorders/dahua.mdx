@@ -4,15 +4,13 @@ sidebar:
     order: 2
 ---
 
-import {LinkCard, Tabs, TabItem, Aside} from "@astrojs/starlight/components";
-
-<Aside type="tip" title="Города с рассрочкой">
+<starlight.Aside type="tip" title="Города с рассрочкой">
     Пермь, Ижевск, Санкт-Петербург, Челябинск, Уфа, Оренбург, Магнитогорск, Иркутск, Красноярск, Омск, Тюмень, Курган, Нижний Новгород, Чебоксары, Киров, Йошкар-Ола, Ярославль, Тверь, Брянск, Липецк, Воронеж, Курск, Тула, Рязань
-</Aside>
+</starlight.Aside>
 
 ### Камеры DAHUA
-<Tabs>
-    <TabItem label="IMOU RANGER 2">
+<starlight.Tabs>
+    <starlight.TabItem label="IMOU RANGER 2">
         ```txt
         Внутренняя камера DAHUA IMOU RANGER 2
         - Максимальное разрешение: 2 Мп. (1920х1080), 25 к/с.
@@ -29,14 +27,14 @@ import {LinkCard, Tabs, TabItem, Aside} from "@astrojs/starlight/components";
         - В собственность - 5765 ₽
         ```
 
-        <LinkCard
+        <starlight.LinkCard
             title="Камера в БЗ"
             href="https://clever.ertelecom.ru/content/space/4/article/1785"
             target="_blank"
             description="Открыть камеру в базе знаний"
         />
-    </TabItem>
-    <TabItem label=" IMOU Cue 2">
+    </starlight.TabItem>
+    <starlight.TabItem label=" IMOU Cue 2">
         ```txt
         Внутренняя камера DAHUA IMOU Cue 2
         - Максимальное разрешение: 2 Мп. (1920х1080), 25 к/с.
@@ -54,11 +52,11 @@ import {LinkCard, Tabs, TabItem, Aside} from "@astrojs/starlight/components";
         - В собственность - 3960 ₽
         ```
 
-        <LinkCard
+        <starlight.LinkCard
             title="Камера в БЗ"
             href="https://clever.ertelecom.ru/content/space/4/article/1786"
             target="_blank"
             description="Открыть камеру в базе знаний"
         />
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>

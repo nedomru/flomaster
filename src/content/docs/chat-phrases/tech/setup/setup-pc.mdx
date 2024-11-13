@@ -4,11 +4,9 @@ sidebar:
     order: 2
 ---
 
-import {TabItem, Tabs} from "@astrojs/starlight/components"
-
 ### Настройка PPPoE
-<Tabs>
-    <TabItem label="Win7">
+<starlight.Tabs>
+    <starlight.TabItem label="Win7">
         ```txt
         Для настройки соединения:
         1. Откройте "Пуск" - "Панель управления" - "Сеть и Интернет"
@@ -19,8 +17,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Win8">
+    </starlight.TabItem>
+    <starlight.TabItem label="Win8">
         ```txt
         Для настройки соединения:
         1. Откройте "Пуск" - "Панель управления" - "Сеть и Интернет"
@@ -31,8 +29,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Win8.1">
+    </starlight.TabItem>
+    <starlight.TabItem label="Win8.1">
         ```txt
         Для настройки соединения:
         1. Правой кнопкой мыши нажмите по значку сетевых подключений на панели задач и
@@ -45,8 +43,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
         При необходимости установите галочку на пункте "Запомнить этот пароль"
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Win10">
+    </starlight.TabItem>
+    <starlight.TabItem label="Win10">
         ```txt
         Для настройки соединения:
         1. Откройте "Пуск" - "Параметры" - "Сеть и Интернет" - "Набор номера"
@@ -57,8 +55,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Win11">
+    </starlight.TabItem>
+    <starlight.TabItem label="Win11">
         ```txt
         Для настройки соединения:
         1. Откройте "Пуск" - "Параметры" - "Сеть и Интернет" - "Набор номера"
@@ -69,8 +67,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         Для настройки соединения:
         1. Откройте "Системные настройки" - "Сеть"
@@ -82,12 +80,12 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого PPPoE соединение будет создано
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Настройка Static IP
-<Tabs>
-    <TabItem label="Win">
+<starlight.Tabs>
+    <starlight.TabItem label="Win">
         ```txt
         Для настройки соединения:
         1. Нажмите на клавиатуре WIN+R, в окне введите "ncpa.cpl" без кавычек
@@ -97,8 +95,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого Static IP соединение будет создано
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         Для настройки соединения:
         1. Откройте раздел "Системные настройки" - "Сеть"
@@ -110,5 +108,5 @@ import {TabItem, Tabs} from "@astrojs/starlight/components"
 
         После этого Static IP соединение будет создано
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>

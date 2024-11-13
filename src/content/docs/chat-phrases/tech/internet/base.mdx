@@ -4,11 +4,9 @@ sidebar:
     order: 1
 ---
 
-import {TabItem, Tabs} from "@astrojs/starlight/components";
-
 ### Настройка нового роутера
-<Tabs>
-    <TabItem label="Наша сеть">
+<starlight.Tabs>
+    <starlight.TabItem label="Наша сеть">
         ```txt
         По настройке нового роутера могу предложить вам два варианта:
 
@@ -16,32 +14,32 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         2. Мы можем помочь вам настроить роутер по телефону, это будет стоить всего 600 рублей
         Как вам будет удобнее?
         ```
-    </TabItem>
-    <TabItem label="Мигрант">
+    </starlight.TabItem>
+    <starlight.TabItem label="Мигрант">
         ```txt
         По настройке нового роутера могу предложить вам два варианта:
         1. Мы можем помочь вам настроить роутер по телефону, это будет стоить всего 600 рублей
         2. Помощь в настройке с помощью вызова сервисного инженера, вызов и настройка также платная
         Как вам будет удобнее?
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Перезагрузка оборудования
-<Tabs>
-    <TabItem label="Роутер">
+<starlight.Tabs>
+    <starlight.TabItem label="Роутер">
         ```txt
         Сейчас перезагрузите роутер, необходимо отключить блок питания из розетки на секунд 30 и подключить назад
         Со своей стороны обновлю данные на сервере
         ```
-    </TabItem>
-    <TabItem label="Терминал">
+    </starlight.TabItem>
+    <starlight.TabItem label="Терминал">
         ```txt
         Сейчас перезагрузите терминал, необходимо отключить блок питания из розетки на секунд 30 и подключить назад
         Далее уточните, загорелся ли индикатор PON?
         ```
-    </TabItem>
-    <TabItem label="Роутер и терминал">
+    </starlight.TabItem>
+    <starlight.TabItem label="Роутер и терминал">
         ```txt
         Перезагрузите роутер и терминал:
         1. Отключите роутер и терминал из розетки
@@ -49,19 +47,19 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         3. Включите сначала терминал, затем, через минуту, включите роутер
         Напишите, как сделаете
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Заблокированные порты
-<Tabs>
-    <TabItem label="Наша сеть">
+<starlight.Tabs>
+    <starlight.TabItem label="Наша сеть">
         ```txt
         На данный момент закрыты следующие порты:
         TCP/445; UDP/1434; TCP+UDP/135-139
         Данные порты ограничены не оборудованием, а на уровне ядра сети.
         ```
-    </TabItem>
-    <TabItem label="Interzet">
+    </starlight.TabItem>
+    <starlight.TabItem label="Interzet">
         ```txt
         На данный момент закрыты следующие порты:
         135/TCP,UDP MSRPC (Microsoft RPC[6]) — используется в приложениях "клиент—сервер" Microsoft (например, Exchange)
@@ -77,5 +75,5 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         сервера BOOTP; также используется DHCP (Dynamic Host Configuration Protocol)
         1900/UDP Microsoft SSDP Enables discovery of UPnP devices
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>

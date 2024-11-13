@@ -4,11 +4,9 @@ sidebar:
     order: 5
 ---
 
-import {TabItem, Tabs} from "@astrojs/starlight/components";
-
 ### Замер скорости
-<Tabs>
-    <TabItem label="Speedtest">
+<starlight.Tabs>
+    <starlight.TabItem label="Speedtest">
         ```txt
         1. Подключитесь к вашей сети
         2. Зайдите на сайт speedtest.net
@@ -16,8 +14,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         По окончании напишите результат замера в чат
         ```
-    </TabItem>
-    <TabItem label="Yandex">
+    </starlight.TabItem>
+    <starlight.TabItem label="Yandex">
         ```txt
         1. Подключитесь к вашей сети
         2. Зайдите на сайт yandex.ru/internet
@@ -25,42 +23,42 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         По окончании напишите результат замера в чат
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Проверка уровня сигнала Wi-Fi
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi в верхней панели вашего телефона
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
-    </TabItem>
-    <TabItem label="iOS" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="iOS" icon="apple">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi в верхней панели вашего телефона
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
-    </TabItem>
-    <TabItem label="Windows" icon="seti:windows">
+    </starlight.TabItem>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на нижней панели компьютера справа
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на компьютере
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         1. Найдите, пожалуйста, значок Wi-Fi на верхней панели компьютера справа
         2. Сколько заполнено делений на значке - больше или меньше половины?
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### WAN роутера до 100 мбит, на коробке указано 100+ мбит
 ```txt
@@ -74,35 +72,35 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
 ### Скорость согласования
 #### Проверка скорости согласования
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         1. Откройте настройки телефона, беспроводные сети (или Wi-Fi)
         2. Найдите и нажмите на вашу сеть (или значок напротив названия сети)
         3. На момент проверки подойдите к роутеру и напишите значение пункта "Скорость связи"
         ```
-    </TabItem>
-    <TabItem label="Windows" icon="seti:windows">
-        <Tabs>
-            <TabItem label="Win7">
+    </starlight.TabItem>
+    <starlight.TabItem label="Windows" icon="seti:windows">
+        <starlight.Tabs>
+            <starlight.TabItem label="Win7">
                 ```txt
                 1. Нажмите Пуск - Панель управления - Сеть и интернет - Центр управления сетями и общим доступом
                 2. Слева нажмите на "Изменение параметров адаптера"
                 3. Далее правой кнопкой на "Беспроводная сеть" - "Состояние"
                 4. Напишите значение скорости соединения с открывшегося окна
                 ```
-            </TabItem>
-            <TabItem label="Win8/10/11">
+            </starlight.TabItem>
+            <starlight.TabItem label="Win8/10/11">
                 ```txt
                 1. Нажмите на значок Wi-Fi на нижней панели
                 2. Выберите "Открыть параметры сети и Интернет" - "Настройка параметров адаптера"
                 3. Далее правой кнопкой на "Беспроводная сеть" - "Состояние"
                 4. Напишите значение скорости соединения с открывшегося окна
                 ```
-            </TabItem>
-        </Tabs>
-    </TabItem>
-</Tabs>
+            </starlight.TabItem>
+        </starlight.Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 #### Что такое скорость согласования?
 ```txt

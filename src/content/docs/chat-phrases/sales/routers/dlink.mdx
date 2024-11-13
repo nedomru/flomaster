@@ -4,15 +4,13 @@ sidebar:
     order: 3
 ---
 
-import {Aside, CardGrid, LinkCard, TabItem, Tabs} from "@astrojs/starlight/components";
-
-<Aside type="tip" title="Города с рассрочкой">
+<starlight.Aside type="tip" title="Города с рассрочкой">
     Пермь, Ижевск, Санкт-Петербург, Челябинск, Уфа, Оренбург, Магнитогорск, Иркутск, Красноярск, Омск, Тюмень, Курган, Нижний Новгород, Чебоксары, Киров, Йошкар-Ола, Ярославль, Тверь, Брянск, Липецк, Воронеж, Курск, Тула, Рязань
-</Aside>
+</starlight.Aside>
 
 ### Роутеры D-Link
-<Tabs>
-    <TabItem label="DIR-842/R7">
+<starlight.Tabs>
+    <starlight.TabItem label="DIR-842/R7">
         ```txt
         Модель: D-Link DIR-842/R7
         - Скорость по кабелю: до 1000 Мбит/с
@@ -37,22 +35,22 @@ import {Aside, CardGrid, LinkCard, TabItem, Tabs} from "@astrojs/starlight/compo
         - 183 ₽/мес. на 36 месяцев (общая стоимость - 6 590 ₽)
         ```
 
-        <CardGrid>
-            <LinkCard
+        <starlight.CardGrid>
+            <starlight.LinkCard
                 title="База знаний"
                 href="https://clever.ertelecom.ru/content/space/4/article/1551"
                 target="_blank"
                 description="D-Link DIR-842/R7 в базе знаний"
             />
-            <LinkCard
+            <starlight.LinkCard
                 title="Сайт производителя"
                 href="https://www.dlink.ru/ru/products/5/2663.html"
                 target="_blank"
                 description="D-Link DIR-842/R7 на сайте производителя"
             />
-        </CardGrid>
-    </TabItem>
-    <TabItem label="DIR-X1530">
+        </starlight.CardGrid>
+    </starlight.TabItem>
+    <starlight.TabItem label="DIR-X1530">
         ```txt
         Модель: D-Link DIR-X1530
         - Скорость по кабелю: до 1000 Мбит/с
@@ -77,19 +75,19 @@ import {Aside, CardGrid, LinkCard, TabItem, Tabs} from "@astrojs/starlight/compo
         - 244 ₽/мес. на 36 месяцев (общая стоимость - 8 792 ₽)
         ```
 
-        <CardGrid>
-            <LinkCard
+        <starlight.CardGrid>
+            <starlight.LinkCard
                 title="База знаний"
                 href="https://clever.ertelecom.ru/content/space/4/article/1550"
                 target="_blank"
                 description="D-Link DIR-X1530 в базе знаний"
             />
-            <LinkCard
+            <starlight.LinkCard
                 title="Сайт производителя"
                 href="https://www.dlink.ru/ru/products/5/2591.html"
                 target="_blank"
                 description="D-Link DIR-X1530 на сайте производителя"
             />
-        </CardGrid>
-    </TabItem>
-</Tabs>
+        </starlight.CardGrid>
+    </starlight.TabItem>
+</starlight.Tabs>

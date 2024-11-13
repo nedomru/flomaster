@@ -4,11 +4,9 @@ sidebar:
     order: 6
 ---
 
-import {TabItem, Tabs} from "@astrojs/starlight/components";
-
 ### Запуск Test.exe
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         1. С телефона на Android зайдите в Google Play и установите приложение "Тест Дом.ру"
         2. В приложении введите номер договора - [ПИШИ]
@@ -16,8 +14,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Затем нажмите на кнопку "Запустить диагностику"
         Напишите, пожалуйста, когда появится сообщение "Отчёт готов"
         ```
-    </TabItem>
-    <TabItem label="Windows" icon="seti:windows">
+    </starlight.TabItem>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         1. С компьютера на Windows откройте страницу https://sos.dom.ru
         2. На сайте нажмите на кнопку "Скачать для Windows 8/10/11"
@@ -28,8 +26,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         Напишите, пожалуйста, когда появится сообщение "Завершено!"
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         1. С компьютера на Linux откройте страницу https://sos.dom.ru
         2. На сайте нажмите на кнопку "Скачать для Linux"
@@ -40,13 +38,13 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда программа запросит номер договора - введите [ПИШИ]
         По завершении скрипта напишите в чат
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Пинг ресурсов
 #### С ПК
-<Tabs>
-    <TabItem label="Windows" icon="seti:windows">
+<starlight.Tabs>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         1. Нажмите комбинацию Win+r на клавиатуре компьютера
         2. Введите cmd и нажмите "OK"
@@ -55,8 +53,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу окна появится результат
         Пришлите результат текстом или фотографией
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         1. Откройте Терминал на компьютере
         3. В открывшемся окне введите "ping -c 30 -s 1200 [ПИШИ]" без кавычек и нажмите Enter
@@ -64,8 +62,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу окна появится результат
         Пришлите результат текстом или фотографией
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         1. Откройте Терминал на компьютере
         3. В открывшемся окне введите "ping -c 30 -s 1200 [ПИШИ]" без кавычек и нажмите Enter
@@ -73,12 +71,12 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу окна появится результат
         Пришлите результат текстом или фотографией
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 #### С телефона
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         1. С телефона на Android зайдите в Google Play и установите приложение "PingTools"
         2. В этом приложении нажмите на три полоски вверху, далее выберите пункт "Ping"
@@ -92,8 +90,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу страницы появится результат
         Пришлите скриншот результата в чат
         ```
-    </TabItem>
-    <TabItem label="iOS" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="iOS" icon="apple">
         ```txt
         1. С телефона на iOS зайдите в App Store и установите приложение "Network Utilities & Analyzer"
         2. В этом приложении откройте раздел "Ping"
@@ -102,14 +100,14 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу страницы появится результат
         Пришлите скриншот результата в чат
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Трассировка ресурсов
 #### С ПК
 ##### Через консоль
-<Tabs>
-    <TabItem label="Windows" icon="seti:windows">
+<starlight.Tabs>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         1. Нажмите комбинацию Win+r на клавиатуре компьютера
         2. Введите cmd и нажмите "OK"
@@ -117,28 +115,28 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         Когда вывод прекратится - пришлите результат в чат
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         1. Откройте Терминал на компьютере
         3. В открывшемся окне введите "traceroute -d [ПИШИ]" без кавычек и нажмите Enter
 
         Когда вывод прекратится - пришлите результат в чат
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         1. Откройте Терминал на компьютере
         3. В открывшемся окне введите "traceroute -d [ПИШИ]" без кавычек и нажмите Enter
 
         Когда вывод прекратится - пришлите результат в чат
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ##### Через WinMTR
-<Tabs>
-    <TabItem label="Windows" icon="seti:windows">
+<starlight.Tabs>
+    <starlight.TabItem label="Windows" icon="seti:windows">
         ```txt
         1. На компьютере загрузите приложение WinMTR - https://sos.dom.ru/public/WinMTR/WinMTRx64.exe
         2. В поле Host укажите адрес сервера и нажмите кнопку "Start"
@@ -146,8 +144,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Программу держите запущенной в течение 20-30 минут, далее нажмите кнопку "Stop", сделайте скриншот окна программы и пришлите его в чат
         Во время теста важно выполнять те же действия, при которых возникали ранее сложности
         ```
-    </TabItem>
-    <TabItem label="Linux" icon="linux">
+    </starlight.TabItem>
+    <starlight.TabItem label="Linux" icon="linux">
         ```txt
         1. Откройте Терминал на компьютере
         2. Установите пакет mtr для вашего дистрибутива
@@ -156,8 +154,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Программу держите запущенной в течение 20-30 минут, далее сделайте скриншот окна программы и пришлите его в чат
         Во время теста важно выполнять те же действия, при которых возникали ранее сложности
         ```
-    </TabItem>
-    <TabItem label="Mac" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="Mac" icon="apple">
         ```txt
         1. Откройте Терминал на компьютере
         2. В открывшемся окне введите "brew install mtr" без кавычек и нажмите Enter
@@ -166,12 +164,12 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Программу держите запущенной в течение 20-30 минут, далее сделайте скриншот окна программы и пришлите его в чат
         Во время теста важно выполнять те же действия, при которых возникали ранее сложности
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 #### С телефона
-<Tabs>
-    <TabItem label="Android" icon="linux">
+<starlight.Tabs>
+    <starlight.TabItem label="Android" icon="linux">
         ```txt
         1. С телефона на Android зайдите в Google Play и установите приложение "PingTools"
         2. В этом приложении нажмите на три полоски вверху, далее выберите пункт Traceroute
@@ -182,8 +180,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу страницы появится результат
         Пришлите скриншот результата в чат
         ```
-    </TabItem>
-    <TabItem label="iOS" icon="apple">
+    </starlight.TabItem>
+    <starlight.TabItem label="iOS" icon="apple">
         ```txt
         1. С телефона на iOS зайдите в App Store и установите приложение "Network Utilities & Analyzer"
         2. В этом приложении откройте раздел "Trace Route"
@@ -192,8 +190,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         Когда диагностика завершится - в самом низу страницы появится результат
         Пришлите скриншот результата в чат
         ```
-    </TabItem>
-</Tabs>
+    </starlight.TabItem>
+</starlight.Tabs>
 
 ### Уточнение IP-адреса ресурса
 ```txt
