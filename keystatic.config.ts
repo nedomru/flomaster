@@ -127,37 +127,22 @@ const commonSchema = {
             label: 'Скрыть из меню',
             defaultValue: false
         }),
-        badge: fields.object({
-            text: fields.text({
-                label: 'Текст значка'
-            }),
-            variant: fields.select({
-                label: 'Тип значка',
-                options: [
-                    { label: 'По умолчанию', value: 'default' },
-                    { label: 'Подсказка', value: 'tip' },
-                    { label: 'Замечание', value: 'note' },
-                    { label: 'Предупреждение', value: 'caution' },
-                    { label: 'Ошибка', value: 'danger' },
-                    { label: 'Успех', value: 'success' }
-                ],
-                defaultValue: 'default'
-            })
-        }, {
-            label: 'Значок',
-            description: 'Оставьте пустым, если значок не нужен',
-        }),
         attrs: fields.object({
             class: fields.text({
-                label: 'Class'
+                label: 'Class',
+                defaultValue: undefined
             }),
             id: fields.text({
-                label: 'ID'
+                label: 'ID',
+                defaultValue: undefined
             })
         }, {
             label: 'HTML атрибуты',
             description: 'Дополнительные HTML атрибуты',
+            shouldRender: (value) => value?.class || value?.id
         })
+    }, {
+        label: 'Боковая панель'
     }),
     content: fields.mdx({
         label: 'Контент',
@@ -187,7 +172,7 @@ export default config({
     locale: "ru-RU",
 
     storage: {
-        kind: 'github',
+        kind: 'local',
         repo: 'AuthFailed/flomaster',
     },
 
