@@ -182,12 +182,13 @@ export default config({
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
             "Диалог": ['dialog/communications', 'dialog/companylaw', 'dialog/reglaments'],
             "Продажи": ['sales/routers', 'sales/decoders', 'sales/camcorders']
-        }
+        },
     },
+    locale: "ru-RU",
 
     storage: {
         kind: 'github',
-        repo: 'AuthFailed/flomaster'
+        repo: 'AuthFailed/flomaster',
     },
 
     collections: {
