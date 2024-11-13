@@ -48,7 +48,7 @@ export default defineConfig({
                 },
                 customCss: ["/src/styles/custom.css", "/src/styles/headings.css"],
                 tableOfContents: {
-                    maxHeadingLevel: 4
+                    maxHeadingLevel: 6
                 },
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
