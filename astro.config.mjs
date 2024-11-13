@@ -94,6 +94,10 @@ export default defineConfig({
                                 autogenerate: {directory: "/chat-phrases/dialog/communications"}
                             },
                             {
+                                label: "Книга возражений",
+                                autogenerate: {directory: "/chat-phrases/dialog/objectionworkbook"}
+                            },
+                            {
                                 label: "Регламенты",
                                 autogenerate: {directory: "/chat-phrases/dialog/reglaments"}
                             },

@@ -180,7 +180,7 @@ export default config({
         brand: { name: 'Фломастер | Админка'},
         navigation: {
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
-            "Диалог": ['dialog/communications', 'dialog/companylaw', 'dialog/reglaments'],
+            "Диалог": ['dialog/communications', 'dialog/objectionworkbook', 'dialog/companylaw', 'dialog/reglaments'],
             "Продажи": ['sales/routers', 'sales/decoders', 'sales/camcorders']
         },
     },
@@ -199,6 +199,7 @@ export default config({
         'tech/cctv': createCollection('Видеонаблюдение', 'tech/cctv'),
         'tech/accidents': createCollection('Заявки и аварии', 'tech/accidents'),
         'dialog/communications': createCollection('Общение с клиентом', 'dialog/communications'),
+        'dialog/objectionworkbook': createCollection('Книга возражений', 'dialog/objectionworkbook'),
         'dialog/companylaw': createCollection('Правовая часть', 'dialog/companylaw'),
         'dialog/reglaments': createCollection('Регламенты', 'dialog/reglaments'),
         'sales/routers': createCollection('Роутеры', 'sales/routers'),
