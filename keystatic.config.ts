@@ -1,22 +1,24 @@
 import { config, fields, collection } from '@keystatic/core';
 import { wrapper } from '@keystatic/core/content-components';
 
-// Define components
 const components = {
-    Tabs: wrapper({
+    "starlight.Tabs": wrapper({
         label: 'Список таб',
         schema: {}
     }),
-    TabItem: wrapper({
+    "starlight.TabItem": wrapper({
         label: 'Таба',
         schema: {
             label: fields.text({
                 label: 'Название вкладки',
                 validation: { length: { min: 1 } }
+            }),
+            icon: fields.text({
+                label: 'Иконка'
             })
         }
     }),
-    Icon: wrapper({
+    "starlight.Icon": wrapper({
         label: 'Иконка',
         schema: {
             name: fields.text({
@@ -28,6 +30,87 @@ const components = {
                 validation: { length: { min: 1 } },
             })
         }
+    }),
+    "starlight.LinkCard": wrapper({
+        label: 'Карточка-ссылка',
+        schema: {
+            title: fields.text({
+                label: 'Заголовок',
+                validation: { length: { min: 1 } }
+            }),
+            href: fields.text({
+                label: 'Ссылка',
+                validation: { length: { min: 1 } }
+            }),
+            description: fields.text({
+                label: 'Описание',
+                validation: { length: { min: 1 } }
+            }),
+            target: fields.select({
+                label: 'Открывать в',
+                options: [
+                    { label: 'В этом же окне', value: '_self' },
+                    { label: 'В новом окне', value: '_blank' }
+                ],
+                defaultValue: '_self'
+            })
+        }
+    }),
+    "starlight.Aside": wrapper({
+        label: 'Сноска',
+        schema: {
+            type: fields.select({
+                label: 'Тип заметки',
+                options: [
+                    { label: 'Заметка (синяя)', value: 'note' },
+                    { label: 'Подсказка (фиолетовая)', value: 'tip' },
+                    { label: 'Предупреждение (жёлтая)', value: 'caution' },
+                    { label: 'Опасность (красная)', value: 'danger' }
+                ],
+                defaultValue: 'note'
+            }),
+            title: fields.text({
+                label: 'Заголовок',
+                validation: { length: { min: 1 } },
+                required: false
+            }),
+            content: fields.text({
+                label: 'Содержимое',
+                validation: { length: { min: 1 } },
+                multiline: true
+            })
+        }
+    }),
+    "starlight.CardGrid": wrapper({
+        label: 'Сетка карточек',
+        schema: {
+            stagger: fields.checkbox({
+                label: 'Смещать карточки',
+                defaultValue: false
+            })
+        }
+    }),
+    "starlight.Card": wrapper({
+        label: 'Карточка',
+        schema: {
+            title: fields.text({
+                label: 'Заголовок',
+                validation: { length: { min: 1 } }
+            }),
+            icon: fields.text({
+                label: 'Иконка',
+                required: false
+            }),
+            content: fields.text({
+                label: 'Содержимое',
+                validation: { length: { min: 1 } },
+                multiline: true
+            })
+        }
+    }),
+    "starlight.Steps": wrapper({
+        label: 'Пошаговая инструкция',
+        schema: {}
     })
 };
 
@@ -63,12 +146,8 @@ const commonSchema = {
         }, {
             label: 'Значок',
             description: 'Оставьте пустым, если значок не нужен',
-            optional: true
         }),
         attrs: fields.object({
-            target: fields.text({
-                label: 'Target'
-            }),
             class: fields.text({
                 label: 'Class'
             }),
@@ -78,11 +157,7 @@ const commonSchema = {
         }, {
             label: 'HTML атрибуты',
             description: 'Дополнительные HTML атрибуты',
-            optional: true
         })
-    }, {
-        label: 'Настройки боковой панели',
-        layout: [12, 6, 6, 12, 12]
     }),
     content: fields.mdx({
         label: 'Контент',
@@ -111,7 +186,7 @@ export default config({
     },
 
     storage: {
-        kind: 'github',
+        kind: 'local',
         repo: 'AuthFailed/flomaster'
     },
 
