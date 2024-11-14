@@ -134,6 +134,7 @@ export default defineConfig({
                         appId: "DN83H0EFK4",
                         apiKey: "dab20c5dad503493810a3cd2b65e11f5",
                         indexName: 'flomaster-chrsnv',
+                        insights: true
                     }),],
                 expressiveCode: {
                     plugins: [
