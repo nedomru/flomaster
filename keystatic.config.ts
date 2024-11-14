@@ -1,4 +1,4 @@
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
 import { wrapper } from '@keystatic/core/content-components';
 
 const components = {
@@ -166,7 +166,8 @@ export default config({
         navigation: {
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
             "Диалог": ['dialog/communications', 'dialog/objectionworkbook', 'dialog/companylaw', 'dialog/reglaments'],
-            "Продажи": ['sales/routers', 'sales/decoders', 'sales/camcorders']
+            "Продажи": ['sales/routers', 'sales/decoders', 'sales/camcorders'],
+            "Внешние страницы": ["index"],
         },
     },
     locale: "ru-RU",
@@ -176,6 +177,87 @@ export default config({
         repo: 'AuthFailed/flomaster',
     },
 
+    singletons: {
+        index: singleton({
+            label: 'Главная страница',
+            path: 'src/content/docs/index',
+            format: { contentField: 'content' },
+            schema: {
+                title: fields.text({
+                    label: 'Заголовок',
+                    validation: { length: { min: 1 } }
+                }),
+                template: fields.select({
+                    label: 'Шаблон',
+                    options: [
+                        { label: 'Splash', value: 'splash' }
+                    ],
+                    defaultValue: 'splash'
+                }),
+                hero: fields.object({
+                    tagline: fields.text({
+                        label: 'Подзаголовок',
+                        validation: { length: { min: 1 } }
+                    }),
+                    image: fields.object({
+                        file: fields.text({
+                            label: 'Путь к изображению',
+                            validation: { length: { min: 1 } }
+                        })
+                    }, {
+                        label: 'Изображение'
+                    }),
+                    actions: fields.array(
+                        fields.object({
+                            text: fields.text({
+                                label: 'Текст кнопки',
+                                validation: { length: { min: 1 } }
+                            }),
+                            link: fields.text({
+                                label: 'Ссылка',
+                                validation: { length: { min: 1 } }
+                            }),
+                            icon: fields.select({
+                                label: 'Иконка',
+                                options: [
+                                    { label: 'Стрелка вправо', value: 'right-arrow' },
+                                    { label: 'Ракета', value: 'rocket' },
+                                    { label: 'Внешняя ссылка', value: 'external' }
+                                ],
+                                defaultValue: 'right-arrow'  // Added default value
+                            }),
+                            variant: fields.select({
+                                label: 'Вариант',
+                                options: [
+                                    { label: 'По умолчанию', value: 'default' },
+                                    { label: 'Минимальный', value: 'minimal' }
+                                ],
+                                defaultValue: 'default'
+                            })
+                        }),
+                        {
+                            label: 'Действия',
+                            itemLabel: props => props.text
+                        }
+                    )
+                }, {
+                    label: 'Hero секция'
+                }),
+                prev: fields.checkbox({
+                    label: 'Показывать кнопку "Назад"',
+                    defaultValue: false
+                }),
+                next: fields.checkbox({
+                    label: 'Показывать кнопку "Вперед"',
+                    defaultValue: false
+                }),
+                content: fields.mdx({
+                    label: 'Контент',
+                    components: components
+                })
+            }
+        })
+    },
     collections: {
         'tech/internet': createCollection('Интернет', 'tech/internet'),
         'tech/setup': createCollection('Настройка оборудования', 'tech/setup'),
