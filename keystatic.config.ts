@@ -161,7 +161,15 @@ const components = {
                 defaultValue: 'async'
             })
         }
-    })
+    }),
+    "starlight.details": wrapper({
+        label: 'Раскрывающийся блок',
+        schema: {}
+    }),
+    "starlight.summary": wrapper({
+        label: 'Заголовок раскрывающегося блока',
+        schema: {}
+    }),
 };
 
 const commonSchema = {
