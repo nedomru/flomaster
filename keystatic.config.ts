@@ -1,5 +1,5 @@
 import { config, fields, collection, singleton } from '@keystatic/core';
-import { wrapper } from '@keystatic/core/content-components';
+import { wrapper, block } from '@keystatic/core/content-components';
 
 const components = {
     "starlight.Tabs": wrapper({
@@ -111,6 +111,56 @@ const components = {
     "starlight.Steps": wrapper({
         label: 'Пошаговая инструкция',
         schema: {}
+    }),
+    "astroassets.Image": block({
+        label: 'Картинка',
+        schema: {
+            src: fields.image({
+                label: 'Картинка',
+                directory: 'src/assets/images/pages',
+                publicPath: '/src/assets/images/pages/',
+                validation: {
+                    isRequired: true
+                }
+            }),
+            alt: fields.text({
+                label: 'Альтернативный текст',
+                validation: {
+                    isRequired: true
+                }
+            }),
+            width: fields.text({
+                label: 'Ширина',
+                defaultValue: '600',
+                validation: {
+                    isRequired: true
+                }
+            }),
+            height: fields.text({
+                label: 'Высота',
+                defaultValue: '100',
+                validation: {
+                    isRequired: true
+                }
+            }),
+            loading: fields.select({
+                label: 'Загрузка',
+                options: [
+                    { label: 'Lazy', value: 'lazy' },
+                    { label: 'Eager', value: 'eager' }
+                ],
+                defaultValue: 'lazy'
+            }),
+            decoding: fields.select({
+                label: 'Декодирование',
+                options: [
+                    { label: 'Async', value: 'async' },
+                    { label: 'Sync', value: 'sync' },
+                    { label: 'Auto', value: 'auto' }
+                ],
+                defaultValue: 'async'
+            })
+        }
     })
 };
 
@@ -146,7 +196,14 @@ const commonSchema = {
     }),
     content: fields.mdx({
         label: 'Контент',
-        components: components
+        components: components,
+        options: {
+            image: {
+                directory: 'src/assets/images/images',
+
+                publicPath: '@assets/images/'
+            }
+        }
     }),
 };
 

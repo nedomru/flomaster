@@ -161,7 +161,8 @@ export default defineConfig({
             }),
         AutoImport({
             imports: [{
-                '@astrojs/starlight/components': 'starlight'
+                '@astrojs/starlight/components': 'starlight',
+                'astro:assets': 'astroassets'
             }]
         }),
         react(),
