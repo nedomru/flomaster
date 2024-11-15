@@ -18,7 +18,9 @@ const {data: {session}} = await supabase.auth.getSession();
         <h1 class="text-3xl font-bold mb-4 text-center">Менеджер API</h1>
         <APIManager client:only="react"/>
         <div class="text-center mt-8">
-            <a href="/admin" class="text-blue-400 hover:underline">Вернуться в Админ-панель</a>
+            <a href="/admin" class="text-blue-400 hover:underline">
+                Вернуться в Админ-панель
+            </a>
         </div>
     </div>
 </div>
