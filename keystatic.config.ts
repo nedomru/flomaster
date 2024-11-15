@@ -117,8 +117,8 @@ const components = {
         schema: {
             src: fields.image({
                 label: 'Картинка',
-                directory: 'src/assets/images',
-                publicPath: '/src/assets/images/',
+                directory: 'public/images',
+                publicPath: '/images/',
                 validation: {
                     isRequired: true
                 }
