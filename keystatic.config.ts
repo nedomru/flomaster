@@ -56,7 +56,7 @@ const components = {
             })
         }
     }),
-    "starlight.Aside": block({
+    "starlight.Aside": wrapper({
         label: 'Сноска',
         schema: {
             type: fields.select({
@@ -196,15 +196,13 @@ const commonSchema = {
     }),
     content: fields.mdx({
         label: 'Контент',
-        components: components,
+        components,
         options: {
-            image: {
-                directory: 'src/assets/images/images',
-
-                publicPath: '@assets/images/'
-            }
+          jsx: true,
+          componentBlocks: components,
+          preserveWhitespace: true
         }
-    }),
+      })
 };
 
 // Helper function to create a collection with common configuration
@@ -230,7 +228,7 @@ export default config({
     locale: "ru-RU",
 
     storage: {
-        kind: 'github',
+        kind: 'local',
         repo: 'AuthFailed/flomaster',
     },
 
