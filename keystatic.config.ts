@@ -162,13 +162,18 @@ const components = {
             })
         }
     }),
-    "starlight.details": wrapper({
+    "details": wrapper({
         label: 'Раскрывающийся блок',
         schema: {}
     }),
-    "starlight.summary": wrapper({
+    "summary": wrapper({
         label: 'Заголовок раскрывающегося блока',
-        schema: {}
+        schema: {
+            title: fields.text({
+                label: 'Заголовок',
+                validation: { length: { min: 1 } }
+            }),
+        }
     }),
 };
 
