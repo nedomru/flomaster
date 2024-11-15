@@ -163,17 +163,12 @@ const components = {
         }
     }),
     "details": wrapper({
-        label: 'Раскрывающийся блок',
+        label: 'Хайд',
         schema: {}
     }),
     "summary": wrapper({
-        label: 'Заголовок раскрывающегося блока',
-        schema: {
-            title: fields.text({
-                label: 'Заголовок',
-                validation: { length: { min: 1 } }
-            }),
-        }
+        label: 'Заголовок хайда',
+        schema: {}
     }),
 };
 
