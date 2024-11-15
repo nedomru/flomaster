@@ -161,7 +161,20 @@ const components = {
                 defaultValue: 'async'
             })
         }
-    })
+    }),
+    "details": wrapper({
+        label: 'Раскрывающийся блок',
+        schema: {}
+    }),
+    "summary": wrapper({
+        label: 'Заголовок раскрывающегося блока',
+        schema: {
+            title: fields.text({
+                label: 'Заголовок',
+                validation: { length: { min: 1 } }
+            }),
+        }
+    }),
 };
 
 const commonSchema = {
