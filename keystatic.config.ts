@@ -262,7 +262,7 @@ export default config({
     locale: "ru-RU",
 
     storage: {
-        kind: 'local',
+        kind: 'github',
         repo: 'AuthFailed/flomaster',
     },
 
