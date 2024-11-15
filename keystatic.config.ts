@@ -18,7 +18,7 @@ const components = {
             })
         }
     }),
-    "starlight.Icon": wrapper({
+    "starlight.Icon": block({
         label: 'Иконка',
         schema: {
             name: fields.text({
@@ -31,7 +31,7 @@ const components = {
             })
         }
     }),
-    "starlight.LinkCard": wrapper({
+    "starlight.LinkCard": block({
         label: 'Карточка-ссылка',
         schema: {
             title: fields.text({
@@ -56,7 +56,7 @@ const components = {
             })
         }
     }),
-    "starlight.Aside": wrapper({
+    "starlight.Aside": block({
         label: 'Сноска',
         schema: {
             type: fields.select({
