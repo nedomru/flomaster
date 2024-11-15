@@ -117,8 +117,8 @@ const components = {
         schema: {
             src: fields.image({
                 label: 'Картинка',
-                directory: 'src/assets/images/pages',
-                publicPath: '/src/assets/images/pages/',
+                directory: 'src/assets/images',
+                publicPath: '/src/assets/images/',
                 validation: {
                     isRequired: true
                 }
@@ -241,7 +241,7 @@ export default config({
     locale: "ru-RU",
 
     storage: {
-        kind: 'github',
+        kind: 'local',
         repo: 'AuthFailed/flomaster',
     },
 
