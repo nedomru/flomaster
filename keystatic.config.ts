@@ -118,7 +118,7 @@ const components = {
             src: fields.image({
                 label: 'Картинка',
                 directory: 'src/assets/images/pages',
-                publicPath: '/src/assets/images/pages/',
+                publicPath: '@assets/pages/',
                 validation: {
                     isRequired: true
                 }
