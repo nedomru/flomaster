@@ -62,27 +62,27 @@ export default defineConfig({
                         items: [
                             {
                                 label: "Интернет",
-                                autogenerate: {directory: "/chat-phrases/tech/internet"}
+                                autogenerate: {directory: "/phrases/tech/internet"}
                             },
                             {
                                 label: "Настройка оборудования",
-                                autogenerate: {directory: "/chat-phrases/tech/setup"}
+                                autogenerate: {directory: "/phrases/tech/setup"}
                             },
                             {
                                 label: "Телевидение",
-                                autogenerate: {directory: "/chat-phrases/tech/television"}
+                                autogenerate: {directory: "/phrases/tech/television"}
                             },
                             {
                                 label: "Домофония",
-                                autogenerate: {directory: "/chat-phrases/tech/intercom"}
+                                autogenerate: {directory: "/phrases/tech/intercom"}
                             },
                             {
                                 label: "Видеонаблюдение",
-                                autogenerate: {directory: "/chat-phrases/tech/cctv"}
+                                autogenerate: {directory: "/phrases/tech/cctv"}
                             },
                             {
                                 label: "Заявки и аварии",
-                                autogenerate: {directory: "/chat-phrases/tech/accidents"}
+                                autogenerate: {directory: "/phrases/tech/accidents"}
                             },
                         ],
                     },
@@ -91,19 +91,19 @@ export default defineConfig({
                         items: [
                             {
                                 label: "Общение с клиентом",
-                                autogenerate: {directory: "/chat-phrases/dialog/communications"}
+                                autogenerate: {directory: "/phrases/dialog/communications"}
                             },
                             {
                                 label: "Книга возражений",
-                                autogenerate: {directory: "/chat-phrases/dialog/objectionworkbook"}
+                                autogenerate: {directory: "/phrases/dialog/objectionworkbook"}
                             },
                             {
                                 label: "Регламенты",
-                                autogenerate: {directory: "/chat-phrases/dialog/reglaments"}
+                                autogenerate: {directory: "/phrases/dialog/reglaments"}
                             },
                             {
                                 label: "Правовая часть",
-                                autogenerate: {directory: "/chat-phrases/dialog/companylaw"}
+                                autogenerate: {directory: "/phrases/dialog/companylaw"}
                             },
                         ],
                     },
@@ -112,15 +112,15 @@ export default defineConfig({
                         items: [
                             {
                                 label: "Продажа роутеров",
-                                autogenerate: {directory: "/chat-phrases/sales/routers"}
+                                autogenerate: {directory: "/phrases/sales/routers"}
                             },
                             {
                                 label: "Продажа приставок",
-                                autogenerate: {directory: "/chat-phrases/sales/decoders"}
+                                autogenerate: {directory: "/phrases/sales/decoders"}
                             },
                             {
                                 label: "Продажа камер",
-                                autogenerate: {directory: "/chat-phrases/sales/camcorders"}
+                                autogenerate: {directory: "/phrases/sales/camcorders"}
                             },
                         ],
                     },

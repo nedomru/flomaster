@@ -243,7 +243,7 @@ const commonSchema = {
 const createCollection = (label, path) => ({
     label,
     slugField: 'title',
-    path: `src/content/docs/chat-phrases/${path}/**`,
+    path: `src/content/docs/phrases/${path}/**`,
     entryLayout: 'content',
     format: { contentField: 'content' },
     schema: commonSchema,
