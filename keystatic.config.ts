@@ -170,6 +170,32 @@ const components = {
         label: 'Заголовок хайда',
         schema: {}
     }),
+    "a": wrapper({
+        label: 'Ссылка',
+        schema: {
+            href: fields.text({
+                label: 'Адрес ссылки',
+                description: 'URL-адрес, куда должна вести ссылка',
+                validation: {
+                    isRequired: true
+                }
+            }),
+            target: fields.select({
+                label: 'Target',
+                description: 'В каком окне открывать ссылку',
+                options: [
+                    { label: 'В том же окне', value: '_self' },
+                    { label: 'В новом окне', value: '_blank' }
+                ],
+                defaultValue: '_self'
+            }),
+            download: fields.text({
+                label: 'Скачать',
+                description: 'Оставьте пустым если не требуется скачивание, или укажите название файла для загрузки',
+                defaultValue: '',
+            }),
+        }
+    }),
 };
 
 const commonSchema = {
