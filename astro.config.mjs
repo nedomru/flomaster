@@ -37,6 +37,16 @@ export default defineConfig({
         starlight(
             {
                 title: "Фломастер",
+                head: [
+                    {
+                      tag: 'script',
+                      attrs: {
+                        defer: true,
+                        src: 'https://webstats.chrsnv.ru/script.js',
+                        'data-website-id': '82c6bc5e-64b3-4d04-bfa6-ade9e2f2e38b'
+                      },
+                    },
+                  ],
                 logo: {
                     src: "/src/assets/flomaster.png",
                 },
