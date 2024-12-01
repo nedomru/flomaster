@@ -18,7 +18,7 @@ import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
+    output: 'hybrid',
     adapter: node({
         mode: "standalone"
     }),
@@ -144,7 +144,7 @@ export default defineConfig({
                         appId: "DN83H0EFK4",
                         apiKey: "26993d897f7166569aaa44ad941e0475",
                         indexName: 'flomaster-chrsnv',
-                        insights: false
+                        insights: true
                     }),],
                 expressiveCode: {
                     plugins: [

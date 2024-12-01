@@ -1,4 +1,4 @@
-import { config, fields, collection, singleton } from '@keystatic/core';
+import { config, fields, singleton } from '@keystatic/core';
 import { wrapper, block } from '@keystatic/core/content-components';
 
 const components = {

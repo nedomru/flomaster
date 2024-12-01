@@ -1,5 +1,3 @@
-import {createHash} from 'crypto';
-
 const TELEGRAM_BOT_TOKEN = import.meta.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = import.meta.env.TELEGRAM_CHAT_ID;
 
