@@ -18,7 +18,7 @@ import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'hybrid',
+    output: 'server',
     adapter: node({
         mode: "standalone"
     }),
