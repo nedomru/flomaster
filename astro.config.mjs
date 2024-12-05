@@ -167,6 +167,9 @@ export default defineConfig({
                             shadowColor: '#124',
                         },
                     },
+                    defaultProps: {
+                        wrap: true,
+                    },
                 }
             }),
         AutoImport({
