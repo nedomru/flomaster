@@ -255,7 +255,7 @@ export default config({
         navigation: {
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
             "Диалог": ['dialog/communications', 'dialog/objectionworkbook', 'dialog/companylaw', 'dialog/reglaments'],
-            "Продажи": ['sales/routers', 'sales/decoders', 'sales/camcorders'],
+            "Продажи": ['sales/remote-help', 'sales/routers', 'sales/decoders', 'sales/camcorders'],
             "Внешние страницы": ["index"],
         },
     },
@@ -358,6 +358,7 @@ export default config({
         'dialog/objectionworkbook': createCollection('Книга возражений', 'dialog/objectionworkbook'),
         'dialog/companylaw': createCollection('Правовая часть', 'dialog/companylaw'),
         'dialog/reglaments': createCollection('Регламенты', 'dialog/reglaments'),
+        'sales/paid-help': createCollection('Платная помощь', 'sales/paid-help'),
         'sales/routers': createCollection('Роутеры', 'sales/routers'),
         'sales/decoders': createCollection('Декодеры', 'sales/decoders'),
         'sales/camcorders': createCollection('Камеры', 'sales/camcorders'),

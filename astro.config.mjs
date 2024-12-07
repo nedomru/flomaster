@@ -121,6 +121,10 @@ export default defineConfig({
                         label: "🛒 Продажи",
                         items: [
                             {
+                                label: "Платная помощь",
+                                autogenerate: {directory: "/phrases/sales/paid-help"}
+                            },
+                            {
                                 label: "Продажа роутеров",
                                 autogenerate: {directory: "/phrases/sales/routers"}
                             },
