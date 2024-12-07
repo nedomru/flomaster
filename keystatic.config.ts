@@ -255,7 +255,7 @@ export default config({
         navigation: {
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
             "Диалог": ['dialog/communications', 'dialog/objectionworkbook', 'dialog/companylaw', 'dialog/reglaments'],
-            "Продажи": ['sales/remote-help', 'sales/routers', 'sales/decoders', 'sales/camcorders'],
+            "Продажи": ['sales/paid-help', 'sales/routers', 'sales/decoders', 'sales/camcorders'],
             "Внешние страницы": ["index"],
         },
     },
