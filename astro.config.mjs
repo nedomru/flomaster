@@ -9,9 +9,7 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import starlightDocSearch from '@astrojs/starlight-docsearch';
 
 
-import {reportErrorPlugin} from '/src/plugins/reportError';
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
-import {codePhotoPlugin} from "/src/plugins/codeShowPhoto";
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import AutoImport from "astro-auto-import";
@@ -39,14 +37,14 @@ export default defineConfig({
                 title: "Фломастер",
                 head: [
                     {
-                      tag: 'script',
-                      attrs: {
-                        defer: true,
-                        src: 'https://webstats.chrsnv.ru/script.js',
-                        'data-website-id': '82c6bc5e-64b3-4d04-bfa6-ade9e2f2e38b'
-                      },
+                        tag: 'script',
+                        attrs: {
+                            defer: true,
+                            src: 'https://webstats.chrsnv.ru/script.js',
+                            'data-website-id': '82c6bc5e-64b3-4d04-bfa6-ade9e2f2e38b'
+                        },
                     },
-                  ],
+                ],
                 logo: {
                     src: "/src/assets/flomaster.png",
                 },
