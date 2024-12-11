@@ -152,9 +152,7 @@ export default defineConfig({
                     }),],
                 expressiveCode: {
                     plugins: [
-                        reportErrorPlugin(),
                         clickToCopyPlugin(),
-                        codePhotoPlugin(),
                         {
                             name: 'Hide copy button',
                             baseStyles: `
