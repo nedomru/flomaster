@@ -69,27 +69,27 @@ export default defineConfig({
                         label: "🛠️ Технина",
                         items: [
                             {
-                                label: "Интернет",
+                                label: "🌐 Интернет",
                                 autogenerate: {directory: "/phrases/tech/internet"}
                             },
                             {
-                                label: "Настройка оборудования",
-                                autogenerate: {directory: "/phrases/tech/setup"}
-                            },
-                            {
-                                label: "Телевидение",
+                                label: "📺 Телевидение",
                                 autogenerate: {directory: "/phrases/tech/television"}
                             },
                             {
-                                label: "Домофония",
+                                label: "📟 Домофония",
                                 autogenerate: {directory: "/phrases/tech/intercom"}
                             },
                             {
-                                label: "Видеонаблюдение",
+                                label: "📼 Видеонаблюдение",
                                 autogenerate: {directory: "/phrases/tech/cctv"}
                             },
                             {
-                                label: "Заявки и аварии",
+                                label: "🔧 Настройка оборудки",
+                                autogenerate: {directory: "/phrases/tech/setup"}
+                            },
+                            {
+                                label: "📝 Заявки и аварии",
                                 autogenerate: {directory: "/phrases/tech/accidents"}
                             },
                         ],
@@ -98,19 +98,19 @@ export default defineConfig({
                         label: "💭 Диалог",
                         items: [
                             {
-                                label: "Общение с клиентом",
+                                label: "🗣️ Общение с клиентом",
                                 autogenerate: {directory: "/phrases/dialog/communications"}
                             },
                             {
-                                label: "Книга возражений",
+                                label: "😡 Книга возражений",
                                 autogenerate: {directory: "/phrases/dialog/objectionworkbook"}
                             },
                             {
-                                label: "Регламенты",
+                                label: "📚 Регламенты",
                                 autogenerate: {directory: "/phrases/dialog/reglaments"}
                             },
                             {
-                                label: "Правовая часть",
+                                label: "🗃️ Правовая часть",
                                 autogenerate: {directory: "/phrases/dialog/companylaw"}
                             },
                         ],
@@ -119,27 +119,27 @@ export default defineConfig({
                         label: "🛒 Продажи",
                         items: [
                             {
-                                label: "Диалог",
+                                label: "🗣️ Диалог",
                                 autogenerate: {directory: "/phrases/sales/dialog"}
                             },
                             {
-                                label: "Платная помощь",
+                                label: "💳 Платная помощь",
                                 autogenerate: {directory: "/phrases/sales/paid-help"}
                             },
                             {
-                                label: "Тарифы",
+                                label: "🧾 Тарифы",
                                 autogenerate: {directory: "/phrases/sales/tariffs"}
                             },
                             {
-                                label: "Продажа роутеров",
+                                label: "📡 Продажа роутеров",
                                 autogenerate: {directory: "/phrases/sales/routers"}
                             },
                             {
-                                label: "Продажа приставок",
+                                label: "📺 Продажа приставок",
                                 autogenerate: {directory: "/phrases/sales/decoders"}
                             },
                             {
-                                label: "Продажа камер",
+                                label: "🎥 Продажа камер",
                                 autogenerate: {directory: "/phrases/sales/camcorders"}
                             },
                         ],
