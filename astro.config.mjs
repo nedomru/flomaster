@@ -123,6 +123,10 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/paid-help"}
                             },
                             {
+                                label: "Тарифы",
+                                autogenerate: {directory: "/phrases/sales/tariffs"}
+                            },
+                            {
                                 label: "Продажа роутеров",
                                 autogenerate: {directory: "/phrases/sales/routers"}
                             },
