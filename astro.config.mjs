@@ -119,6 +119,10 @@ export default defineConfig({
                         label: "🛒 Продажи",
                         items: [
                             {
+                                label: "Диалог",
+                                autogenerate: {directory: "/phrases/sales/dialog"}
+                            },
+                            {
                                 label: "Платная помощь",
                                 autogenerate: {directory: "/phrases/sales/paid-help"}
                             },
