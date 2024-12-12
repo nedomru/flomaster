@@ -145,17 +145,19 @@ export default defineConfig({
                         ],
                     },
                 ],
-                plugins: [starlightUtils({
+                plugins: [
+                    starlightUtils({
                     multiSidebar: {
                         switcherStyle: "horizontalList",
                     },
                 }),
-                    starlightDocSearch({
+                    /*starlightDocSearch({
                         appId: "DN83H0EFK4",
                         apiKey: "26993d897f7166569aaa44ad941e0475",
                         indexName: 'flomaster-chrsnv',
                         insights: true
-                    }),],
+                    }),*/
+                ],
                 expressiveCode: {
                     plugins: [
                         clickToCopyPlugin(),
