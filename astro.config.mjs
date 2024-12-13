@@ -16,10 +16,14 @@ import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
+    output: 'static',
     adapter: node({
         mode: "standalone"
     }),
+
+    legacy: {
+        collections: true,
+    },
 
     site: "https://flomaster.chrsnv.ru",
     base: "/",
