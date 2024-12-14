@@ -6,7 +6,6 @@ import markdoc from "@astrojs/markdoc";
 import keystatic from '@keystatic/astro'
 import tailwind from "@astrojs/tailwind";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
-import starlightDocSearch from '@astrojs/starlight-docsearch';
 
 
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
@@ -16,14 +15,10 @@ import AutoImport from "astro-auto-import";
 
 // https://astro.build/config
 export default defineConfig({
-    output: 'server',
+    output: 'static',
     adapter: node({
         mode: "standalone"
     }),
-
-    legacy: {
-        collections: true,
-    },
 
     site: "https://flomaster.chrsnv.ru",
     base: "/",
