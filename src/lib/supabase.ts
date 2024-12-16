@@ -5,7 +5,7 @@ const supabaseRoleKey = import.meta.env.PUBLIC_SUPABASE_SERVICE_ROLE_KEY
 
 if (!supabaseUrl || !supabaseRoleKey) {
     console.error("[Supabase] There are some configuration missing");
-    throw new Error(`Supabase configura tion is missing, url: ${supabaseUrl}, key: ${supabaseRoleKey}`);
+    throw new Error(`Supabase configuration is missing, url: ${supabaseUrl}, key: ${supabaseRoleKey}`);
 }
 
 export const supabase = createClient(supabaseUrl, supabaseRoleKey, {
