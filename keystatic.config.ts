@@ -255,7 +255,7 @@ export default config({
         navigation: {
             "Технина": ['tech/internet', 'tech/setup', 'tech/television', 'tech/intercom', 'tech/cctv', 'tech/accidents'],
             "Диалог": ['dialog/communications', 'dialog/objectionworkbook', 'dialog/companylaw', 'dialog/reglaments'],
-            "Продажи": ['sales/dialog', 'sales/paid-help', '/phrases/sales/tariffs', 'sales/routers', 'sales/decoders', 'sales/camcorders'],
+            "Продажи": ['sales/dialog', 'sales/paid-help', 'sales/tariffs', 'sales/routers', 'sales/decoders', 'sales/camcorders'],
             "Внешние страницы": ["index"],
         },
     },
@@ -360,7 +360,7 @@ export default config({
         'dialog/reglaments': createCollection('Регламенты', 'dialog/reglaments'),
         'sales/dialog': createCollection('Диалог', 'sales/dialog'),
         'sales/paid-help': createCollection('Платная помощь', 'sales/paid-help'),
-        'sales/tariffs': createCollection('Тарифы', '/sales/tariffs'),
+        'sales/tariffs': createCollection('Тарифы', 'sales/tariffs'),
         'sales/routers': createCollection('Роутеры', 'sales/routers'),
         'sales/decoders': createCollection('Декодеры', 'sales/decoders'),
         'sales/camcorders': createCollection('Камеры', 'sales/camcorders'),
