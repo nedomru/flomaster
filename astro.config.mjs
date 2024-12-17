@@ -12,6 +12,7 @@ import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import AutoImport from "astro-auto-import";
+import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
 export default defineConfig({
@@ -150,12 +151,12 @@ export default defineConfig({
                         switcherStyle: "horizontalList",
                     },
                 }),
-                    /*starlightDocSearch({
+                    starlightDocSearch({
                         appId: "DN83H0EFK4",
                         apiKey: "26993d897f7166569aaa44ad941e0475",
                         indexName: 'flomaster-chrsnv',
                         insights: true
-                    }),*/
+                    }),
                 ],
                 expressiveCode: {
                     plugins: [
