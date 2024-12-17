@@ -41,7 +41,7 @@ export default defineConfig({
                         attrs: {
                             defer: true,
                             src: 'https://webstats.chrsnv.ru/script.js',
-                            'data-website-id': '82c6bc5e-64b3-4d04-bfa6-ade9e2f2e38b'
+                            'data-website-id': 'e8ff0de4-de47-420c-8b71-d8ef93efde62'
                         },
                     },
                 ],
