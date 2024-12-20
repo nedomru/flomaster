@@ -82,7 +82,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/tech/setup"}
                             },
                             {
-                                label: "📝 Заявки и аварии",
+                                label: "📝 Заявки, задачи, аварии",
                                 autogenerate: {directory: "/phrases/tech/accidents"}
                             },
                         ],
