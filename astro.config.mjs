@@ -92,7 +92,28 @@ export default defineConfig({
                         items: [
                             {
                                 label: "🗣️ Общение с клиентом",
-                                autogenerate: {directory: "/phrases/dialog/communications"}
+                                items: [
+                                    {
+                                        label: "Приветствие",
+                                        slug: "phrases/dialog/communications/greetings"
+                                    },
+                                    {
+                                        label: "Прощание",
+                                        items: [
+                                            {
+                                                label: "Завершение чата",
+                                                slug: "phrases/dialog/communications/parting/default"
+                                            },
+                                            {
+                                                label: "Завершение с поздравлением",
+                                                slug: "phrases/dialog/communications/parting/holidays"
+                                            }]
+                                    },
+                                    {
+                                        label: "Полезное в диалоге",
+                                        slug: "phrases/dialog/communications/useful"
+                                    }
+                                ]
                             },
                             {
                                 label: "😡 Книга возражений",
@@ -140,10 +161,10 @@ export default defineConfig({
                 ],
                 plugins: [
                     starlightUtils({
-                    multiSidebar: {
-                        switcherStyle: "horizontalList",
-                    },
-                }),
+                        multiSidebar: {
+                            switcherStyle: "horizontalList",
+                        },
+                    }),
                     starlightDocSearch({
                         appId: "DN83H0EFK4",
                         apiKey: "26993d897f7166569aaa44ad941e0475",
