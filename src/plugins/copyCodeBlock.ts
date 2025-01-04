@@ -39,19 +39,31 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                         const copyButton = container.querySelector('.ec-copy-button');
                         
                         function copyToClipboard(text, isFullBlock) {
-                            navigator.clipboard.writeText(text).then(() => {
-                                const originalText = copyButton.textContent;
-                                copyButton.textContent = isFullBlock ? 'Скопировал полностью' : 'Скопировал часть';
-                                copyButton.style.opacity = '1';
-                                setTimeout(() => {
-                                    copyButton.textContent = originalText;
-                                    if (!preElement.matches(':hover')) {
-                                        copyButton.style.opacity = '0';
-                                    }
-                                }, 2000);
-                            }).catch(err => {
+                            const textarea = document.createElement("textarea");
+                            textarea.value = text;
+                            textarea.style.position = "fixed";
+                            textarea.style.left = "-9999px";
+                            document.body.appendChild(textarea);
+                            textarea.select();
+                            
+                            try {
+                                const successful = document.execCommand("copy");
+                                if (successful) {
+                                    const originalText = copyButton.textContent;
+                                    copyButton.textContent = isFullBlock ? 'Скопировал полностью' : 'Скопировал часть';
+                                    copyButton.style.opacity = '1';
+                                    setTimeout(() => {
+                                        copyButton.textContent = originalText;
+                                        if (!preElement.matches(':hover')) {
+                                            copyButton.style.opacity = '0';
+                                        }
+                                    }, 2000);
+                                }
+                            } catch (err) {
                                 console.error('Failed to copy: ', err);
-                            });
+                            } finally {
+                                document.body.removeChild(textarea);
+                            }
                         }
                         
                         preElement.addEventListener('click', (event) => {
