@@ -22,7 +22,6 @@
     "@keystatic/astro": "^5.0.3",
     "@keystatic/core": "^0.5.39",
     "@lorenzo_lewis/starlight-utils": "^0.2.0",
-    "@supabase/supabase-js": "^2.45.6",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "astro": "^5.1.1",
