@@ -1,10 +1,7 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import node from "@astrojs/node";
-import react from "@astrojs/react";
-import markdoc from "@astrojs/markdoc";
 import keystatic from '@keystatic/astro'
-import tailwind from "@astrojs/tailwind";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 
@@ -202,9 +199,6 @@ export default defineConfig({
                 'astro:assets': 'astroassets'
             }]
         }),
-        react(),
-        tailwind(),
-        markdoc(),
         keystatic()],
 
     markdown: {

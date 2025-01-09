@@ -14,26 +14,15 @@
     "@astrojs/node": "^9.0.0",
     "@astrojs/starlight": "^0.30.3",
     "@astrojs/starlight-docsearch": "^0.4.0",
-    "@astrojs/tailwind": "^5.1.4",
-    "@headlessui/react": "^2.1.10",
-    "@heroicons/react": "^2.1.5",
     "@keystatic/astro": "^5.0.3",
     "@keystatic/core": "^0.5.39",
     "@lorenzo_lewis/starlight-utils": "^0.2.0",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
     "astro": "^5.1.1",
     "astro-auto-import": "^0.4.4",
     "astro-expressive-code": "^0.38.0",
     "lucide-react": "^0.469.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "rehype-autolink-headings": "^7.1.0",
     "sharp": "^0.33.0",
     "unist-util-visit": "^5.0.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.15",
-    "tailwindcss": "^3.4.14"
   }
 }
