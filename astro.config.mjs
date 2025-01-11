@@ -14,9 +14,11 @@ import starlightDocSearch from "@astrojs/starlight-docsearch";
 // https://astro.build/config
 export default defineConfig({
     output: 'static',
-    adapter: node({
-        mode: "standalone"
-    }),
+
+    // Адаптер Node для корректной работы Keystatic
+    // adapter: node({
+    //     mode: "standalone"
+    // }),
 
     site: "https://flomaster.chrsnv.ru",
     base: "/",
@@ -199,7 +201,8 @@ export default defineConfig({
                 'astro:assets': 'astroassets'
             }]
         }),
-        keystatic()],
+        //keystatic()
+        ],
 
     markdown: {
         rehypePlugins: [
