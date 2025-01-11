@@ -54,7 +54,6 @@ export default defineConfig({
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
                     telegram: "https://t.me/+jH1mblw0ytcwOWUy",
-                    openCollective: "https://planer.chrsnv.ru/spaces/issues/74f8fa320fc047a68c5f21bbb64f0e3f"
                 },
                 sidebar: [
                     {
