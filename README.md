@@ -26,6 +26,14 @@ npm install
 npm run dev
 ```
 
+## Переменные
+При использовании [Keystatic](https://github.com/Thinkmill/keystatic) в качестве CMS:
+- `KEYSTATIC_GITHUB_CLIENT_ID`
+- `KEYSTATIC_GITHUB_CLIENT_SECRET`
+- `KEYSTATIC_SECRET`
+- `PUBLIC_KEYSTATIC_GITHUB_APP_SLUG`
+заполняются либо вручную, либо автоматически при установке Keystatic
+
 ## Авторы
 
 - [Роман Чурсанов](https://www.github.com/AuthFailed) - Техническая часть, написание РМов
