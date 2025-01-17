@@ -139,8 +139,8 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/paid-help"}
                             },
                             {
-                                label: "🧾 Тарифы",
-                                autogenerate: {directory: "/phrases/sales/tariffs"}
+                                label: "🚀 Продажа услуг",
+                                autogenerate: {directory: "/phrases/sales/service"}
                             },
                             {
                                 label: "📡 Продажа роутеров",
