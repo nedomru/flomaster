@@ -37,4 +37,4 @@ npm run dev
 ## Авторы
 
 - [Роман Чурсанов](https://www.github.com/AuthFailed) - Техническая часть, написание РМов
-
+ 
