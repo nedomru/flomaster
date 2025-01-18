@@ -38,3 +38,4 @@ npm run dev
 
 - [Роман Чурсанов](https://www.github.com/AuthFailed) - Техническая часть, написание РМов
  
+ 
