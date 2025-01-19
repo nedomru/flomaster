@@ -15,7 +15,7 @@
 Для развертывания проекта:
 1. Клонируйте репозиторий
 ```bash
-git clone https://github.com/AuthFailed/chat-flomaster.git
+git clone https://devops.chrsnv.ru/nedomru/flomaster.git
 ```
 2. Установите зависимости
 ```bash
