@@ -1,0 +1,17 @@
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+    - .npm/
+
+stages:
+  - build
+
+build:
+  stage: build
+  before_script:
+    - node --version  # Check node is available
+    - npm --version   # Check npm is available
+  script:
+    - npm ci
+    - npm run build
