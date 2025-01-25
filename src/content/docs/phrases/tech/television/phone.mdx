@@ -4,9 +4,11 @@ sidebar:
     order: 5
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+
 ### Переустановка приложения
-<starlight.Tabs>
-    <starlight.TabItem label="Android" icon="linux">
+<Tabs>
+    <TabItem label="Android" icon="linux">
         ```txt
         Потребуется переустановить приложение:
         1. Найдите приложение Movix на телефоне и удалите его
@@ -18,8 +20,8 @@ sidebar:
         2. Проверьте наличие вашего устройства на странице
         Если его там не будет - нажмите на "+ Добавить это устройство"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="iOS" icon="apple">
+    </TabItem>
+    <TabItem label="iOS" icon="apple">
         ```txt
         Потребуется переустановить приложение:
         1. Найдите приложение Movix на телефоне и удалите его
@@ -31,5 +33,5 @@ sidebar:
         2. Проверьте наличие вашего устройства на странице
         Если его там не будет - нажмите на "+ Добавить это устройство"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>

@@ -6,19 +6,22 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Роутеры Dom.ru
 
-<starlight.Tabs>
-    <starlight.TabItem label="Wave">
+<Tabs>
+    <TabItem label="Wave">
         ```txt
         Модель: Wave
         - Скорость по кабелю: до 1000 Мбит/с
@@ -43,13 +46,13 @@ sidebar:
         - 275 ₽/мес. на 36 месяцев (общая стоимость - 9 900 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/12122"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/12122"
                                 description="Dom.ru Wave в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://dom.ru/internet/equipment/wi-fi-router-dom-ru-wave-ax1500"
                                 description="Dom.ru Wave на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
-</starlight.Tabs>
+        </CardGrid>
+    </TabItem>
+</Tabs>

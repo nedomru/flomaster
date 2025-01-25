@@ -6,9 +6,11 @@ sidebar:
     attrs: {}
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+
 ### Проверка MAC-адреса
-<starlight.Tabs>
-    <starlight.TabItem label="Через настройки">
+<Tabs>
+    <TabItem label="Через настройки">
         ```txt
         Нужно уточнить номер приставки:
         1. Нажмите иконку шестеренки в главном меню приставки
@@ -17,16 +19,16 @@ sidebar:
         На открывшейся странице найдите значение "Ethernet MAC адрес"
         Напишите его, пожалуйста, или пришлите его фото в чат
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="С наклейки">
+    <TabItem label="С наклейки">
         ```txt
         Нужно уточнить номер приставки:
         Снизу на приставке, где наклейка, будет написан её MAC-адрес формата XX:XX:XX:XX:XX:XX
         Напишите его, пожалуйста, или пришлите фото наклейки в чат
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Проверка даты и времени
 ```txt
@@ -52,8 +54,8 @@ sidebar:
 ```
 
 ### Проверка подключения к сети и получаемых метрик
-<starlight.Tabs>
-    <starlight.TabItem label="Wi-Fi">
+<Tabs>
+    <TabItem label="Wi-Fi">
         ```txt
         Проверим статус сети на приставке:
         1. Нажмите иконку шестеренки в главном меню приставки
@@ -62,8 +64,8 @@ sidebar:
         На экране появится перечень сетей, выделите вашу сеть и нажмите кнопку "ОК" на пульте
         Найдите значение IP-адреса и напишите его в чат, или пришлите его фото
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Патчкорд">
+    </TabItem>
+    <TabItem label="Патчкорд">
         ```txt
         Проверим статус сети на приставке:
         1. Нажмите иконку шестеренки в главном меню приставки
@@ -72,8 +74,8 @@ sidebar:
         На экране найдите раздел Ethernet, состояние - "Подключено"
         Под состоянием будут прописаны адреса - напишите их чат, или пришлите фото
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Установка статических метрик
 Вместо x введи 3 октет роутера, к которому подключена приставка
@@ -152,10 +154,10 @@ sidebar:
 ```
 
 ### Перенастройка приставки
-<starlight.Tabs>
-    <starlight.TabItem label="Movix 2021">
-        <starlight.Tabs syncKey="reset">
-            <starlight.TabItem label="Через настройки">
+<Tabs>
+    <TabItem label="Movix 2021">
+        <Tabs syncKey="reset">
+            <TabItem label="Через настройки">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Нажмите иконку шестеренки в главном меню приставки
@@ -165,8 +167,8 @@ sidebar:
 
                 После перезагрузки пройдите по инструкциям на экране ТВ
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Через Recovery">
+            </TabItem>
+            <TabItem label="Через Recovery">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Выключите приставку от розетки
@@ -181,12 +183,12 @@ sidebar:
 
                 Появится стандартная загрузка приставки и ее первоначальная настройка
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="Movix GO">
-        <starlight.Tabs syncKey="reset">
-            <starlight.TabItem label="Через настройки">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="Movix GO">
+        <Tabs syncKey="reset">
+            <TabItem label="Через настройки">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Нажмите иконку шестеренки в главном меню приставки
@@ -196,8 +198,8 @@ sidebar:
 
                 После перезагрузки пройдите по инструкциям на экране ТВ
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Через Recovery">
+            </TabItem>
+            <TabItem label="Через Recovery">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Выключите приставку от розетки
@@ -212,12 +214,12 @@ sidebar:
 
                 Появится стандартная загрузка приставки и ее первоначальная настройка
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="Movix Pro/Wi-Fi">
-        <starlight.Tabs syncKey="reset">
-            <starlight.TabItem label="Через настройки">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="Movix Pro/Wi-Fi">
+        <Tabs syncKey="reset">
+            <TabItem label="Через настройки">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Нажмите иконку шестеренки в главном меню приставки
@@ -227,8 +229,8 @@ sidebar:
 
                 После перезагрузки пройдите по инструкциям на экране ТВ
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Через Recovery">
+            </TabItem>
+            <TabItem label="Через Recovery">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Выключите приставку от розетки
@@ -242,12 +244,12 @@ sidebar:
 
                 Появится стандартная загрузка приставки и ее первоначальная настройка
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="Movix Pro ZTE">
-        <starlight.Tabs syncKey="reset">
-            <starlight.TabItem label="Через настройки">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="Movix Pro ZTE">
+        <Tabs syncKey="reset">
+            <TabItem label="Через настройки">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Нажмите иконку шестеренки в главном меню приставки
@@ -257,8 +259,8 @@ sidebar:
 
                 После перезагрузки пройдите по инструкциям на экране ТВ
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Через Recovery">
+            </TabItem>
+            <TabItem label="Через Recovery">
                 ```txt
                 Потребуется перенастройка приставки:
                 1. Выключите приставку от розетки
@@ -274,10 +276,10 @@ sidebar:
                 На экране появится изображение удаления, после чего повторно откроется меню
                 Выберите первый пункт зажатием клавиши включения чтобы перезапустить приставку
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 ### Очистка кеша
 ```txt

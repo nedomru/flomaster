@@ -5,24 +5,28 @@ sidebar:
   hidden: false
   attrs: {}
 ---
-<starlight.CardGrid stagger={false}>
-  <starlight.LinkCard title="Города с рассрочкой" href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0" description="Список городов с доступной рассрочкой в базе знаний" target="_blank" />
 
-  <starlight.LinkCard title="Оформление рассрочки" href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8" description="Инструкция по оформлению рассрочки в базе знаний" target="_blank" />
-</starlight.CardGrid>
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
 
-<starlight.LinkCard title="Все приставки" href="https://clever.ertelecom.ru/content/space/4/article/8943" description="Открыть список приставок в базе знаний" target="_blank" />
+<CardGrid stagger={false}>
+  <LinkCard title="Города с рассрочкой" href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0" description="Список городов с доступной рассрочкой в базе знаний" target="_blank" />
+
+  <LinkCard title="Оформление рассрочки" href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8" description="Инструкция по оформлению рассрочки в базе знаний" target="_blank" />
+</CardGrid>
+
+<LinkCard title="Все приставки" href="https://clever.ertelecom.ru/content/space/4/article/8943" description="Открыть список приставок в базе знаний" target="_blank" />
 
 ### Movix
 
-<starlight.Tabs>
-  <starlight.TabItem label="Model 2023">
+<Tabs>
+  <TabItem label="Model 2023">
     <details>
       <summary>
         Открыть картинку
       </summary>
 
-      <astroassets.Image src="/images/decoders/movix/movix2023.jpg" alt="Model 2023" width="600" height="100" loading="lazy" decoding="async" />
+      <Image src="/images/decoders/movix/movix2023.jpg" alt="Model 2023" width="600" height="100" loading="lazy" decoding="async" />
 
       <a href="/images/decoders/movix/movix2023.jpg" target="_self" download="Model 2023.jpg">
         Скачать картинку
@@ -58,20 +62,20 @@ sidebar:
     - 318 ₽/мес. на 36 месяцев (общая стоимость - 11 449 ₽)
     ```
 
-    <starlight.CardGrid stagger={false}>
-      <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4424" description="Movix Model 2023 в базе знаний" target="_blank" />
+    <CardGrid stagger={false}>
+      <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4424" description="Movix Model 2023 в базе знаний" target="_blank" />
 
-      <starlight.LinkCard title="Пульт от приставки" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/6947" description="Открыть пульт в базе знаний" target="_blank" />
-    </starlight.CardGrid>
-  </starlight.TabItem>
+      <LinkCard title="Пульт от приставки" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/6947" description="Открыть пульт в базе знаний" target="_blank" />
+    </CardGrid>
+  </TabItem>
 
-  <starlight.TabItem label="Go">
+  <TabItem label="Go">
     <details>
       <summary>
         Открыть картинку
       </summary>
 
-      <astroassets.Image src="/images/decoders/movix/movixgo.jpg" alt="Go" width="600" height="100" loading="lazy" decoding="async" />
+      <Image src="/images/decoders/movix/movixgo.jpg" alt="Go" width="600" height="100" loading="lazy" decoding="async" />
 
       <a href="/images/decoders/movix/movixgo.jpg" target="_self" download="Go.jpg">
         Скачать картинку
@@ -105,10 +109,10 @@ sidebar:
     - 306 ₽/мес. на 36 месяцев (общая стоимость - 11 008 ₽)
     ```
 
-    <starlight.CardGrid stagger={false}>
-      <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4621" description="Movix Model 2023 в базе знаний" target="_blank" />
+    <CardGrid stagger={false}>
+      <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4621" description="Movix Model 2023 в базе знаний" target="_blank" />
 
-      <starlight.LinkCard title="Пульт от приставки" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4951" description="Открыть пульт в базе знаний" target="_blank" />
-    </starlight.CardGrid>
-  </starlight.TabItem>
-</starlight.Tabs>
+      <LinkCard title="Пульт от приставки" href="https://clever.ertelecom.ru/content/space/4/folder/477/article/4951" description="Открыть пульт в базе знаний" target="_blank" />
+    </CardGrid>
+  </TabItem>
+</Tabs>

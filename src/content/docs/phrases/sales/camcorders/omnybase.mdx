@@ -6,19 +6,22 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Камеры Omny Base
 
-<starlight.Tabs>
-    <starlight.TabItem label="minibullet2E-U">
+<Tabs>
+    <TabItem label="minibullet2E-U">
         ```txt
         Внешняя камера Omny Base minibullet2E-U
         - Тип камеры: миникупольная
@@ -52,11 +55,11 @@ sidebar:
         - 294 ₽/мес. на 36 месяцев (общая стоимость - 10 568 ₽)
         ```
 
-        <starlight.LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1787"
+        <LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1787"
                             description="Открыть камеру в базе знаний" target="_blank"/>
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="miniDome2E-U">
+    <TabItem label="miniDome2E-U">
         ```txt
         Внешняя камера Omny Base miniDome2E-U
         - Тип камеры: миникупольная
@@ -91,7 +94,7 @@ sidebar:
         - 294 ₽/мес. на 36 месяцев (общая стоимость - 10 568 ₽)
         ```
 
-        <starlight.LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1788"
+        <LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1788"
                             description="Открыть камеру в базе знаний" target="_blank"/>
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>

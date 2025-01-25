@@ -6,9 +6,11 @@ sidebar:
     attrs: {}
 ---
 
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
 ### Планы подключения
-<starlight.Tabs>
-    <starlight.TabItem label="Аудиодомофон">
+<Tabs>
+    <TabItem label="Аудиодомофон">
     ```txt "[СТОИМОСТЬ]"
     Стоимость подключения аудио-домофона: [СТОИМОСТЬ] ₽
 
@@ -20,8 +22,8 @@ sidebar:
     — Установку, настройку мобильного приложения при необходимости
     — Подписание документов
     ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Видеодомофон">
+    </TabItem>
+    <TabItem label="Видеодомофон">
     ```txt "[СТОИМОСТЬ]"
     Стоимость подключения видео-домофона: [СТОИМОСТЬ] ₽
 
@@ -34,12 +36,12 @@ sidebar:
     — Установку, настройку мобильного приложения при необходимости
     — Подписание документов
     ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Подключение тарифа
-<starlight.Tabs>
-    <starlight.TabItem label="Базовый">
+<Tabs>
+    <TabItem label="Базовый">
     ```txt "[СТОИМОСТЬ]"
 Могу предложить тариф "Базовый"
 Стоимость тарифа: [СТОИМОСТЬ] ₽/мес
@@ -49,8 +51,8 @@ sidebar:
 
 Согласны?
     ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Классический">
+    </TabItem>
+    <TabItem label="Классический">
     ```txt "[СТОИМОСТЬ]"
 Могу предложить тариф "Классический"
 Стоимость тарифа: [СТОИМОСТЬ] ₽/мес
@@ -61,8 +63,8 @@ sidebar:
 
 Согласны?
     ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Мобильный">
+    </TabItem>
+    <TabItem label="Мобильный">
     ```txt "[СТОИМОСТЬ]"
 Могу предложить тариф "Мобильный"
 Стоимость тарифа: [СТОИМОСТЬ] ₽/мес
@@ -74,8 +76,8 @@ sidebar:
 
 Согласны?
     ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Аудиодомофон">
+    </TabItem>
+    <TabItem label="Аудиодомофон">
     ```txt "[СТОИМОСТЬ]"
 Могу предложить тариф "Аудиодомофон"
 Стоимость тарифа: [СТОИМОСТЬ] ₽/мес
@@ -88,8 +90,8 @@ sidebar:
 
 Согласны?
     ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Видеодомофон">
+    </TabItem>
+    <TabItem label="Видеодомофон">
     ```txt "[СТОИМОСТЬ]"
 Могу предложить тариф "Видеодомофон"
 Стоимость тарифа: [СТОИМОСТЬ] ₽/мес
@@ -102,8 +104,8 @@ sidebar:
 
 Согласны?
     ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Покупка ключа
 ```txt

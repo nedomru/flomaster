@@ -1,7 +1,5 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
-import node from "@astrojs/node";
-import keystatic from '@keystatic/astro'
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
 
 
@@ -14,12 +12,6 @@ import starlightDocSearch from "@astrojs/starlight-docsearch";
 // https://astro.build/config
 export default defineConfig({
     output: 'static',
-
-    // Адаптер Node для корректной работы Keystatic
-    // adapter: node({
-    //     mode: "standalone"
-    // }),
-
     site: "https://flomaster.chrsnv.ru",
     base: "/",
 
@@ -194,14 +186,7 @@ export default defineConfig({
                     },
                 }
             }),
-        AutoImport({
-            imports: [{
-                '@astrojs/starlight/components': 'starlight',
-                'astro:assets': 'astroassets'
-            }]
-        }),
-        //keystatic()
-        ],
+    ],
 
     markdown: {
         rehypePlugins: [

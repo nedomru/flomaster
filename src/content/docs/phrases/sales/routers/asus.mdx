@@ -6,25 +6,28 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Роутеры ASUS
 
-<starlight.Tabs>
-    <starlight.TabItem label="ASUS ROG Rapture GT-AX6000">
+<Tabs>
+    <TabItem label="ASUS ROG Rapture GT-AX6000">
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/asus/Asus ROG AX6000.jpg" alt="ASUS ROG Rapture GT-AX6000" width="600"
+            <Image src="/images/asus/Asus ROG AX6000.jpg" alt="ASUS ROG Rapture GT-AX6000" width="600"
                                height="100" loading="lazy" decoding="async"/>
 
             <a href="/images/asus/Asus ROG AX6000.jpg" target="_self" download="Asus ROG AX6000.jpg">
@@ -47,13 +50,13 @@ sidebar:
 
         Рассрочка от банка - **Рассрочки нет**
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/9349"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/9349"
                                 description="ASUS ROG Rapture GT-AX6000 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://rog.asus.com/ru/networking/rog-rapture-gt-ax6000-model"
                                 description="ASUS ROG Rapture GT-AX6000 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
-</starlight.Tabs>
+        </CardGrid>
+    </TabItem>
+</Tabs>

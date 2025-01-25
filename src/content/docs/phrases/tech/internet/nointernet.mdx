@@ -5,6 +5,11 @@ sidebar:
     hidden: false
     attrs: {}
 ---
+
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+import { Image } from 'astro:assets';
+
+
 ### Проверка целостности кабеля
 
 ```txt
@@ -17,18 +22,18 @@ sidebar:
 
 ### Проверка линка
 
-<starlight.Tabs>
-    <starlight.TabItem label="Роутер">
-        <starlight.Tabs>
-            <starlight.TabItem label="Через WAN">
+<Tabs>
+    <TabItem label="Роутер">
+        <Tabs>
+            <TabItem label="Через WAN">
                 ```txt
                 Давайте проверим получает ли роутер сигнал:
                 1. Отключите основной кабель интернета от роутера
                 2. Проверьте, погас ли индикатор планеты
                 ```
-            </starlight.TabItem>
+            </TabItem>
 
-            <starlight.TabItem label="Через LAN">
+            <TabItem label="Через LAN">
                 ```txt
                 Давайте проверим получает ли роутер сигнал:
                 1. Отключите все интернет-кабели от роутера, кроме питания
@@ -36,40 +41,40 @@ sidebar:
                 3. Пришлите фото индикации роутера, а так же фото задней части роутера, чтобы было видно куда подключили
                 кабель
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
+            </TabItem>
+        </Tabs>
 
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/nointernet/link.jpg" alt="Порты роутера" width="600" height="100"
+            <Image src="/images/nointernet/link.jpg" alt="Порты роутера" width="600" height="100"
                                loading="lazy" decoding="async"/>
 
             <a href="/images/nointernet/link.jpg" target="_self" download="link.jpg">
                 Скачать картинку
             </a>
         </details>
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="Терминал">
+    <TabItem label="Терминал">
         ```txt
         Давайте проверим получает ли терминал сигнал:
         Проверьте, горит ли индикатор PON на терминале?
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="Медиаконвертер">
+    <TabItem label="Медиаконвертер">
         ```txt
         Давайте проверим получает ли медиаконвертер сигнал:
         1. Найдите на медиаконвертере два столбца индикаторов
         2. На левом столбце найдите средний индикатор, обычно он подписан как Link
         3. Уточните, горит ли он
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="Напрямую">
+    <TabItem label="Напрямую">
         ```txt
         Давайте проверим получает ли компьютер сигнал:
         1. На вашем ПК откройте Пуск (значок Windows в левом углу)
@@ -81,30 +86,30 @@ sidebar:
 
         Что указано в "Состояние среды"? Отправьте, пожалуйста, фото
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Проверка индикации
 
-<starlight.Tabs>
-    <starlight.TabItem label="Роутер">
+<Tabs>
+    <TabItem label="Роутер">
         ```txt
         Требуется проверить индикацию роутера:
         Пришлите, пожалуйста, в чат фотографию его индикаторов
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="Терминал">
+    <TabItem label="Терминал">
         ```txt
         Требуется проверить индикацию терминала:
         Пришлите, пожалуйста, в чат фотографию его индикаторов
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="Медиаконвертер">
+    <TabItem label="Медиаконвертер">
         ```txt
         Требуется проверить индикацию медиаконвертера:
         Пришлите, пожалуйста, в чат фотографию его индикаторов
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>

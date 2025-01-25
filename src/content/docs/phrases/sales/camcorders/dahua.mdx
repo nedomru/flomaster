@@ -6,25 +6,28 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Камеры DAHUA
 
-<starlight.Tabs>
-    <starlight.TabItem label="IMOU RANGER 2">
+<Tabs>
+    <TabItem label="IMOU RANGER 2">
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/cameras/dahua/Ranger2.jpg" alt="IMOU RANGER 2" width="600" height="100"
+            <Image src="/images/cameras/dahua/Ranger2.jpg" alt="IMOU RANGER 2" width="600" height="100"
                                loading="lazy" decoding="async"/>
 
             <a href="/images/cameras/dlink/Ranger2.jpg" target="_self" download="IMOU RANGER 2.jpg">
@@ -58,17 +61,17 @@ sidebar:
         - 235 ₽/мес. на 36 месяцев (общая стоимость - 8 462 ₽)
         ```
 
-        <starlight.LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1785"
+        <LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1785"
                             description="Открыть камеру в базе знаний" target="_blank"/>
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="IMOU Cue 2">
+    <TabItem label="IMOU Cue 2">
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/cameras/dahua/CUE2.jpg" alt="IMOU Cue 2" width="600" height="100"
+            <Image src="/images/cameras/dahua/CUE2.jpg" alt="IMOU Cue 2" width="600" height="100"
                                loading="lazy" decoding="async"/>
 
             <a href="/images/cameras/dahua/CUE2.jpg" target="_self" download="IMOU Cue 2.jpg">
@@ -103,7 +106,7 @@ sidebar:
         - 161 ₽/мес. на 36 месяцев (общая стоимость - 5 812 ₽)
         ```
 
-        <starlight.LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1786"
+        <LinkCard title="Камера в БЗ" href="https://clever.ertelecom.ru/content/space/4/article/1786"
                             description="Открыть камеру в базе знаний" target="_blank"/>
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>

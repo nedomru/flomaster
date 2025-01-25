@@ -6,19 +6,22 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Роутеры D-Link
 
-<starlight.Tabs>
-    <starlight.TabItem label="DIR-842/R7">
+<Tabs>
+    <TabItem label="DIR-842/R7">
 
         ```txt
         Модель: D-Link DIR-842/R7
@@ -45,16 +48,16 @@ sidebar:
         - 250 ₽/мес. на 36 месяцев (общая стоимость - 9 000 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1551"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1551"
                                 description="D-Link DIR-842/R7 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя" href="https://www.dlink.ru/ru/products/5/2663.html"
+            <LinkCard title="Сайт производителя" href="https://www.dlink.ru/ru/products/5/2663.html"
                                 description="D-Link DIR-842/R7 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="DIR-X1530">
+    <TabItem label="DIR-X1530">
         ```txt
         Модель: D-Link DIR-X1530
         - Скорость по кабелю: до 1000 Мбит/с
@@ -80,12 +83,12 @@ sidebar:
         - 323 ₽/мес. на 36 месяцев (общая стоимость - 11 628 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1550"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1550"
                                 description="D-Link DIR-X1530 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя" href="https://www.dlink.ru/ru/products/5/2591.html"
+            <LinkCard title="Сайт производителя" href="https://www.dlink.ru/ru/products/5/2591.html"
                                 description="D-Link DIR-X1530 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
-</starlight.Tabs>
+        </CardGrid>
+    </TabItem>
+</Tabs>

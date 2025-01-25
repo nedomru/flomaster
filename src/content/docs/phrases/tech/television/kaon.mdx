@@ -6,10 +6,12 @@ sidebar:
     attrs: {}
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+
 ### Проверка NUID
 
-<starlight.Tabs>
-    <starlight.TabItem label="Через настройки">
+<Tabs>
+    <TabItem label="Через настройки">
         ```txt
         Нужно уточнить номер приставки:
         1. Нажмите кнопку "Меню" на пульте от приставки
@@ -18,16 +20,16 @@ sidebar:
         На открывшейся странице найдите значение пункта "NUID" (10 цифр)
         Напишите его, пожалуйста, или пришлите его фото в чат
         ```
-    </starlight.TabItem>
+    </TabItem>
 
-    <starlight.TabItem label="С наклейки">
+    <TabItem label="С наклейки">
         ```txt
         Нужно уточнить номер приставки:
         Снизу на приставке, где наклейка, будет написан её NUID в формате 10 цифр
         Напишите его, пожалуйста, или пришлите фото наклейки в чат
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Проверка работы интернета
 ```txt

@@ -5,20 +5,24 @@ sidebar:
     hidden: false
     attrs: {}
 ---
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Города с рассрочкой"
+
+import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Image } from 'astro:assets';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Города с рассрочкой"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
 
-    <starlight.LinkCard title="Оформление рассрочки"
+    <LinkCard title="Оформление рассрочки"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
                         description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ### Роутеры TP-Link
 
-<starlight.Tabs>
-    <starlight.TabItem label="Archer EC220">
+<Tabs>
+    <TabItem label="Archer EC220">
         ```txt
         Модель: TP-Link Archer EC220
         - Скорость по кабелю: до 1000 Мбит/с
@@ -44,23 +48,23 @@ sidebar:
         - 250 ₽/мес. на 36 месяцев (общая стоимость - 9 000 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1495"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1495"
                                 description="TP-Link Archer EC220 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/service-provider/wifi-router/ec220-g5"
                                 description="TP-Link Archer EC220 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="Archer EX220">
+    <TabItem label="Archer EX220">
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/routers/tp-link/EX220.jpg" alt="TP-Link Archer EX220" width="600"
+            <Image src="/images/routers/tp-link/EX220.jpg" alt="TP-Link Archer EX220" width="600"
                                height="100" loading="lazy" decoding="async"/>
 
             <a href="/images/routers/tp-link/EX220.jpg" target="_self" download="EX220.jpg">
@@ -94,17 +98,17 @@ sidebar:
 
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/6969"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/6969"
                                 description="TP-Link Archer EX220 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/service-provider/wifi-router/ex220"
                                 description="TP-Link Archer EX220 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="Archer EX511">
+    <TabItem label="Archer EX511">
         ```txt
         Модель: TP-Link Archer EX511
         - Скорость по кабелю: до 1000 Мбит/с
@@ -130,17 +134,17 @@ sidebar:
         - 448 ₽/мес. на 36 месяцев (общая стоимость - 16 131 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/6970"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/6970"
                                 description="TP-Link Archer EX511 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/service-provider/wifi-router/ex511"
                                 description="TP-Link Archer EX511 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="Archer AX55">
+    <TabItem label="Archer AX55">
         ```txt
         Модель: TP-Link Archer AX55
         - Скорость по кабелю: до 1000 Мбит/с
@@ -166,23 +170,23 @@ sidebar:
         - 448 ₽/мес. на 36 месяцев (общая стоимость - 16 131 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1557"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1557"
                                 description="TP-Link Archer AX55 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/home-networking/wifi-router/archer-ax55"
                                 description="TP-Link Archer AX55 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="Archer AX73">
+    <TabItem label="Archer AX73">
         <details>
             <summary>
                 Открыть картинку
             </summary>
 
-            <astroassets.Image src="/images/routers/tp-link/AX73.jpg" alt="TP-Link Archer AX73" width="600" height="100"
+            <Image src="/images/routers/tp-link/AX73.jpg" alt="TP-Link Archer AX73" width="600" height="100"
                                loading="lazy" decoding="async"/>
 
             <a href="/images/routers/tp-link/AX73.jpg" target="_self" download="AX73.jpg">
@@ -216,21 +220,21 @@ sidebar:
         - 754 ₽/мес. на 36 месяцев (общая стоимость - 27 139 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1613"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1613"
                                 description="TP-Link Archer AX73 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/home-networking/wifi-router/archer-ax73"
                                 description="TP-Link Archer AX73 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
-</starlight.Tabs>
+        </CardGrid>
+    </TabItem>
+</Tabs>
 
 ### Mesh-системы TP-Link
 
-<starlight.Tabs>
-    <starlight.TabItem label="Deco M4">
+<Tabs>
+    <TabItem label="Deco M4">
         ```txt
         Модель: TP-Link Deco M4
         - Скорость по кабелю: до 1000 Мбит/с
@@ -255,17 +259,17 @@ sidebar:
         - 509 ₽/мес. на 36 месяцев (общая стоимость - 18 333 ₽)
         ```
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1564"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1564"
                                 description="TP-Link Deco M4 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/home-networking/deco/deco-m4/"
                                 description="TP-Link Deco M4 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
+        </CardGrid>
+    </TabItem>
 
-    <starlight.TabItem label="Deco X60">
+    <TabItem label="Deco X60">
         ```txt
         Модель: TP-Link Deco X60
         - Скорость по кабелю: до 1000 Мбит/с
@@ -284,8 +288,8 @@ sidebar:
 
         Рассрочка от банка:
 
-        <starlight.Tabs>
-            <starlight.TabItem label="Два модуля">
+        <Tabs>
+            <TabItem label="Два модуля">
                 ```
                 Два модуля в рассрочку:
                 - 10 103 ₽/мес. на 3 месяца (общая стоимость - 30 309 ₽)
@@ -294,9 +298,9 @@ sidebar:
                 - 1 576 ₽/мес. на 24 месяцев (общая стоимость - 37 812 ₽)
                 - 1 182 ₽/мес. на 36 месяцев (общая стоимость - 42 564 ₽)
                 ```
-            </starlight.TabItem>
+            </TabItem>
 
-            <starlight.TabItem label="Три модуля">
+            <TabItem label="Три модуля">
                 ```
                 Три модуля в рассрочку:
                 - 15 887 ₽/мес. на 3 месяца (общая стоимость - 47 660 ₽)
@@ -305,16 +309,16 @@ sidebar:
                 - 2 477 ₽/мес. на 24 месяцев (общая стоимость - 59 458 ₽)
                 - 1 859 ₽/мес. на 36 месяцев (общая стоимость - 66 931 ₽)
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
+            </TabItem>
+        </Tabs>
 
-        <starlight.CardGrid stagger={false}>
-            <starlight.LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1566"
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/1566"
                                 description="TP-Link Deco X60 в базе знаний" target="_blank"/>
 
-            <starlight.LinkCard title="Сайт производителя"
+            <LinkCard title="Сайт производителя"
                                 href="https://www.tp-link.com/ru/home-networking/deco/deco-x60/"
                                 description="TP-Link Deco X60 на сайте производителя" target="_blank"/>
-        </starlight.CardGrid>
-    </starlight.TabItem>
-</starlight.Tabs>
+        </CardGrid>
+    </TabItem>
+</Tabs>

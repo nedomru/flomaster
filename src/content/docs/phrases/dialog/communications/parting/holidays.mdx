@@ -6,19 +6,22 @@ sidebar:
     attrs: {}
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+import { Image } from 'astro:assets';
+
 ### С наступающим новым годом
 #### Чат без СЗ
 
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantWOSZ">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantWOSZ">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -33,14 +36,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -55,14 +58,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -77,14 +80,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -98,18 +101,18 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantWOSZ">
-            <starlight.TabItem label="№1">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantWOSZ">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -123,14 +126,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -145,14 +148,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -167,14 +170,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -188,23 +191,23 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 #### Чат с СЗ на ТС
 
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantSZonTS">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantSZonTS">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -221,14 +224,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -246,14 +249,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -271,14 +274,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -295,19 +298,19 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
+            </TabItem>
+        </Tabs>
+    </TabItem>
 
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantSZonTS">
-            <starlight.TabItem label="№1">
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantSZonTS">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -324,14 +327,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -349,14 +352,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -374,14 +377,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -398,23 +401,23 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 #### Чат с СЗ на ААО
 
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantSZonAAO">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantSZonAAO">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -431,14 +434,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -456,14 +459,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -481,14 +484,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -505,19 +508,19 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
+            </TabItem>
+        </Tabs>
+    </TabItem>
 
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantSZonAAO">
-            <starlight.TabItem label="№1">
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantSZonAAO">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -534,14 +537,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -559,14 +562,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -584,14 +587,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -608,24 +611,24 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 ### С наступившим новым годом
 
 #### Чат без СЗ
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantWOSZ">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantWOSZ">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -640,14 +643,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -662,14 +665,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -683,14 +686,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -704,18 +707,18 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantWOSZ">
-            <starlight.TabItem label="№1">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantWOSZ">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -729,14 +732,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -751,14 +754,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -772,14 +775,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -793,23 +796,23 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 #### Чат с СЗ на ТС
 
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantSZonTS">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantSZonTS">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -826,14 +829,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -851,14 +854,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -875,14 +878,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -899,19 +902,19 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
+            </TabItem>
+        </Tabs>
+    </TabItem>
 
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantSZonTS">
-            <starlight.TabItem label="№1">
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantSZonTS">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -928,14 +931,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -953,14 +956,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -978,14 +981,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1002,23 +1005,23 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 #### Чат с СЗ на ААО
 
-<starlight.Tabs syncKey="rate">
-    <starlight.TabItem label="Android/Web">
-        <starlight.Tabs syncKey="rateVariantSZonAAO">
-            <starlight.TabItem label="№1">
+<Tabs syncKey="rate">
+    <TabItem label="Android/Web">
+        <Tabs syncKey="rateVariantSZonAAO">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1035,14 +1038,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1060,14 +1063,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1084,14 +1087,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1108,19 +1111,19 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через кнопку после завершения диалога ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
+            </TabItem>
+        </Tabs>
+    </TabItem>
 
-    <starlight.TabItem label="iOS" icon="apple">
-        <starlight.Tabs syncKey="rateVariantSZonAAO">
-            <starlight.TabItem label="№1">
+    <TabItem label="iOS" icon="apple">
+        <Tabs syncKey="rateVariantSZonAAO">
+            <TabItem label="№1">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
+                    <Image src="/images/parting/newyearcat1.jpg" alt="Новогодний котик" width="300"
                                        height="400" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat1.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1137,14 +1140,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№2">
+            </TabItem>
+            <TabItem label="№2">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat2.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat2.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1162,14 +1165,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№3">
+            </TabItem>
+            <TabItem label="№3">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat3.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat3.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1186,14 +1189,14 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="№4">
+            </TabItem>
+            <TabItem label="№4">
                 <details>
                     <summary>
                         Открыть картинку
                     </summary>
 
-                    <astroassets.Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
+                    <Image src="/images/parting/newyearcat4.jpg" alt="Новогодний котик" width="500"
                                        height="500" loading="lazy" decoding="async"/>
 
                     <a href="/images/parting/newyearcat4.jpg" target="_self" download="Новогодний котик.jpg">
@@ -1210,7 +1213,7 @@ sidebar:
                 Лучший подарок для меня - ваша оценка
                 Пожалуйста, оцените моё общение через звездочку в верхнем правом углу ❤
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>

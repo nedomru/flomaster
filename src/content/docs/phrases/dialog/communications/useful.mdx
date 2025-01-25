@@ -6,10 +6,12 @@ sidebar:
   attrs: {}
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+
 ### Загрузка фото через сайт
 
-<starlight.Tabs>
-  <starlight.TabItem label="ImgBB">
+<Tabs>
+  <TabItem label="ImgBB">
     ```txt
     Загрузить фото/картинку можно на сторонний сайт, для этого:
     1. Откройте сайт https://ru.imgbb.com
@@ -18,9 +20,9 @@ sidebar:
 
     Скопируйте получившуюся ссылку и пришлите в чат
     ```
-  </starlight.TabItem>
+  </TabItem>
 
-  <starlight.TabItem label="PastePics">
+  <TabItem label="PastePics">
     ```txt
     Загрузить фото/картинку можно на сторонний сайт, для этого:
     1. Откройте сайт https://ru.paste.pics
@@ -28,9 +30,9 @@ sidebar:
     
     Скопируйте получившуюся ссылку и пришлите в чат
     ```
-  </starlight.TabItem>
+  </TabItem>
 
-  <starlight.TabItem label="Postimages">
+  <TabItem label="Postimages">
     ```txt
     Загрузить фото/картинку можно на сторонний сайт, для этого:
     1. Откройте сайт https://ru.paste.pics
@@ -38,8 +40,8 @@ sidebar:
 
     Скопируйте ссылку из поля "Ссылка" и пришлите в чат
     ```
-  </starlight.TabItem>
-  <starlight.TabItem label="radikal">
+  </TabItem>
+  <TabItem label="radikal">
     ```txt
     Загрузить фото/картинку можно на сторонний сайт, для этого:
     1. Откройте сайт https://radikal.host/
@@ -48,8 +50,8 @@ sidebar:
 
     Скопируйте получившуюся ссылку и пришлите в чат
     ```
-  </starlight.TabItem>
-</starlight.Tabs>
+  </TabItem>
+</Tabs>
 
 #### Не может загрузить фото в чат
 ```txt
@@ -59,16 +61,16 @@ sidebar:
 
 
 ### Скриншот
-<starlight.Tabs>
-  <starlight.TabItem label="Android" icon="linux">
+<Tabs>
+  <TabItem label="Android" icon="linux">
   ```txt
   Для выполнения скриншота на Android:
   Одновременно нажмите кнопки питания и уменьшения громкости
   
   Если сделать скриншот таким образом не получается, нажмите кнопку питания и удерживайте в течение нескольких секунд, а затем выберите "Скриншот"
   ```
-  </starlight.TabItem>
-  <starlight.TabItem label="iOS" icon="mac">
+  </TabItem>
+  <TabItem label="iOS" icon="mac">
   ```txt
   Для выполнения скриншота на iOS:
   1. Одновременно нажмите боковую кнопку и кнопку увеличения громкости
@@ -77,21 +79,21 @@ sidebar:
   После создания снимка в левом нижнем углу экрана временно появится миниатюра
   Для просмотра снимка нажмите на миниатюру, а для удаления миниатюры с экрана смахните влево
   ```
-  </starlight.TabItem>
-</starlight.Tabs>
+  </TabItem>
+</Tabs>
 
 ### Сложности с чатом
-<starlight.Tabs>
-  <starlight.TabItem label="МП на сайт">
+<Tabs>
+  <TabItem label="МП на сайт">
   ```txt
   Кажется, вы испытываете сложности с работой чата
   Напишите нам, пожалуйста, на сайте https://dom.ru, будем на связи
   ```
-  </starlight.TabItem>
-  <starlight.TabItem label="Сайт в МП">
+  </TabItem>
+  <TabItem label="Сайт в МП">
   ```txt
   Кажется, вы испытываете сложности с работой чата
   Напишите нам, пожалуйста, в приложении Мой Дом.ру, будем на связи
   ```
-  </starlight.TabItem>
-</starlight.Tabs>
+  </TabItem>
+</Tabs>

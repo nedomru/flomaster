@@ -6,15 +6,17 @@ sidebar:
     attrs: {}
 ---
 
+import { CardGrid, LinkCard } from '@astrojs/starlight/components';
+
 ### Переключение 100+
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="План подключения"
+<CardGrid stagger={false}>
+    <LinkCard title="План подключения"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
                         description="План подключения в базе знаний" target="_blank"/>
-    <starlight.LinkCard title="Цены ПС по городам"
+    <LinkCard title="Цены ПС по городам"
                         href="https://clever.ertelecom.ru/content/space/4/folder/634/article/6366"
                         description="Открыть цены ПС по городам в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ```txt
 Для смены тарифа необходим выезд технического специалиста

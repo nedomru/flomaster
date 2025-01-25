@@ -4,6 +4,8 @@ sidebar:
     order: 1
 ---
 
+import {TabItem, Tabs, CardGrid, LinkCard} from "@astrojs/starlight/components";
+
 ### Acorp
 
 #### Вход в настройки
@@ -15,8 +17,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="PPPoE">
+<Tabs>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел Operation Mode
@@ -37,8 +39,8 @@ sidebar:
 
         Нажмите кнопку "Apply and connect"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -73,20 +75,20 @@ sidebar:
 ```
 
 ### Apple Airport
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Apple Airport в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2069"
         target="_blank"
         description="Открыть инструкции Apple Airport в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Apple Airport на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router_AirPort_001"
         target="_blank"
         description="Открыть инструкции Apple Airport на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -95,8 +97,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Изменить" - "Интернет"
@@ -105,8 +107,8 @@ sidebar:
 
         Нажмите кнопку "Обновить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Изменить" - "Интернет"
@@ -116,8 +118,8 @@ sidebar:
 
         Нажмите кнопку "Обновить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Изменить" - "Интернет"
@@ -127,8 +129,8 @@ sidebar:
 
         Нажмите кнопку "Обновить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -161,20 +163,20 @@ sidebar:
 ```
 
 ### ASUS
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="ASUS в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2520"
         target="_blank"
         description="Открыть инструкции ASUS в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="ASUS на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__ASUS"
         target="_blank"
         description="Открыть инструкции ASUS на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -185,8 +187,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Дополнительные настройки" - "Интернет"
@@ -199,8 +201,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Дополнительные настройки" - "Интернет"
@@ -215,8 +217,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Дополнительные настройки" - "Интернет"
@@ -229,8 +231,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -277,20 +279,20 @@ sidebar:
 ```
 
 ### D-Link
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="D-Link в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2275"
         target="_blank"
         description="Открыть инструкции D-Link в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="D-Link на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__DLink"
         target="_blank"
         description="Открыть инструкции D-Link на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -301,10 +303,10 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-<starlight.TabItem label="Через мастер">
-        <starlight.Tabs>
-            <starlight.TabItem label="DHCP">
+<Tabs>
+<TabItem label="Через мастер">
+        <Tabs>
+            <TabItem label="DHCP">
                 ```txt
                 Настроим соединение:
                 1. Нажмите кнопку "Начать", затем "Продолжить"
@@ -321,8 +323,8 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="PPPoE">
+            </TabItem>
+            <TabItem label="PPPoE">
                 ```txt
                 Настроим соединение:
                 1. Нажмите кнопку "Начать", затем "Продолжить"
@@ -341,8 +343,8 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Static IP">
+            </TabItem>
+            <TabItem label="Static IP">
                 ```txt
                 Настроим соединение:
                 1. Нажмите кнопку "Начать", затем "Продолжить"
@@ -361,12 +363,12 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-    <starlight.TabItem label="Через расширенные">
-        <starlight.Tabs>
-            <starlight.TabItem label="DHCP">
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="Через расширенные">
+        <Tabs>
+            <TabItem label="DHCP">
                 ```txt
                 Настроим соединение:
                 1. Откройте раздел "Настройка соединений" - "WAN" - "Расширенный режим"
@@ -375,8 +377,8 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="PPPoE">
+            </TabItem>
+            <TabItem label="PPPoE">
                 ```txt
                 Настроим соединение:
                 1. Откройте раздел "Настройка соединений" - "WAN" - "Расширенный режим"
@@ -389,8 +391,8 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-            <starlight.TabItem label="Static IP">
+            </TabItem>
+            <TabItem label="Static IP">
                 ```txt
                 Настроим соединение:
                 1. Откройте раздел "Настройка соединений" - "WAN" - "Расширенный режим"
@@ -403,10 +405,10 @@ sidebar:
 
                 Нажмите кнопку "Применить"
                 ```
-            </starlight.TabItem>
-        </starlight.Tabs>
-    </starlight.TabItem>
-</starlight.Tabs>
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
 
 #### ALG / VPN passthrough
 ```txt
@@ -429,8 +431,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Вверху откройте раздел "WAN"
@@ -441,8 +443,8 @@ sidebar:
 
         Нажмите кнопку "Применить изменения"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Вверху откройте раздел "WAN"
@@ -452,8 +454,8 @@ sidebar:
 
         Нажмите кнопку "Применить изменения"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Вверху откройте раздел "WAN"
@@ -464,8 +466,8 @@ sidebar:
 
         Нажмите кнопку "Применить изменения"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -494,20 +496,20 @@ sidebar:
 ```
 
 ### Honor
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Honor в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/12251"
         target="_blank"
         description="Открыть инструкции Honor в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Honor на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Honor_001"
         target="_blank"
         description="Открыть инструкции Honor на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -518,8 +520,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет"
@@ -530,8 +532,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет"
@@ -543,8 +545,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет"
@@ -556,8 +558,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -595,14 +597,14 @@ sidebar:
 ```
 
 ### Huawei
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Huawei в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/8179"
         target="_blank"
         description="Открыть инструкции Huawei в базе знаний"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -613,8 +615,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Настройки интернета"
@@ -626,8 +628,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Настройки интернета"
@@ -644,8 +646,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Настройки интернета"
@@ -657,8 +659,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -696,20 +698,20 @@ sidebar:
 ```
 
 ### Keenetic / Zyxel
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Keenetic в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2510"
         target="_blank"
         description="Открыть инструкции Keenetic в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Keenetic на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Keenetic"
         target="_blank"
         description="Открыть инструкции Keenetic на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -720,8 +722,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Кабель Ethernet"
@@ -736,8 +738,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Кабель Ethernet"
@@ -748,8 +750,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Интернет" - "Кабель Ethernet"
@@ -759,8 +761,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -813,8 +815,8 @@ sidebar:
 ```
 
 #### Проброс портов
-<starlight.Tabs>
-    <starlight.TabItem label="Старая прошивка">
+<Tabs>
+    <TabItem label="Старая прошивка">
         ```txt
         Для проброса портов:
         1. Откройте раздел "Безопасность" - "Трансляция сетевых адресов"
@@ -826,24 +828,24 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Mercusys
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Mercusys в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2076"
         target="_blank"
         description="Открыть инструкции Mercusys в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Mercusys на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Mercusys_001"
         target="_blank"
         description="Открыть инструкции Mercusys на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -854,8 +856,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Нажмите "Пропустить" вверху справа
@@ -865,8 +867,8 @@ sidebar:
 
         Нажмите кнопку "Обновить", затем "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Нажмите "Пропустить" вверху справа
@@ -879,8 +881,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить" после каждого пункта
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Нажмите "Пропустить" вверху справа
@@ -891,8 +893,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -920,20 +922,20 @@ sidebar:
 ```
 
 ### Mikrotik
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Mikrotik в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2082"
         target="_blank"
         description="Открыть инструкции Mikrotik в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Mikrotik на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Mikrotik_hAP-Lite-TC_001"
         target="_blank"
         description="Открыть инструкции Mikrotik на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -944,8 +946,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Для настройки соединения:
         1. Нажмите на "WebFig" в правом верхнем углу
@@ -969,8 +971,8 @@ sidebar:
         - Action - "masquerade"
         Нажмите кнопку "OK"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Для настройки соединения:
         1. Нажмите на "WebFig" в правом верхнем углу
@@ -995,8 +997,8 @@ sidebar:
         - Action - "masquerade"
         Нажмите кнопку "OK"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Для настройки соединения:
         1. Откройте раздел "QuickSet"
@@ -1006,8 +1008,8 @@ sidebar:
 
         Нажмите кнопку "Apply Configuration"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Смена каналов
 ```txt
@@ -1078,20 +1080,20 @@ sidebar:
 ```
 
 ### Netgear
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Netgear в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2507"
         target="_blank"
         description="Открыть инструкции Netgear в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Netgear на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__NetGear"
         target="_blank"
         description="Открыть инструкции Netgear на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1102,8 +1104,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Расширенный режим" - "Настройка" - "Настройка интернета"
@@ -1116,8 +1118,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Расширенный режим" - "Настройка" - "Настройка интернета"
@@ -1133,8 +1135,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Расширенный режим" - "Настройка" - "Настройка интернета"
@@ -1148,8 +1150,8 @@ sidebar:
 
         Нажмите кнопку "Применить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -1176,20 +1178,20 @@ sidebar:
 ```
 
 ### Netis
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Netis в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2078"
         target="_blank"
         description="Открыть инструкции Netis в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Netis на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Netis"
         target="_blank"
         description="Открыть инструкции Netis на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1200,8 +1202,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Advanced" - "Сеть" - "WAN"
@@ -1211,8 +1213,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Advanced" - "Сеть" - "WAN"
@@ -1224,8 +1226,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Advanced" - "Сеть" - "WAN"
@@ -1236,8 +1238,8 @@ sidebar:
 
         Нажмите кнопку "Сохранить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -1268,7 +1270,7 @@ sidebar:
 ```
 
 ### Rotek / Ротек
-<starlight.LinkCard
+<LinkCard
     title="Rotek в БЗ"
     href="https://clever.ertelecom.ru/content/space/4/article/8178"
     target="_blank"
@@ -1284,8 +1286,8 @@ sidebar:
 ```
 
 #### Настройка соединения (быстрая)
-<starlight.Tabs>
-    <starlight.TabItem label="PPPoE">
+<Tabs>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Подключитесь к сети роутера по кабелю или Wi-Fi
@@ -1295,8 +1297,8 @@ sidebar:
         На открывшейся странице введите данные по договору от PPPoE
         Настройки сохраните
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Подключитесь к сети роутера по кабелю или Wi-Fi
@@ -1306,24 +1308,24 @@ sidebar:
         На открывшейся странице введите данные по договору
         Настройки сохраните
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### SNR
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="SNR в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2515"
         target="_blank"
         description="Открыть инструкции SNR в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="SNR на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__SNR-CPE-W4N"
         target="_blank"
         description="Открыть инструкции SNR на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1334,8 +1336,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="PPPoE">
+<Tabs>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте пункт "Сетевые настройки" - "Настройки VPN"
@@ -1351,12 +1353,12 @@ sidebar:
 
         Нажмите кнопку "Применить и подключить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
-<starlight.Tabs>
-    <starlight.TabItem label="Название сети">
+<Tabs>
+    <TabItem label="Название сети">
         ```txt
         Настроим название Wi-Fi:
         1. Откройте раздел "Wireless Settings" - "Basic"
@@ -1366,8 +1368,8 @@ sidebar:
 
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Пароль сети">
+    </TabItem>
+    <TabItem label="Пароль сети">
         ```txt
         Настроим пароль Wi-Fi:
         1. Откройте раздел "Wireless Settings" - "Security"
@@ -1378,8 +1380,8 @@ sidebar:
 
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Смена каналов
 ```txt
@@ -1395,20 +1397,20 @@ sidebar:
 ```
 
 ### Tenda
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Tenda в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2598"
         target="_blank"
         description="Открыть инструкции Tenda в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Tenda на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Tenda"
         target="_blank"
         description="Открыть инструкции Tenda на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1419,8 +1421,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Слева выберите раздел "Настройка Интернета"
@@ -1430,8 +1432,8 @@ sidebar:
 
         Нажмите кнопку "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Слева выберите раздел "Настройка Интернета"
@@ -1442,8 +1444,8 @@ sidebar:
 
         Нажмите кнопку "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Слева выберите раздел "Настройка Интернета"
@@ -1453,8 +1455,8 @@ sidebar:
 
         Нажмите кнопку "Подключить"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -1485,20 +1487,20 @@ sidebar:
 ```
 
 ### Totolink
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="Totolink в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/article/2084"
         target="_blank"
         description="Открыть инструкции Totolink в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="Totolink на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__Totolink_001"
         target="_blank"
         description="Открыть инструкции Totolink на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1509,8 +1511,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Установите галочки на главной странице
@@ -1521,8 +1523,8 @@ sidebar:
 
         Сохраните настройки
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Установите галочки на главной странице
@@ -1533,8 +1535,8 @@ sidebar:
 
         Сохраните настройки
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Установите галочки на главной странице
@@ -1547,8 +1549,8 @@ sidebar:
 
         Сохраните настройки
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -1574,20 +1576,20 @@ sidebar:
 ```
 
 ### TP-Link
-<starlight.CardGrid>
-    <starlight.LinkCard
+<CardGrid>
+    <LinkCard
         title="TP-Link в БЗ"
         href="https://clever.ertelecom.ru/content/space/4/folder/631/article/2312"
         target="_blank"
         description="Открыть инструкции TP-Link в базе знаний"
     />
-    <starlight.LinkCard
+    <LinkCard
         title="TP-Link на сайте"
         href="https://dom.ru/service/knowledgebase/instruktsii-po-oborudovaniyu/router__TPLink"
         target="_blank"
         description="Открыть инструкции TP-Link на сайте"
     />
-</starlight.CardGrid>
+</CardGrid>
 
 #### Вход в настройки
 ```txt
@@ -1598,8 +1600,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Быстрая настройка" сверху
@@ -1609,8 +1611,8 @@ sidebar:
         На оставшихся страницах настройки вы можете поменять название вайфай сети и пароль
         Затем сохраните настройки
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Быстрая настройка" сверху
@@ -1623,8 +1625,8 @@ sidebar:
         На оставшихся страницах настройки вы можете поменять название вайфай сети и пароль
         Затем сохраните настройки
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Быстрая настройка" сверху
@@ -1640,8 +1642,8 @@ sidebar:
         На оставшихся страницах настройки вы можете поменять название вайфай сети и пароль
         Затем сохраните настройки
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка моста
 Для прошивки EC220
@@ -1674,8 +1676,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="DHCP">
+<Tabs>
+    <TabItem label="DHCP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Network"
@@ -1686,8 +1688,8 @@ sidebar:
 
         Нажмите кнопку "Change"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="PPPoE">
+    </TabItem>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Network"
@@ -1699,8 +1701,8 @@ sidebar:
 
         Нажмите кнопку "Change"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Static IP">
+    </TabItem>
+    <TabItem label="Static IP">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Network"
@@ -1712,8 +1714,8 @@ sidebar:
 
         Нажмите кнопку "Change"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
 ```txt
@@ -1753,8 +1755,8 @@ sidebar:
 ```
 
 #### Настройка соединения
-<starlight.Tabs>
-    <starlight.TabItem label="PPPoE">
+<Tabs>
+    <TabItem label="PPPoE">
         ```txt
         Настроим соединение:
         1. Откройте раздел "Advanced Setup" - "WAN Connections"
@@ -1770,12 +1772,12 @@ sidebar:
 
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Настройка Wi-Fi
-<starlight.Tabs>
-    <starlight.TabItem label="H660RW">
+<Tabs>
+    <TabItem label="H660RW">
         ```txt
         Настроим Wi-Fi:
         1. Откройте раздел "Wi-Fi Setup" - "Wi-Fi Setting"
@@ -1785,8 +1787,8 @@ sidebar:
         При желании название сети можно изменить в строчке "SSID", пароль в "Pre-Shared Key"
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="H640RW">
+    </TabItem>
+    <TabItem label="H640RW">
         ```txt
         Настроим Wi-Fi:
         1. Откройте раздел "Basic Setting" - "SSID Setting"
@@ -1796,8 +1798,8 @@ sidebar:
         При желании название сети можно изменить в строчке "SSID", пароль в "Pre-Shared Key"
         Нажмите кнопку "Apply", затем вверху "Apply Config"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Смена каналов
 ```txt
@@ -1809,8 +1811,8 @@ sidebar:
 ```
 
 #### Проброс портов
-<starlight.Tabs>
-    <starlight.TabItem label="H660RW">
+<Tabs>
+    <TabItem label="H660RW">
         ```txt
         Для проброса портов:
         1. Откройте раздел "Firewall Setup" - "NAT" - "Port Forwarding"
@@ -1822,8 +1824,8 @@ sidebar:
 
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="H640RW">
+    </TabItem>
+    <TabItem label="H640RW">
         ```txt
         Для проброса портов:
         1. Откройте раздел "Advanced Setting" - "Port Forwarding"
@@ -1835,12 +1837,12 @@ sidebar:
 
         Нажмите кнопку "Apply", затем кнопку "Apply Config"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### DMZ
-<starlight.Tabs>
-    <starlight.TabItem label="H660RW">
+<Tabs>
+    <TabItem label="H660RW">
         ```txt
         Для настройки DMZ:
         1. Откройте раздел "Firewall Setup" - "NAT" - "DMZ"
@@ -1850,8 +1852,8 @@ sidebar:
 
         Нажмите кнопку "Apply"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="H640RW">
+    </TabItem>
+    <TabItem label="H640RW">
         ```txt
         Для настройки DMZ:
         1. Откройте раздел "Advanced Setting" - "DMZ Settings"
@@ -1859,5 +1861,5 @@ sidebar:
 
         Нажмите кнопку "Add", затем кнопку "Apply Config"
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>

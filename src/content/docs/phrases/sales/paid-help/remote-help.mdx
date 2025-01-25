@@ -6,14 +6,16 @@ sidebar:
     attrs: {}
 ---
 
-<starlight.CardGrid stagger={false}>
-    <starlight.LinkCard title="Удаленный ПС" href="https://clever.ertelecom.ru/content/space/4/article/7873/page/3"
+import { Tabs, TabItem, CardGrid, LinkCard, Steps} from '@astrojs/starlight/components';
+
+<CardGrid stagger={false}>
+    <LinkCard title="Удаленный ПС" href="https://clever.ertelecom.ru/content/space/4/article/7873/page/3"
                         description="Открыть регламент в базе знаний" target="_blank"/>
 
-    <starlight.LinkCard title="Цены по городам"
+    <LinkCard title="Цены по городам"
                         href="https://clever.ertelecom.ru/content/space/4/folder/634/article/6366"
                         description="Открыть цены по городам в базе знаний" target="_blank"/>
-</starlight.CardGrid>
+</CardGrid>
 
 ## Общая информация
 #### Как работает сервис?
@@ -37,20 +39,20 @@ sidebar:
 
 ## Виды услуг
 ### НОВЫЙ ПС
-<starlight.Tabs>
-    <starlight.TabItem label="Wi-Fi">
+<Tabs>
+    <TabItem label="Wi-Fi">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Настройка Wi-Fi-роутера Клиента
                 2. Удаленная помощь - Точечная настройка маршрутизатора
                 3. Удаленная помощь - Диагностика компьютера или ноутбука
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
             <summary>Список работ</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Подключение устройства к Wi-Fi если требуется восстановление ключа безопасности Wi-Fi (Если требуется
                 вход в настройки роутера с Клиентом)
                 2. Изменение настроек Wi-Fi по желанию Клиента, если этого не требует диагностика;
@@ -61,7 +63,7 @@ sidebar:
                 4. Если в схеме подключения более одного роутера/точки доступа настраиваем доступ и проводим диагностику
                 только на том, к которому подключен кабель из подъезда, все остальные настраиваются в рамках платного
                 сервиса
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt "[СТОИМОСТЬ]"
@@ -71,27 +73,27 @@ sidebar:
         Стоимость сервиса: [СТОИМОСТЬ] ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Аккаунты/приложения">
+    </TabItem>
+    <TabItem label="Аккаунты/приложения">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Консультации по настройкам и работе на устройстве
                 2. Удаленная помощь - Установка и настройка лицензионных программ (предоставляется клиентом)
                 3. Удаленная помощь - Установка, обновление и настройка дополнительных приложений
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
             <summary>Список работ</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Авторизация в сервисах/создание аккаунта в т.ч. Google (при первоначальной настройке приставки
                 пропускаем этот шаг)
                 2. Установка плееров для воспроизведение определенного контента
                 3. Восстановление доступа к аккаунту в сторонних сервисах/ресурсах
                 4. Установка приложений на устройство/SmartTV, в т.ч. со съемных носителей, кроме VPN и обхода
                 блокировок
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt "[СТОИМОСТЬ]"
@@ -103,21 +105,21 @@ sidebar:
         Стоимость сервиса: [СТОИМОСТЬ] ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Устройства абонента">
+    </TabItem>
+    <TabItem label="Устройства абонента">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Оптимизация операционной системы (чистка реестра, временных файлов, автозагрузки)
                 2. Удаленная помощь - Диагностика компьютера или ноутбука
                 3. Удаленная помощь - Очистка ПК от вирусов с использованием ПО Клиента (без установки антивирусной
                 программы для ПК)
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
             <summary>Список работ</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Диагностика компьютера/ноутбука/мобильного и SmartTV;
                 2. Настройка/подключение любой периферии (Домашний кинотеатр, колонки, приставки и т.д.).
                 3. Медленная работа ПК, длительная загрузка страниц, при условии, что потерь до ST и внеш. ресурсов нет;
@@ -125,7 +127,7 @@ sidebar:
                 5. Настройка VPN (исключительно для удаленной работы);
                 6. Первоначальная настройка ТВ;
                 7. Настройка работы SmartTV/приставок в т.ч. Movix со съемными носителями;
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt "[СТОИМОСТЬ]"
@@ -137,21 +139,21 @@ sidebar:
         Стоимость сервиса: [СТОИМОСТЬ] ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Умный дом">
+    </TabItem>
+    <TabItem label="Умный дом">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Обучение пользованием "умной" техникой
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
             <summary>Список работ</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Любые работы по подключению и настройке устройств "умного дома", в т.ч. умные колонки, VR-очки,
                 видеокамеры, датчики, умная бытовая техника (при наличии приложений производителя в свободном доступе)
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt
@@ -163,18 +165,18 @@ sidebar:
         Стоимость сервиса: 1 300 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Работа с ОС
 #### ОС Windows
-<starlight.Tabs>
-    <starlight.TabItem label="Установка обновлений">
+<Tabs>
+    <TabItem label="Установка обновлений">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Обновление до последней версии Windows
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
@@ -194,13 +196,13 @@ sidebar:
         Стоимость сервиса: 800 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Восстановление системы">
+    </TabItem>
+    <TabItem label="Восстановление системы">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Восстановление системы Windows 7, 8, 10
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
@@ -217,17 +219,17 @@ sidebar:
         Стоимость сервиса: 1 300 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ##### Оптимизация системы
-<starlight.Tabs>
-    <starlight.TabItem label="Настройки автозагрузки">
+<Tabs>
+    <TabItem label="Настройки автозагрузки">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Настройка автозагрузки Windows
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt
@@ -238,13 +240,13 @@ sidebar:
         Стоимость сервиса: 800 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Чистка системного реестра">
+    </TabItem>
+    <TabItem label="Чистка системного реестра">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Чистка системного реестра Windows
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt
@@ -256,13 +258,13 @@ sidebar:
         Стоимость сервиса: 800 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Общая оптимизация">
+    </TabItem>
+    <TabItem label="Общая оптимизация">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Оптимизация операционной системы (чистка реестра, временных файлов, автозагрузки)
-            </starlight.Steps>
+            </Steps>
         </details>
 
         <details>
@@ -279,15 +281,15 @@ sidebar:
         Стоимость сервиса: 1 300₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ##### Установка драйверов
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка драйверов
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -299,13 +301,13 @@ Cпециалист удаленно подключается к вашему у
 ```
 
 #### macOS
-<starlight.Tabs>
-    <starlight.TabItem label="Установка обновлений">
+<Tabs>
+    <TabItem label="Установка обновлений">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Обновление версии Mac OS X
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt
@@ -317,13 +319,13 @@ Cпециалист удаленно подключается к вашему у
         Стоимость сервиса: 800 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Подключение Apple ID">
+    </TabItem>
+    <TabItem label="Подключение Apple ID">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Установка Mac OS X + подключение Apple ID
-            </starlight.Steps>
+            </Steps>
         </details>
 
         ```txt
@@ -335,16 +337,16 @@ Cпециалист удаленно подключается к вашему у
         Стоимость сервиса: 1 300 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Мобильные устройства
 ##### Установка и настройка приложения на телефон
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка и настройка приложения на телефон
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -359,10 +361,10 @@ Cпециалист удаленно подключается к вашему у
 ##### Установка, настройка и обновление дополнительных приложений
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка, обновление и настройка дополнительных приложений
 
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -377,9 +379,9 @@ Cпециалист удаленно подключается к вашему у
 #### Сохранение данных на внешнем носителе/облаке
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Сохранение данных пользователя
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -394,9 +396,9 @@ Cпециалист удаленно подключается к вашему у
 #### Установка MS Office/офисных программ
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка MS Office/офисных программ
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -411,9 +413,9 @@ Cпециалист удаленно подключается к вашему у
 #### Установка программ мультимедиа
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка программ мультимедиа (видео, аудио, работа с фотографиями)
-    </starlight.Steps>
+    </Steps>
 </details>
 <details>
     <summary>Описание</summary>
@@ -434,9 +436,9 @@ Cпециалист удаленно подключается к вашему у
 #### Установка и настройка игр
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка и настройка игр
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -450,9 +452,9 @@ Cпециалист удаленно подключается к вашему у
 #### Подбор и установка фаервола
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Подбор и установка фаервола
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -467,9 +469,9 @@ Cпециалист удаленно подключается к вашему у
 #### Установка архиватора
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка архиватора
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -484,9 +486,9 @@ Cпециалист удаленно подключается к вашему у
 #### Установка и настройка лицензионных программ
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Установка и настройка лицензионных программ (предоставляется клиентом)
-    </starlight.Steps>
+    </Steps>
 </details>
 
 <details>
@@ -506,10 +508,10 @@ Cпециалист удаленно подключается к вашему у
 #### Установка браузера, регистрация в соц. сетях, онлайн-играх, регистрация и настройка почтового ящика, мессенджерах
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Установка браузера, регистрация и настройка почтового ящика, мессенджера, регистрация в социальных сетях,
         онлайн-играх (за 1 ПК)
-    </starlight.Steps>
+    </Steps>
 </details>
 
 <details>
@@ -529,9 +531,9 @@ Cпециалист удаленно подключается к вашему у
 #### Помощь с настройкой умного дома
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Настройка умного дома
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -544,13 +546,13 @@ Cпециалист удаленно подключается к вашему у
 
 ### Работа с устройством клиента
 #### Настройка роутера
-<starlight.Tabs>
-    <starlight.TabItem label="Первичная настройка">
+<Tabs>
+    <TabItem label="Первичная настройка">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Настройка Wi-Fi-роутера Клиента
-            </starlight.Steps>
+            </Steps>
         </details>
         ```txt
         Могу предложить вам наш платный сервис:
@@ -559,21 +561,21 @@ Cпециалист удаленно подключается к вашему у
         Стоимость сервиса: 600 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Точечная настройка">
+    </TabItem>
+    <TabItem label="Точечная настройка">
         <details>
             <summary>Список работ</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Настройка IPv6 на роутере
                 2. Проброс портов/DMZ
                 3. Настройка родительского контроля и работы по расписанию
-            </starlight.Steps>
+            </Steps>
         </details>
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Точечная настройка маршрутизатора
-            </starlight.Steps>
+            </Steps>
         </details>
         ```txt
         Могу предложить вам наш платный сервис:
@@ -583,13 +585,13 @@ Cпециалист удаленно подключается к вашему у
         Стоимость сервиса: 750 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Замена прошивки">
+    </TabItem>
+    <TabItem label="Замена прошивки">
         <details>
             <summary>Название в АРМе</summary>
-            <starlight.Steps>
+            <Steps>
                 1. Удаленная помощь - Замена прошивки роутера
-            </starlight.Steps>
+            </Steps>
         </details>
         ```txt
         Могу предложить вам наш платный сервис:
@@ -598,16 +600,16 @@ Cпециалист удаленно подключается к вашему у
         Стоимость сервиса: 800 ₽
         Назначим звонок?
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 #### Чистка от вирусов
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Очистка ПК от вирусов с использованием ПО Клиента (без установки антивирусной программы
         для ПК)
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -621,9 +623,9 @@ Cпециалист удаленно подключается к вашему у
 #### Удаление СМС-баннера
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Удаление СМС-баннера
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -637,9 +639,9 @@ Cпециалист удаленно подключается к вашему у
 #### Настройка синхронизации с другими устройствами
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Настройка ПО для работы с мобильными устройствами
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -653,9 +655,9 @@ Cпециалист удаленно подключается к вашему у
 #### Исправление ошибок в процессе работы
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Исправление ошибок в процессе работы
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -669,18 +671,18 @@ Cпециалист удаленно подключается к вашему у
 #### Диагностика компьютера или ноутбука
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Диагностика компьютера или ноутбука
-    </starlight.Steps>
+    </Steps>
 </details>
 
 <details>
     <summary>Список работ</summary>
-    <starlight.Steps>
+    <Steps>
         1. Подключение устройства к Wi-Fi если требуется восстановление ключа безопасности Wi-Fi
         2. Проброс портов/DMZ
         3. Настройка родительского контроля и работы по расписанию
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -695,9 +697,9 @@ Cпециалист удаленно подключается к вашему у
 #### Разбивка жесткого диска на разделы
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Разбивка жесткого диска на разделы
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -711,9 +713,9 @@ Cпециалист удаленно подключается к вашему у
 #### Настройка общего доступа к файлам и принтерам
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Настройка общего доступа к файлам и принтерам
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -727,9 +729,9 @@ Cпециалист удаленно подключается к вашему у
 #### Первоначальная настройка нового устройства
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Первоначальная настройка нового устройства
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -743,9 +745,9 @@ Cпециалист удаленно подключается к вашему у
 #### Настройка родительского контроля
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Настройка родительского контроля
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -759,9 +761,9 @@ Cпециалист удаленно подключается к вашему у
 #### Настройка, подключение второго монитора, телевизора
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Настройка, подключение второго монитора, телевизора
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -775,9 +777,9 @@ Cпециалист удаленно подключается к вашему у
 #### Подключение мобильных устройств к компьютеру
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Подключение мобильных устройств к компьютеру
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -791,9 +793,9 @@ Cпециалист удаленно подключается к вашему у
 #### Консультации по настройкам и работе на устройстве
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Консультации по настройкам и работе на устройстве
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -807,9 +809,9 @@ Cпециалист удаленно подключается к вашему у
 #### Помощь в изучении основных функций устройства
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Помощь в изучении основных функций устройства
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt
@@ -823,9 +825,9 @@ Cпециалист удаленно подключается к вашему у
 #### Консультации по безопасной работе в интернете
 <details>
     <summary>Название в АРМе</summary>
-    <starlight.Steps>
+    <Steps>
         1. Удаленная помощь - Консультации по безопасной работе в интернете
-    </starlight.Steps>
+    </Steps>
 </details>
 
 ```txt

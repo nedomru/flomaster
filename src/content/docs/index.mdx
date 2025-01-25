@@ -19,19 +19,22 @@ prev: false
 next: false
 ---
 
+import {Card, CardGrid} from "@astrojs/starlight/components";
+
+
 ## Возможности
 
-<starlight.CardGrid stagger>
-  <starlight.Card title="Частые обновления" icon="pencil">
+<CardGrid stagger>
+  <Card title="Частые обновления" icon="pencil">
     РМы постоянно обновляются для поддержания актуальности
-  </starlight.Card>
-  <starlight.Card title="Адаптивность" icon="add-document">
+  </Card>
+  <Card title="Адаптивность" icon="add-document">
     Список РМов пополняется благодаря вашим предложениям
-  </starlight.Card>
-  <starlight.Card title="Доступность" icon="setting">
+  </Card>
+  <Card title="Доступность" icon="setting">
     Инструмент доступен как с внешней, так и с внутренней сети
-  </starlight.Card>
-  <starlight.Card title="Удобство" icon="open-book">
+  </Card>
+  <Card title="Удобство" icon="open-book">
     Категории, теги и другие инструменты структурирования РМов
-  </starlight.Card>
-</starlight.CardGrid>
+  </Card>
+</CardGrid>

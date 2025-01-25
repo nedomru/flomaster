@@ -4,9 +4,11 @@ sidebar:
     order: 2
 ---
 
+import {TabItem, Tabs} from "@astrojs/starlight/components";
+
 ### Настройка PPPoE
-<starlight.Tabs>
-    <starlight.TabItem label="Win7" icon="seti:windows">
+<Tabs>
+    <TabItem label="Win7" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows 7:
         1. Откройте "Пуск" - "Панель управления" - "Сеть и Интернет"
@@ -15,8 +17,8 @@ sidebar:
         4. Нажмите на "Высокоскоростное (с PPPoE)" и введите имя пользователя и пароль по договору от PPPoE
         5. Нажмите "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Win8" icon="seti:windows">
+    </TabItem>
+    <TabItem label="Win8" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows 8:
         1. Откройте "Пуск" - "Панель управления" - "Сеть и Интернет"
@@ -25,8 +27,8 @@ sidebar:
         4. Нажмите на "Высокоскоростное (с PPPoE)" и введите имя пользователя и пароль по договору от PPPoE
         5. Нажмите "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Win8.1" icon="seti:windows">
+    </TabItem>
+    <TabItem label="Win8.1" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows 8.1:
         1. Правой кнопкой мыши нажмите по значку сетевых подключений на панели задач и
@@ -36,8 +38,8 @@ sidebar:
         4. Нажмите на "Высокоскоростное (с PPPoE)" и введите имя пользователя и пароль по договору от PPPoE
         5. Нажмите "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Win10" icon="seti:windows">
+    </TabItem>
+    <TabItem label="Win10" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows 10:
         1. Откройте "Пуск" - "Параметры" - "Сеть и Интернет" - "Набор номера"
@@ -46,8 +48,8 @@ sidebar:
         4. Нажмите на "Высокоскоростное с РРРоЕ" и введите имя пользователя и пароль по договору от PPPoE
         5. Нажмите "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Win11" icon="seti:windows">
+    </TabItem>
+    <TabItem label="Win11" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows 11:
         1. Откройте "Пуск" - "Параметры" - "Сеть и Интернет" - "Набор номера"
@@ -56,8 +58,8 @@ sidebar:
         4. Тип подключения выберите "Высокоскоростное с РРРоЕ"
         5. Введите имя пользователя и пароль по договору от PPPoE, нажмите "Подключить"
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Mac" icon="apple">
+    </TabItem>
+    <TabItem label="Mac" icon="apple">
         ```txt
         Для настройки соединения на Mac:
         1. Откройте "Системные настройки" - "Сеть"
@@ -67,12 +69,12 @@ sidebar:
         5. Введите имя службы и имя пользователя от PPPoE
         6. Включите параметр "Запомнить пароль", затем введите пароль от PPPoE
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Настройка Static IP
-<starlight.Tabs>
-    <starlight.TabItem label="Win" icon="seti:windows">
+<Tabs>
+    <TabItem label="Win" icon="seti:windows">
         ```txt
         Для настройки соединения на Windows:
         1. Нажмите на клавиатуре WIN+R, в окне введите "ncpa.cpl" без кавычек
@@ -80,8 +82,8 @@ sidebar:
         3. В списки найдите "Протокол Интернета версии 4" (или "IP версии 4"), дважды нажмите на него
         4. В окне выберите "Использовать следующий IP адрес" и введите данные по договору
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Mac" icon="apple">
+    </TabItem>
+    <TabItem label="Mac" icon="apple">
         ```txt
         Для настройки соединения на Mac:
         1. Откройте раздел "Системные настройки" - "Сеть"
@@ -91,12 +93,12 @@ sidebar:
         5. Откройте пункт "TCP/IP", "Конфигурация IP" установите в "Вручную" и введите данные по договору
         6. Перейдите в пункт "DNS", нажмите на кнопку "+" в строке добавления DNS, данные также введите по договору
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
 
 ### Смена MAC-адреса устройства
-<starlight.Tabs>
-    <starlight.TabItem label="Win">
+<Tabs>
+    <TabItem label="Win">
         ```txt "[ВВЕДИ MAC]"
         Требуется сменить MAC-адрес:
         1. Нажмите на клавиатуре WIN+R, в окне введите "devmgmt.msc" без кавычек
@@ -107,8 +109,8 @@ sidebar:
 
         По завершении инструкции нажмите ОК и перезагрузите компьютер
         ```
-    </starlight.TabItem>
-    <starlight.TabItem label="Mac" icon="apple">
+    </TabItem>
+    <TabItem label="Mac" icon="apple">
         ```txt "[ВВЕДИ MAC]"
         Требуется сменить MAC-адрес:
         1. Откройте Терминал на компьютере
@@ -117,5 +119,5 @@ sidebar:
 
         После выполнения инструкции покажите на фото или скриншотом вывод в окне
         ```
-    </starlight.TabItem>
-</starlight.Tabs>
+    </TabItem>
+</Tabs>
