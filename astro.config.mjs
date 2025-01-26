@@ -89,15 +89,16 @@ export default defineConfig({
                                     },
                                     {
                                         label: "Прощание",
-                                        items: [
-                                            {
-                                                label: "Завершение чата",
-                                                slug: "phrases/dialog/communications/parting/default"
-                                            },
-                                            {
-                                                label: "Завершение с поздравлением",
-                                                slug: "phrases/dialog/communications/parting/holidays"
-                                            }]
+                                        slug: "phrases/dialog/communications/parting/default"
+                                        // items: [
+                                        //     {
+                                        //         label: "Завершение чата",
+                                        //
+                                        //     },
+                                        //     {
+                                        //         label: "Завершение с поздравлением",
+                                        //         slug: "phrases/dialog/communications/parting/holidays"
+                                        //     }]
                                     },
                                     {
                                         label: "Полезное в диалоге",
