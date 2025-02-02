@@ -6,7 +6,6 @@ import starlightUtils from "@lorenzo_lewis/starlight-utils";
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import AutoImport from "astro-auto-import";
 import starlightDocSearch from "@astrojs/starlight-docsearch";
 
 // https://astro.build/config
