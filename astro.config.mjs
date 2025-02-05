@@ -139,7 +139,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/routers"}
                             },
                             {
-                                label: "📺 Продажа приставок",
+                                label: "📺 Продажа декодеров",
                                 autogenerate: {directory: "/phrases/sales/decoders"}
                             },
                             {
