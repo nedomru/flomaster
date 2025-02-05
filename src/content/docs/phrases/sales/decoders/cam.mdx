@@ -6,38 +6,29 @@ sidebar:
   attrs: {}
 ---
 
-import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components';
-import { Image } from 'astro:assets';
+import { Tabs, TabItem, LinkCard } from '@astrojs/starlight/components';
 
-    <CardGrid stagger={false}>
-      <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/4811/page/0?query=CAM%202.0&sort=POPULARITY" description="CAM-модуль 2.0 в базе знаний" target="_blank" />
-
-    </CardGrid>
-
-
+<LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/4811/page/0" description="CAM-модуль 2.0 в базе знаний" target="_blank" />
 
 <Tabs>
-  <TabItem label="CAM-модуль 2.0">
-
-<details>
+    <TabItem label="CAM-модуль 2.0">
+        <details>
             <summary>
                 Не продаём в городах:
             </summary>
-    ```txt
-    - Брянск
-    - Екатеринбург
-    - Краснодар
-    - Красноярск
-    - Курск
-    - Липецк (в г. Моршанск и пос. Моршанского р-на)
-    - Нижний Новгород
-    - Рязань
-    - Самара, Сызрань
-    - Санкт-Петербург
-    - Томск
-    - Тула
-    ```
-</details>
+            - Брянск
+            - Екатеринбург
+            - Краснодар
+            - Красноярск
+            - Курск
+            - Липецк (в г. Моршанск и пос. Моршанского р-на)
+            - Нижний Новгород
+            - Рязань
+            - Самара, Сызрань
+            - Санкт-Петербург
+            - Томск
+            - Тула
+        </details>
 
     ```txt
     Модель: CAM-модуль 2.0 со встроенной картой
@@ -53,7 +44,5 @@ import { Image } from 'astro:assets';
 - Иркутск и Улан-Удэ - 1 600 ₽
 - Йошкар Ола и Пенза - 2 000 ₽
     ```
-
-
   </TabItem>
 </Tabs>
