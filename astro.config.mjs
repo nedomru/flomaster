@@ -41,7 +41,6 @@ export default defineConfig({
                 tableOfContents: {
                     maxHeadingLevel: 6
                 },
-                lastUpdated: true,
                 social: {
                     github: "https://github.com/AuthFailed/flomaster/",
                     telegram: "https://t.me/+jH1mblw0ytcwOWUy",
