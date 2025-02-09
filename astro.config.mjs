@@ -51,7 +51,7 @@ export default defineConfig({
                         items: [
                             {
                                 label: "🌐 Интернет",
-                                autogenerate: {directory: "/phrases/tech/internet"}
+                                autogenerate: {directory: "/phrases/tech/internet"},
                             },
                             {
                                 label: "📺 Телевидение",
@@ -175,7 +175,7 @@ export default defineConfig({
 
                     ],
                     styleOverrides: {
-                        borderRadius: '0.5rem',
+                        borderRadius: '0.8rem',
                         frames: {
                             shadowColor: '#124',
                         },
