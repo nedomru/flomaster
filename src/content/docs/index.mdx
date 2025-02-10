@@ -1,40 +1,54 @@
 ---
-title: Фломастер
+title: Фломастер ✍ База РМов
+head:
+  - tag: title
+    content: Фломастер ✍ База РМов
+description: Starlight helps you build beautiful, high-performance documentation websites with Astro.
 template: splash
+editUrl: false
+lastUpdated: false
+banner:
+  content: |
+    Еще не пользуешься расширением?
+    <a href="https://helper.chrsnv.ru">
+      Самое время начать
+    </a>
 hero:
-  tagline: Твой главный инструмент в мире РМов!
+  title: Апгрейдни РМы
+  tagline: Здесь ты найдешь все, что моежет пригодиться в чате
+  image:
+    file: /src/assets/writing_hand.png
   actions:
     - text: Посмотреть РМы
       link: /phrases
       icon: right-arrow
-    - text: Установить расширение
-      link: https://helper.chrsnv.ru
-      icon: rocket
-      variant: minimal
     - text: Перейти в Telegram
       link: https://t.me/+jH1mblw0ytcwOWUy
       icon: external
       variant: minimal
-prev: false
-next: false
+
 ---
 
-import {Card, CardGrid} from "@astrojs/starlight/components";
-
-
-## Возможности
+import { CardGrid, Card } from '@astrojs/starlight/components';
+import AboutAstro from '/src/components/about-flomaster.astro';
+import TestimonialGrid from '/src/components/testimonial-grid.astro';
+import Testimonial from '/src/components/testimonial.astro';
 
 <CardGrid stagger>
-  <Card title="Частые обновления" icon="pencil">
-    РМы постоянно обновляются для поддержания актуальности
-  </Card>
-  <Card title="Адаптивность" icon="add-document">
-    Список РМов пополняется благодаря вашим предложениям
-  </Card>
-  <Card title="Доступность" icon="setting">
-    Инструмент доступен как с внешней, так и с внутренней сети
-  </Card>
-  <Card title="Удобство" icon="open-book">
-    Категории, теги и другие инструменты структурирования РМов
-  </Card>
+	<Card title="Удобство" icon="open-book">
+		Включая: Навигацию по сайту, быстрый поиск, удобочитаемость, подсветку РМов, темную тему и т.д.
+	</Card>
+	<Card title="Адаптивность" icon="rocket">
+		Изменения в инструмент вносятся благодаря вашим предложениям
+	</Card>
+	<Card title="Обновляемость" icon="document">
+		Изменения вносятся как только они требуют того, без задержек
+	</Card>
+	<Card title="Доступность" icon="puzzle">
+		Инструмент доступен с внутренней и внешней сети, с компьютера и мобильного телефона в таком же удобном формате
+	</Card>
 </CardGrid>
+
+<AboutAstro title="Сделано с любовью в">
+<b>[Не Дом.ру](https://t.me/+jH1mblw0ytcwOWUy)</b>
+</AboutAstro>
