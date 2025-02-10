@@ -109,7 +109,11 @@ export default defineConfig({
                             },
                             {
                                 label: "😡 Книга возражений",
-                                autogenerate: {directory: "/phrases/dialog/objectionworkbook"}
+                                autogenerate: {directory: "/phrases/dialog/objectionworkbook"},
+                                badge: {
+                                    text: "Перерабатывается",
+                                    variant: "danger"
+                                }
                             },
                             {
                                 label: "📚 Регламенты",
@@ -138,15 +142,27 @@ export default defineConfig({
                             },
                             {
                                 label: "📡 Продажа роутеров",
-                                autogenerate: {directory: "/phrases/sales/routers"}
+                                autogenerate: {directory: "/phrases/sales/routers"},
+                                badge: {
+                                    text: "Акт 10.02",
+                                    variant: "success"
+                                }
                             },
                             {
                                 label: "📺 Продажа декодеров",
-                                autogenerate: {directory: "/phrases/sales/decoders"}
+                                autogenerate: {directory: "/phrases/sales/decoders"},
+                                badge: {
+                                    text: "Акт 10.02",
+                                    variant: "success"
+                                }
                             },
                             {
                                 label: "🎥 Продажа камер",
-                                autogenerate: {directory: "/phrases/sales/camcorders"}
+                                autogenerate: {directory: "/phrases/sales/camcorders"},
+                                badge: {
+                                    text: "Акт 10.02",
+                                    variant: "success"
+                                }
                             },
                         ],
                     },
