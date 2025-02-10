@@ -1,6 +1,7 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
+import starlightCoolerCredit from 'starlight-cooler-credit'
 
 
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
@@ -151,6 +152,14 @@ export default defineConfig({
                     },
                 ],
                 plugins: [
+                    starlightCoolerCredit({
+                        credit: {
+                            title: "Предложить РМ",
+                            href: "https://t.me/roman_domru",
+                            description: "Здесь ты можешь предложить изменения"
+                        },
+                        showImage: false
+                    }),
                     starlightUtils({
                         multiSidebar: {
                             switcherStyle: "horizontalList",
