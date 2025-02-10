@@ -142,27 +142,15 @@ export default defineConfig({
                             },
                             {
                                 label: "📡 Продажа роутеров",
-                                autogenerate: {directory: "/phrases/sales/routers"},
-                                badge: {
-                                    text: "Акт 10.02",
-                                    variant: "success"
-                                }
+                                autogenerate: {directory: "/phrases/sales/routers"}
                             },
                             {
                                 label: "📺 Продажа декодеров",
-                                autogenerate: {directory: "/phrases/sales/decoders"},
-                                badge: {
-                                    text: "Акт 10.02",
-                                    variant: "success"
-                                }
+                                autogenerate: {directory: "/phrases/sales/decoders"}
                             },
                             {
                                 label: "🎥 Продажа камер",
-                                autogenerate: {directory: "/phrases/sales/camcorders"},
-                                badge: {
-                                    text: "Акт 10.02",
-                                    variant: "success"
-                                }
+                                autogenerate: {directory: "/phrases/sales/camcorders"}
                             },
                         ],
                     },
