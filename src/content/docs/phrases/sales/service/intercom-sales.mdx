@@ -7,11 +7,15 @@ sidebar:
     hidden: false
 ---
 
-import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Tabs, TabItem, LinkCard } from '@astrojs/starlight/components';
 
 ### Планы подключения
 <Tabs>
     <TabItem label="Аудиодомофон">
+    <LinkCard title="План подключения"
+                        href="https://clever.ertelecom.ru/content/space/4/folder/492/article/2449"
+                        description="План подключения в базе знаний" target="_blank"/>
+
     ```txt "[СТОИМОСТЬ]"
     Стоимость подключения аудио-домофона: [СТОИМОСТЬ] ₽
 
@@ -25,6 +29,10 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
     ```
     </TabItem>
     <TabItem label="Видеодомофон">
+    <LinkCard title="План подключения"
+                        href="https://clever.ertelecom.ru/content/space/4/folder/492/article/2461"
+                        description="План подключения в базе знаний" target="_blank"/>
+
     ```txt "[СТОИМОСТЬ]"
     Стоимость подключения видео-домофона: [СТОИМОСТЬ] ₽
 
@@ -41,6 +49,11 @@ import { Tabs, TabItem } from '@astrojs/starlight/components';
 </Tabs>
 
 ### Подключение тарифа
+
+<LinkCard title="Тарифы"
+                        href="https://clever.ertelecom.ru/content/space/4/folder/1149/article/5547"
+                        description="Тарифы в базе знаний" target="_blank"/>
+
 <Tabs>
     <TabItem label="Базовый">
     ```txt "[СТОИМОСТЬ]"
