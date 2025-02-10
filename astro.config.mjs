@@ -170,11 +170,8 @@ export default defineConfig({
                         },
                     }),
                     starlightDocSearch({
-                        appId: "DN83H0EFK4",
-                        apiKey: "26993d897f7166569aaa44ad941e0475",
-                        indexName: 'flomaster-chrsnv',
-                        insights: true
-                    }),
+                        clientOptionsModule: './src/config/docsearch.ts',
+                      }),
                 ],
                 expressiveCode: {
                     plugins: [

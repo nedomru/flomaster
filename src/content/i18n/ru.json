@@ -26,8 +26,8 @@
   "docsearch.footer.closeKeyAriaLabel": "Кнопка выхода",
   "docsearch.footer.searchByText": "Поиск по",
 
-  "docsearch.noResultsScreen.noResultsText": "Результаты не найдены для",
-  "docsearch.noResultsScreen.suggestedQueryText": "Попробуй поискать по",
-  "docsearch.noResultsScreen.reportMissingResultsText": "Уверен, что что-то должно находиться?",
-  "docsearch.noResultsScreen.reportMissingResultsLinkText": "Дай нам знать."
+  "docsearch.noResultsScreen.noResultsText": "Ничего не нашел по запросу",
+  "docsearch.noResultsScreen.suggestedQueryText": "Попробуй эти варианты",
+  "docsearch.noResultsScreen.reportMissingResultsText": "Здесь что-то должно быть?",
+  "docsearch.noResultsScreen.reportMissingResultsLinkText": "Дай нам знать"
 }
