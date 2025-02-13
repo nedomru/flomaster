@@ -83,45 +83,15 @@ export default defineConfig({
                         items: [
                             {
                                 label: "🗣️ Общение с клиентом",
-                                items: [
-                                    {
-                                        label: "Приветствие",
-                                        slug: "phrases/dialog/communications/greetings"
-                                    },
-                                    {
-                                        label: "Прощание",
-                                        slug: "phrases/dialog/communications/parting/default"
-                                        // items: [
-                                        //     {
-                                        //         label: "Завершение чата",
-                                        //
-                                        //     },
-                                        //     {
-                                        //         label: "Завершение с поздравлением",
-                                        //         slug: "phrases/dialog/communications/parting/holidays"
-                                        //     }]
-                                    },
-                                    {
-                                        label: "Полезное в диалоге",
-                                        slug: "phrases/dialog/communications/useful"
-                                    }
-                                ]
+                                autogenerate: {directory: "/phrases/dialog/communications"}
                             },
                             {
                                 label: "😡 Книга возражений",
-                                autogenerate: {directory: "/phrases/dialog/objectionworkbook"},
-                                badge: {
-                                    text: "Перерабатывается",
-                                    variant: "danger"
-                                }
+                                autogenerate: {directory: "/phrases/dialog/objectionworkbook"}
                             },
                             {
                                 label: "📚 Регламенты",
                                 autogenerate: {directory: "/phrases/dialog/reglaments"}
-                            },
-                            {
-                                label: "🗃️ Правовая часть",
-                                autogenerate: {directory: "/phrases/dialog/companylaw"}
                             },
                         ],
                     },
