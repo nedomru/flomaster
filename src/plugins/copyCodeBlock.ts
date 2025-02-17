@@ -80,7 +80,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
                         });
 
                         preElement.addEventListener('mouseout', () => {
-                            if (copyButton.textContent === 'Нажми чтобы скопировать') {
+                            if (copyButton.textContent === 'Скопировать') {
                                 copyButton.style.opacity = '0';
                             }
                         });
@@ -96,7 +96,7 @@ export function clickToCopyPlugin(): ExpressiveCodePlugin {
 
                 renderData.blockAst = h('div', {class: 'ec-code-block'}, [
                     renderData.blockAst,
-                    h('button', {class: 'ec-copy-button'}, 'Нажми чтобы скопировать'),
+                    h('button', {class: 'ec-copy-button'}, 'Скопировать'),
                     h('script', copyScript)
                 ]);
             },
