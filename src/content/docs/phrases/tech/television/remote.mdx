@@ -51,32 +51,6 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
     </TabItem>
     <TabItem label="От приставок">
         <Tabs>
-            <TabItem label="2021/GO">
-            </TabItem>
-            <TabItem label="Pro">
-                <Tabs>
-                    <TabItem label="Pro Voice (ZTE)">
-                    </TabItem>
-                    <TabItem label="Pro Voice">
-                    </TabItem>
-                    <TabItem label="Pro Model 2023">
-                    </TabItem>
-                    <TabItem label="Pro (ZTE)">
-                    </TabItem>
-                    <TabItem label="Pro Voice NAG/ZTE">
-                    Подходит только для Movix Pro Voice (NAG) и Movix Pro Voice (ZTE)
-
-                    ```txt
-                    Для привязки пульта к приставке:
-                    1. Удалите все привязанные пульты в настройках приставки
-                    2. Запустите поиск в меню пультов на приставке
-                    3. Наведите пульт на приставку и зажмите кнопки "Назад" и "Домик" до тех пор, пока индикатор на пульте не начнет мигать
-
-                    После привязки индикатор перестанет мигать                   
-                    ```
-                    </TabItem>
-                </Tabs>
-            </TabItem>
         </Tabs>
     </TabItem>
 </Tabs>
@@ -208,6 +182,8 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
             2. Немного сдвиньте крышку вниз
             2. Установите 2 батарейки соблюдая полярность (+/-)
             3. Закройте крышку и проверьте работу пульта
+
+            Тип батареек: AAA (мизинчиковые)
             ```
             </TabItem>
             <TabItem label="5304-ERT">
@@ -217,39 +193,23 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
             2. Немного сдвиньте крышку вниз
             2. Установите 2 батарейки соблюдая полярность (+/-)
             3. Закройте крышку и проверьте работу пульта
+
+            Тип батареек: AAA (мизинчиковые)
             ```
             </TabItem>
         </Tabs>
     </TabItem>
     <TabItem label="От приставок">
         <Tabs>
-            <TabItem label="Movix">
-            Подходит к приставкам:
-            - Like Box
-            - Like Box pro
-            - Like Box Wi-Fi
-            - Movix
-            - Movix Wi-Fi
-            - Movix PRO
-            - Movix PRO Wi-Fi
-
+            <TabItem label="Eltex">
             ```txt
             Для смены батарек:
-            1. Надавливающим движением сдвиньте крышку по направлению стрелки
+            1. Слегка надавите на крышку пульта
+            2. Немного сдвиньте крышку вниз
             2. Установите 2 батарейки соблюдая полярность (+/-)
             3. Закройте крышку и проверьте работу пульта
 
-            Тип батареек: CR2032
-            ```
-            </TabItem>
-            <TabItem label="PRO/ZTE">
-            Подходит для Movix Pro / ZTE AOSP
-
-            ```txt
-            Для смены батарек:
-            1. Надавливающим движением сдвиньте крышку по направлению стрелки
-            2. Установите 2 батарейки соблюдая полярность (+/-)
-            3. Закройте крышку и проверьте работу пульта
+            Тип батареек: две AAA
             ```
             </TabItem>
         </Tabs>
