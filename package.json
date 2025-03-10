@@ -10,20 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.1.0",
-    "@astrojs/node": "^9.0.3",
-    "@astrojs/starlight": "^0.31.1",
-    "@astrojs/starlight-docsearch": "^0.5.0",
-    "@keystatic/astro": "^5.0.3",
-    "@keystatic/core": "^0.5.39",
-    "@lorenzo_lewis/starlight-utils": "^0.2.0",
-    "astro": "^5.2.6",
+    "@astrojs/markdown-remark": "^6.2.0",
+    "@astrojs/node": "^9.1.2",
+    "@astrojs/starlight": "^0.32.2",
+    "@astrojs/starlight-docsearch": "^0.6.0",
+    "@lorenzo_lewis/starlight-utils": "^0.3.1",
+    "astro": "^5.4.2",
     "astro-auto-import": "^0.4.4",
     "astro-expressive-code": "^0.39.0",
-    "lucide-react": "^0.471.0",
+    "lucide-react": "^0.471.2",
     "rehype-autolink-headings": "^7.1.0",
-    "sharp": "^0.33.0",
-    "starlight-cooler-credit": "^0.2.3",
+    "sharp": "^0.33.5",
+    "starlight-cooler-credit": "^0.3.1",
     "unist-util-visit": "^5.0.0"
   }
 }

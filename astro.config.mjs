@@ -1,8 +1,7 @@
 import {defineConfig} from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightUtils from "@lorenzo_lewis/starlight-utils";
-import starlightCoolerCredit from 'starlight-cooler-credit'
-
+import starlightCoolerCredit from "starlight-cooler-credit";
 
 import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
