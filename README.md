@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4df07bd4-7b9a-4d26-9d0a-be4c255fa9d7/deploy-status)](https://app.netlify.com/sites/nedomru-flomaster/deploys)
 
 # Фломастер
 
