@@ -114,7 +114,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/routers"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 26.02"
+                                    text: "Акт 29.03"
                                 }
                             },
                             {
@@ -122,7 +122,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/decoders"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 26.02"
+                                    text: "Акт 29.03"
                                 }
                             },
                             {
@@ -130,7 +130,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/camcorders"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 26.02"
+                                    text: "Акт 29.03"
                                 }
                             },
                         ],
