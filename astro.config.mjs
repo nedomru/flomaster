@@ -42,10 +42,18 @@ export default defineConfig({
                     maxHeadingLevel: 6
                 },
                 pagination: false,
-                social: {
-                    github: "https://github.com/AuthFailed/flomaster/",
-                    telegram: "https://t.me/+jH1mblw0ytcwOWUy",
-                },
+                social: [
+                    {
+                        icon: "github",
+                        label: "Github",
+                        href: "https://github.com/AuthFailed/flomaster/"
+                    },
+                    {
+                        icon: "telegram",
+                        label: "Telegram",
+                        href: "https://t.me/+jH1mblw0ytcwOWUy",
+                    }
+                    ],
                 pagefind: false,
                 sidebar: [
                     {
