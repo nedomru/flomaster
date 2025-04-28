@@ -138,7 +138,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/camcorders"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 29.03"
+                                    text: "Акт 28.04"
                                 }
                             },
                         ],
