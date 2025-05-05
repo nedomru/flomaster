@@ -111,7 +111,11 @@ export default defineConfig({
                             },
                             {
                                 label: "💳 Платная помощь",
-                                autogenerate: {directory: "/phrases/sales/paid-help"}
+                                autogenerate: {directory: "/phrases/sales/paid-help"},
+                                badge: {
+                                    variant: "success",
+                                    text: "Акт 05.05"
+                                }
                             },
                             {
                                 label: "🚀 Продажа услуг",
@@ -122,7 +126,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/routers"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 29.03"
+                                    text: "Акт 05.05"
                                 }
                             },
                             {
@@ -130,7 +134,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/decoders"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 29.03"
+                                    text: "Акт 05.05"
                                 }
                             },
                             {
@@ -138,7 +142,7 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/camcorders"},
                                 badge: {
                                     variant: "success",
-                                    text: "Акт 28.04"
+                                    text: "Акт 05.05"
                                 }
                             },
                         ],
