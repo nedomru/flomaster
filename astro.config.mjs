@@ -110,16 +110,12 @@ export default defineConfig({
                                 autogenerate: {directory: "/phrases/sales/dialog"}
                             },
                             {
-                                label: "💳 Платная помощь",
-                                autogenerate: {directory: "/phrases/sales/paid-help"},
+                                label: "🚀 Продажа услуг/сервиса",
+                                autogenerate: {directory: "/phrases/sales/service"},
                                 badge: {
                                     variant: "success",
                                     text: "Акт 05.05"
                                 }
-                            },
-                            {
-                                label: "🚀 Продажа услуг",
-                                autogenerate: {directory: "/phrases/sales/service"}
                             },
                             {
                                 label: "📡 Продажа роутеров",
