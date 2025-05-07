@@ -7,6 +7,8 @@ import {clickToCopyPlugin} from '/src/plugins/copyCodeBlock';
 import {rehypeHeadingIds} from "@astrojs/markdown-remark";
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import starlightDocSearch from "@astrojs/starlight-docsearch";
+import starlightThemeRapide from 'starlight-theme-rapide'
+
 
 // https://astro.build/config
 export default defineConfig({
@@ -145,6 +147,7 @@ export default defineConfig({
                     },
                 ],
                 plugins: [
+                    starlightThemeRapide(),
                     starlightCoolerCredit({
                         credit: {
                             title: "Предложить РМ",
