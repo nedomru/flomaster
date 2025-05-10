@@ -17,7 +17,7 @@
     "@lorenzo_lewis/starlight-utils": "^0.3.1",
     "astro": "^5.7.12",
     "astro-auto-import": "^0.4.4",
-    "astro-expressive-code": "^0.39.0",
+    "astro-expressive-code": "^0.41.0",
     "rehype-autolink-headings": "^7.1.0",
     "sharp": "^0.33.5",
     "starlight-contributor-list": "^0.3.0",
