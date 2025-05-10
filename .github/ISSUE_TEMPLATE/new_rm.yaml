@@ -1,0 +1,18 @@
+name: Добавление РМов
+description: Шаблон для запросов на изменение речевых модулей
+title: '[Добавление РМов]: '
+body:
+  - type: checkboxes
+    attributes:
+      label: Тип добавляемых РМов
+      description: Выбери тип речевых модулей, которые требуется добавить
+      options:
+        - label: Технические
+          required: false
+        - label: Диалоговые
+          required: false
+        - label: Продажи
+          required: false
+  - type: textarea
+    attributes:
+      label: Для чего нужен РМ
