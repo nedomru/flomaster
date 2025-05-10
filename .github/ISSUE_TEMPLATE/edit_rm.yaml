@@ -1,0 +1,29 @@
+name: Изменение РМов
+description: Шаблон для запросов на изменение речевых модулей
+title: '[Изменение РМов]: '
+body:
+  - type: checkboxes
+    attributes:
+      label: Тип изменяемых РМов
+      description: Выбери тип речевых модулей, которые требуется изменить
+      options:
+        - label: Технические
+          required: false
+        - label: Диалоговые
+          required: false
+        - label: Продажи
+          required: false
+  - type: textarea
+    attributes:
+      label: Суть изменения
+      description: >-
+        Укажи то, что необходимо изменить. Например, первичный РМ и РМ, на
+        который его меняем
+  - type: input
+    attributes:
+      label: Причина изменений
+  - type: markdown
+    attributes:
+      value: >-
+        This template was generated with [Issue Forms
+        Creator](https://issue-forms-creator.netlify.app)
