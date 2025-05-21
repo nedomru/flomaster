@@ -112,7 +112,7 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
 ### Смена MAC-адреса устройства
 <Tabs>
-    <TabItem label="Win">
+    <TabItem label="Win" icon="seti:windows">
         ```txt "[ВВЕДИ MAC]"
         Требуется сменить MAC-адрес:
         1. Нажмите на клавиатуре WIN+R, в окне введите "devmgmt.msc" без кавычек
@@ -132,6 +132,20 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
         3. Нажмите Enter
 
         После выполнения инструкции покажите на фото или скриншотом вывод в окне
+        ```
+    </TabItem>
+</Tabs>
+
+### Проверка MAC-адреса устройства
+<Tabs>
+    <TabItem label="Win" icon="seti:windows">
+        ```txt 
+        Потребуется узнать MAC-адрес вашего ПК:
+        1. Нажмите комбинацию Win+R на клавиатуре компьютера
+        2. Введите cmd и нажмите "OK"
+        3. В открывшемся окне введите "ipconfig/all" без кавычек и нажмите Enter
+
+        Когда вывод прекратится - напишите или отправьте фото пункта "Физический адрес"
         ```
     </TabItem>
 </Tabs>
