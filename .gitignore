@@ -1,6 +1,7 @@
 #ide output
 .idea/
 .vscode/
+.cache/
 
 # build output
 dist/
@@ -27,4 +28,3 @@ pnpm-debug.log*
 .DS_Store
 settings.json
 .vercel
-.env
