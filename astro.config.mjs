@@ -35,7 +35,7 @@ export default defineConfig({
         }, {
             icon: "telegram", label: "Telegram", href: "https://t.me/+jH1mblw0ytcwOWUy",
         }], pagefind: false, sidebar: [{
-            label: "🛠️ Технина", items: [{
+            label: "🛠️", items: [{
                 label: "🌐 Интернет", autogenerate: {directory: "/phrases/tech/internet"},
             }, {
                 label: "📺 Телевидение", autogenerate: {directory: "/phrases/tech/television"}
@@ -49,7 +49,7 @@ export default defineConfig({
                 label: "📝 Заявки, задачи, аварии", autogenerate: {directory: "/phrases/tech/accidents"}
             },],
         }, {
-            label: "💭 Диалог", items: [{
+            label: "💭", items: [{
                 label: "🗣️ Общение с клиентом", autogenerate: {directory: "/phrases/dialog/communications"}
             }, {
                 label: "😡 Книга возражений", autogenerate: {directory: "/phrases/dialog/objectionworkbook"}
@@ -57,7 +57,7 @@ export default defineConfig({
                 label: "📚 Регламенты", autogenerate: {directory: "/phrases/dialog/reglaments"}
             },],
         }, {
-            label: "🛒 Продажи", items: [{
+            label: "🛒", items: [{
                 label: "🗣️ Диалог", autogenerate: {directory: "/phrases/sales/dialog"}
             }, {
                 label: "🚀 Продажа услуг/сервиса", autogenerate: {directory: "/phrases/sales/service"}, badge: {
