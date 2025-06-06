@@ -9,6 +9,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import starlightDocSearch from "@astrojs/starlight-docsearch";
 import starlightThemeRapide from 'starlight-theme-rapide'
 import starlightScrollToTop from "starlight-scroll-to-top";
+import starlightLlmsTxt from 'starlight-llms-txt'
 
 
 // https://astro.build/config
@@ -76,7 +77,7 @@ export default defineConfig({
                     variant: "success", text: "Акт 05.05"
                 }
             },],
-        },], plugins: [starlightScrollToTop(), starlightThemeRapide(), starlightCoolerCredit({
+        },], plugins: [starlightLlmsTxt(), starlightScrollToTop(), starlightThemeRapide(), starlightCoolerCredit({
             credit: {
                 title: "Предложить РМ",
                 href: "https://t.me/roman_domru",
