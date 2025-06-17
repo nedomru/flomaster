@@ -62,7 +62,7 @@ export default defineConfig({
                 label: "🗣️ Диалог", autogenerate: {directory: "/phrases/sales/dialog"}
             }, {
                 label: "🚀 Продажа услуг/сервиса", autogenerate: {directory: "/phrases/sales/service"}, badge: {
-                    variant: "success", text: "Акт 05.05"
+                    variant: "success", text: "Акт 16.06"
                 }
             }, {
                 label: "📡 Продажа роутеров", autogenerate: {directory: "/phrases/sales/routers"}, badge: {
@@ -70,11 +70,11 @@ export default defineConfig({
                 }
             }, {
                 label: "📺 Продажа декодеров", autogenerate: {directory: "/phrases/sales/decoders"}, badge: {
-                    variant: "success", text: "Акт 05.05"
+                    variant: "success", text: "Акт 16.06"
                 }
             }, {
                 label: "🎥 Продажа камер", autogenerate: {directory: "/phrases/sales/camcorders"}, badge: {
-                    variant: "success", text: "Акт 05.05"
+                    variant: "success", text: "Акт 16.06"
                 }
             },],
         },], plugins: [starlightLlmsTxt({
