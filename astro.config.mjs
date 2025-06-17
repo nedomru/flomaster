@@ -66,7 +66,7 @@ export default defineConfig({
                 }
             }, {
                 label: "📡 Продажа роутеров", autogenerate: {directory: "/phrases/sales/routers"}, badge: {
-                    variant: "success", text: "Акт 05.05"
+                    variant: "success", text: "Акт 16.06"
                 }
             }, {
                 label: "📺 Продажа декодеров", autogenerate: {directory: "/phrases/sales/decoders"}, badge: {
