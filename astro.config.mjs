@@ -24,7 +24,7 @@ export default defineConfig({
                 'data-website-id': 'e8ff0de4-de47-420c-8b71-d8ef93efde62'
             },
         },], logo: {
-            src: "/src/assets/flomaster.png",
+            src: "/src/assets/writing_hand.png",
         }, locales: {
             root: {
                 label: "Русский", lang: "ru",
