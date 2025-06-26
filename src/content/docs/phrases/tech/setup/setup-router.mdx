@@ -2046,6 +2046,21 @@ import {TabItem, Tabs, CardGrid, LinkCard} from "@astrojs/starlight/components";
 2. Отправьте фото или напишите значение пункта "MAC-адрес" из блока "WAN конфигурация"
 ```
 
+#### Настройка PPPoE Relay
+```txt
+Для настройки PPPoE Relay:
+1. Откройте раздел "WAN" - "Ethernet wan"
+2. Укажите параметры:
+- Протокол - IPoE
+- Режим моста - Bridget PPPoE (Implies Bridget Ethernet)
+- Включить NAPT - включите галочку
+- Включить IGMP-прокси - включите галочку
+3. В настройках WAN ниже укажите параметр:
+- Тип - DHCP
+
+Нажмите кнопку "Применить"
+```
+
 ### Xiaomi / Сяоми
 <CardGrid>
     <LinkCard
