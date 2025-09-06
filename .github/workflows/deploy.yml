@@ -1,35 +1,39 @@
-name: Deploy Astro blog to GitHub Pages
+name: Build and Deploy Astro Site
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
-    branches: [astro]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+    branches:
+      - main  # or your default branch
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      # 1. Checkout repository
+      - name: Checkout repository
+        run: git clone https://github.com/nedomru/flomaster.git . || git pull
+
+      # 2. Set up Node.js
+      - name: Set up Node.js
+        uses: nedomru/setup-node@v1
         with:
-          fetch-depth: 0 # Only a single commit is fetched by default, for the ref/SHA that triggered the workflow. Set fetch-depth: 0 to fetch all history for all branches and tags
-      - name: Install, build, and upload your site
-        uses: withastro/action@v1
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
+          node-version: '20'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Build Astro site
+      - name: Build site
+        run: npm run build
+
+      # 5. Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git branch -M gh-pages
+          git add -f dist
+          git commit -m "Deploy site"
+          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/nedomru/flomaster.git gh-pages
