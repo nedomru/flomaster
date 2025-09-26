@@ -99,13 +99,7 @@ export default defineConfig({
                 },
             ],
             exclude: ["404", "index", "phrases/index"]
-        }), starlightScrollToTop(), starlightThemeRapide(), starlightCoolerCredit({
-            credit: {
-                title: "Предложить РМ",
-                href: "https://t.me/roman_domru",
-                description: "Здесь ты можешь предложить изменения"
-            }, showImage: false
-        }), starlightUtils({
+        }), starlightScrollToTop(), starlightThemeRapide(), starlightUtils({
             multiSidebar: {
                 switcherStyle: "horizontalList",
             },
