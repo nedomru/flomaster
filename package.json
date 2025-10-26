@@ -10,12 +10,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.7",
-    "@astrojs/node": "^9.4.4",
-    "@astrojs/starlight": "^0.36.0",
+    "@astrojs/markdown-remark": "^6.3.8",
+    "@astrojs/node": "^9.5.0",
+    "@astrojs/starlight": "^0.36.1",
     "@astrojs/starlight-docsearch": "^0.6.0",
     "@lorenzo_lewis/starlight-utils": "^0.3.1",
-    "astro": "^5.14.0",
+    "astro": "^5.15.1",
     "astro-auto-import": "^0.4.4",
     "astro-expressive-code": "^0.41.0",
     "rehype-autolink-headings": "^7.1.0",
