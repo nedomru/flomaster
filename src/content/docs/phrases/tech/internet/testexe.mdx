@@ -143,6 +143,36 @@ import {TabItem, Tabs} from "@astrojs/starlight/components";
 
         Когда вывод прекратится - пришлите результат в чат
         ```
+
+        <details>
+            <summary>
+                Установка пакета
+            </summary>
+
+            <Tabs>
+                <TabItem label="Debian-based">
+                    Для таких дистрибутивов, как Ubuntu, Debian, Mint и т.д.:
+                    ```bash
+                    sudo apt update
+                    apt install traceroute
+                    ```
+                </TabItem>
+                <TabItem label="Red Hat-based">
+                    Для таких дистрибутивов, как CentOS, Fedora, RHEL, AlmaLinux и т.д.:
+                    ```bash
+                    sudo dnf update
+                    sudo dnf install traceroute
+                    ```
+                </TabItem>
+                <TabItem label="Arch-based">
+                    Для таких дистрибутивов, как Arch, Manjaro, CachyOS и т.д.:
+                    ```bash
+                    sudo pacman -Syu
+                    sudo pacman install traceroute
+                    ```
+                </TabItem>
+            </Tabs>
+        </details>
     </TabItem>
 
     <TabItem label="Mac" icon="apple">
