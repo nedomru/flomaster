@@ -11,12 +11,12 @@ import { Tabs, TabItem, CardGrid, LinkCard } from '@astrojs/starlight/components
 import { Image } from 'astro:assets';
 
 <CardGrid stagger={false}>
-    <LinkCard title="Города с рассрочкой"
+    <LinkCard title="Города с кредитом"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/0"
-                        description="Список городов с доступной рассрочкой в базе знаний" target="_blank"/>
-    <LinkCard title="Оформление рассрочки"
+                        description="Список городов с доступным кредитом в базе знаний" target="_blank"/>
+    <LinkCard title="Оформление кредита"
                         href="https://clever.ertelecom.ru/content/space/4/folder/635/article/13578/page/8"
-                        description="Инструкция по оформлению рассрочки в базе знаний" target="_blank"/>
+                        description="Инструкция по оформлению кредита в базе знаний" target="_blank"/>
 </CardGrid>
 
 ### Роутеры Dom.ru
@@ -28,23 +28,26 @@ import { Image } from 'astro:assets';
         - Скорость по кабелю: до 1000 Мбит/с
         - Скорость по Wi-Fi: до 500 Мбит/с
         - Площадь покрытия: до 80 м2
-        - Технологии: EasyMesh
+        - Технологии: Wi-Fi 6, Band steering, WPA3, QoS, Transmit Beamforming, MU-MIMO, OFDMA, IPv6, EasyMesh, Airtime Fairness, NTP, Samba
         - Одновременно устройств в сети: до 50
+        - Количество портов: 1 x WAN, 3 x LAN
         - Гарантия: 1 год
         - Подходит для любого провайдера
 
-        Стоимость:
-        - В собственность - 5 190 ₽
+        Стоимость: 4 590 ₽
+        Стоимость доставки, установки и настройки роутера техником: 650 ₽
         ```
 
-        Рассрочка от банка:
+        Кредит от банка:
 
         ```txt
-        - 1 730 ₽/мес. на 3 месяца (общая стоимость - 5 190 ₽)
-        - 865 ₽/мес. на 6 месяцев (общая стоимость - 5 190 ₽)
-        - 506 ₽/мес. на 12 месяцев (общая стоимость - 6 069 ₽)
-        - 290 ₽/мес. на 24 месяцев (общая стоимость - 6 959 ₽)
-        - 220 ₽/мес. на 36 месяцев (общая стоимость - 7 922 ₽)
+        Стоимость в кредит:
+        - 1 530 ₽/мес. на 3 месяца (общая стоимость - 4 590 ₽)
+        - 765 ₽/мес. на 6 месяцев (общая стоимость - 4 590 ₽)
+        - 515 ₽/мес. на 10 месяцев (общая стоимость - 5 153 ₽)
+        - 438 ₽/мес. на 12 месяцев (общая стоимость - 5 260 ₽)
+        - 247 ₽/мес. на 24 месяцев (общая стоимость - 5 930 ₽)
+        - 185 ₽/мес. на 36 месяцев (общая стоимость - 6 649 ₽)
         ```
 
         <CardGrid stagger={false}>
@@ -54,6 +57,128 @@ import { Image } from 'astro:assets';
             <LinkCard title="Сайт производителя"
                                 href="https://dom.ru/internet/equipment/wi-fi-router-dom-ru-wave-ax1500"
                                 description="Dom.ru Wave на сайте производителя" target="_blank"/>
+        </CardGrid>
+    </TabItem>
+
+    <TabItem label="Wave Plus">
+        ```txt
+        Модель: Wave Plus
+        - Скорость по кабелю: до 1000 Мбит/с
+        - Скорость по Wi-Fi: до 1000 Мбит/с
+        - Площадь покрытия: до 100 м2
+        - Технологии: Wi-Fi 6, Band steering, WPA3, QoS, Transmit Beamforming, MU-MIMO, OFDMA, IPv6, EasyMesh, Airtime Fairness, NTP, Samba
+        - Одновременно устройств в сети: до 50
+        - Количество портов: 1 x WAN, 3 x LAN, 1 x USB 3.0
+        - Гарантия: 1 год
+        - Подходит для любого провайдера
+
+        Стоимость: 7 990 ₽
+        Стоимость доставки, установки и настройки роутера техником: 650 ₽
+        ```
+
+        Кредит от банка:
+
+        ```txt
+        Стоимость в кредит:
+        - 2 663 ₽/мес. на 3 месяца (общая стоимость - 7 990 ₽)
+        - 1 332 ₽/мес. на 6 месяцев (общая стоимость - 7 990 ₽)
+        - 799 ₽/мес. на 10 месяцев (общая стоимость - 7 990 ₽)
+        - 763 ₽/мес. на 12 месяцев (общая стоимость - 9 155 ₽)
+        - 430 ₽/мес. на 24 месяцев (общая стоимость - 10 322 ₽)
+        - 321 ₽/мес. на 36 месяцев (общая стоимость - 11 574 ₽)
+        ```
+
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/19051"
+                                description="Dom.ru Wave Plus в базе знаний" target="_blank"/>
+
+            <LinkCard title="Сайт производителя"
+                                href="https://dom.ru/internet/equipment/dom-ru-mmr-630?withOption=0"
+                                description="Dom.ru Wave Plus на сайте производителя" target="_blank"/>
+        </CardGrid>
+    </TabItem>
+</Tabs>
+
+### Mesh-системы Dom.ru
+
+<Tabs>
+    <TabItem label="Mesh Wave Plus">
+        ```txt
+        Модель: TP-Link Deco X60
+        - Скорость по кабелю: до 1000 Мбит/с
+        - Скорость по Wi-Fi: до 1000 Мбит/с
+        - Площадь покрытия двух модулей: до 200 м2
+        - Технологии: Mesh (IEEE802.11kvr, 1905.1), Wi-Fi 6, band steering, WPA3, QoS, Transmit Beamforming, MU-MIMO, OFDMA, IPv6, EasyMesh, Airtime Fairness
+        - Одновременно устройств в сети: до 100
+        - Количество портов: 1 x WAN, 2 x LAN на каждом модуле
+        - Гарантия: 1 год
+        - Подходит для любого провайдера
+
+        Стоимость двух модулей: 11 990 ₽
+        Стоимость доставки, установки и настройки роутера техником: 650 ₽
+        ```
+
+        Кредит от банка:
+
+        <Tabs>
+            <TabItem label="Два модуля">
+                ```
+                Два модуля в кредит:
+                - 3 997 ₽/мес. на 3 месяца (общая стоимость - 11 990 ₽)
+                - 1 998 ₽/мес. на 6 месяцев (общая стоимость - 11 990 ₽)
+                - 1 199 ₽/мес. на 6 месяцев (общая стоимость - 11 990 ₽)
+                - 1 145 ₽/мес. на 12 месяцев (общая стоимость - 13 738 ₽)
+                - 645 ₽/мес. на 24 месяцев (общая стоимость - 15 489 ₽)
+                - 482 ₽/мес. на 36 месяцев (общая стоимость - 17 369 ₽)
+                ```
+            </TabItem>
+        </Tabs>
+
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/folder/460/article/19055"
+                                description="Dom.ru Mesh Wave Plus в базе знаний" target="_blank"/>
+
+            <LinkCard title="Сайт производителя"
+                                href="https://dom.ru/internet/equipment/dom-ru-mesh-wave-plus?withOption=0"
+                                description="Dom.ru Mesh Wave Plus на сайте производителя" target="_blank"/>
+        </CardGrid>
+    </TabItem>
+</Tabs>
+
+### Терминалы Dom.ru
+
+<Tabs>
+    <TabItem label="GPON Wave">
+        ```txt
+        Модель: GPON Wave
+        - Скорость по кабелю: до 1000 Мбит/с
+        - Скорость по Wi-Fi: до 500 Мбит/с
+        - Площадь покрытия: до 80 м2
+        - Технологии: Wi-Fi 6, band steering, WPA3, Transmit Beamforming, MU-MIMO, OFDMA, IPv6, EasyMesh
+        - Одновременно устройств в сети: до 50
+        - Количество портов: 1 x SC/APC GPON WAN, 4 x LAN
+        - Гарантия: 1 год
+        - Подходит для любого провайдера
+
+        Стоимость: 5 390 ₽
+        Стоимость доставки, установки и настройки роутера техником: 650 ₽
+        ```
+
+        Кредит от банка:
+
+        ```txt
+        Стоимость в кредит:
+        - 1 797 ₽/мес. на 3 месяца (общая стоимость - 5 390 ₽)
+        - 898 ₽/мес. на 6 месяцев (общая стоимость - 5 390 ₽)
+        - 605 ₽/мес. на 10 месяцев (общая стоимость - 6 051 ₽)
+        - 515 ₽/мес. на 12 месяцев (общая стоимость - 6 176 ₽)
+        - 290 ₽/мес. на 24 месяцев (общая стоимость - 6 963 ₽)
+        - 217 ₽/мес. на 36 месяцев (общая стоимость - 7 808 ₽)
+        ```
+
+        <CardGrid stagger={false}>
+            <LinkCard title="База знаний" href="https://clever.ertelecom.ru/content/space/4/article/19069"
+                                description="Dom.ru GPON Wave в базе знаний" target="_blank"/>
         </CardGrid>
     </TabItem>
 </Tabs>
