@@ -307,6 +307,160 @@ import {TabItem, Tabs, CardGrid, LinkCard} from "@astrojs/starlight/components";
 2. Отправьте фото или напишите значение пункта "MAC-адрес"
 ```
 
+### Cudy / Куди
+
+#### Вход в настройки
+```txt
+Для входа в настройки роутера:
+1. Подключитесь к сети роутера по кабелю или Wi-Fi
+2. Откройте сайт http://192.168.10.1 или http://cudy.net
+3. На странице войдите с данными от роутера (admin / admin1)
+```
+
+#### Настройка соединения
+<Tabs>
+    <TabItem label="Через мастер">
+        <Tabs>
+            <TabItem label="DHCP">
+                ```txt
+                Настроим соединение:
+                1. Откройте раздел "Quick Setup" сверху
+                2. Выберите "Wireless Router"
+                3. Укажите ваш часовой пояс
+                4. В поле "Protocol" выберите "DHCP"
+                5. Настройте Wi-Fi:
+                - SSID - Название сети
+                - Password - Пароль сети
+                - Encryption - WPA-PSK/WPA2-PSK
+                и нажмите "Next"
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+            <TabItem label="PPPoE">
+                ```txt
+                Настроим соединение:
+                1. Откройте раздел "Quick Setup" сверху
+                2. Выберите "Wireless Router"
+                3. Укажите ваш часовой пояс
+                4. Установите параметры:
+                - Protocol - "PPPoE"
+                - Username - Логин PPPoE
+                - Password - Пароль PPPoE
+                - Secondary connection - None
+                5. Настройте Wi-Fi:
+                - SSID - Название сети
+                - Password - Пароль сети
+                - Encryption - WPA-PSK/WPA2-PSK
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+            <TabItem label="PPPoE">
+                ```txt "Логин PPPoE" "Пароль PPPoE"
+                Настроим соединение:
+                1. Откройте раздел "Quick Setup" сверху
+                2. Выберите "Wireless Router"
+                3. Укажите ваш часовой пояс
+                4. Установите параметры:
+                - Protocol - "PPPoE"
+                - Username - Логин PPPoE
+                - Password - Пароль PPPoE
+                - Secondary connection - None
+                5. Настройте Wi-Fi:
+                - SSID - Название сети
+                - Password - Пароль сети
+                - Encryption - WPA-PSK/WPA2-PSK
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+            <TabItem label="Static IP">
+                ```txt "IP-АДРЕС" "ШЛЮЗ" "МАСКА" "DNS1" "DNS2"
+                Настроим соединение:
+                1. Откройте раздел "Quick Setup" сверху
+                2. Выберите "Wireless Router"
+                3. Укажите ваш часовой пояс
+                4. Установите параметры:
+                - Protocol - "Static(Fixed IP)"
+                - IP Address - IP-АДРЕС
+                - Subnet Mask - МАСКА
+                - Default Gateway - ШЛЮЗ
+                - Preferred DNS - DNS1
+                - Alternate DNS - DNS2
+                5. Настройте Wi-Fi:
+                - SSID - Название сети
+                - Password - Пароль сети
+                - Encryption - WPA-PSK/WPA2-PSK
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+        </Tabs>
+    </TabItem>
+    <TabItem label="Через расширенные">
+        <Tabs>
+            <TabItem label="DHCP">
+                ```txt
+                Настроим соединение:
+                1. Откройте раздел "General Settings" сверху
+                2. Выберите слева пункт "WAN Mode"
+                3. Установите параметры:
+                - Protocol - "DHCP"
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+            <TabItem label="PPPoE">
+                ```txt
+                Настроим соединение:
+                1. Откройте раздел "General Settings" сверху
+                2. Выберите слева пункт "WAN Mode"
+                3. Установите параметры:
+                - Protocol - "PPPoE"
+                - Username - Логин PPPoE
+                - Password - Пароль PPPoE
+                - Secondary connection - None
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+            <TabItem label="Static IP">
+                ```txt "IP-АДРЕС" "ШЛЮЗ" "МАСКА" "DNS1" "DNS2"
+                Настроим соединение:
+                1. Откройте раздел "General Settings" сверху
+                2. Выберите слева пункт "WAN Mode"
+                3. Установите параметры:
+                - Protocol - "Static(Fixed IP)"
+                - IP Address - IP-АДРЕС
+                - Subnet Mask - МАСКА
+                - Default Gateway - ШЛЮЗ
+                - Preferred DNS - DNS1
+                - Alternate DNS - DNS2
+
+                Нажмите кнопку "Save & Apply"
+                ```
+            </TabItem>
+        </Tabs>
+    </TabItem>
+</Tabs>
+
+#### Смена каналов
+```txt "КАНАЛ 2.4 ГГц" "КАНАЛ 5 ГГц"
+Сменим каналы Wi-Fi:
+1. Откройте раздел "General Settings" сверху
+2. Выберите слева пункт "Wireless"
+3. В разделе "Wireless Settings" нажмите кнопку "Advanced"
+- 2.4 ГГц:
+    - Channel - КАНАЛ 2.4 ГГц
+    - Channel Width - укажите максимальное значение
+- 5 ГГц:
+    - Channel - КАНАЛ 5 ГГц
+    - Channel Width - укажите максимальное значение
+
+Нажмите кнопку "Save & Apply"
+```
+
 ### D-Link / Д-Линк
 <CardGrid>
     <LinkCard
